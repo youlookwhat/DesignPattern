@@ -3,6 +3,7 @@
     package="com.example.jingbin.designpattern">
 
     <application
+        android:name=".app.PatternApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".observer.ObserverActivity"></activity>
+        <activity android:name=".observer.ObserverActivity" />
     </application>
 
 </manifest>

@@ -9,6 +9,9 @@ import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.observer.classs.ObjectFor3D;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser1;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser2;
+import com.example.jingbin.designpattern.observer.javautil.Observer1;
+import com.example.jingbin.designpattern.observer.javautil.SubjectFor3d;
+import com.example.jingbin.designpattern.observer.javautil.SubjectForSSQ;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +36,27 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
         objectFor3D = new ObjectFor3D();
         btObserver1.setOnClickListener(this);
         btObserver2.setOnClickListener(this);
+
+        // 系统的观察者接口
+        loadSystemObserver();
+    }
+
+    /**
+     * 系统的观察者接口
+     */
+    private void loadSystemObserver() {
+        // 创建服务号
+        SubjectFor3d subjectFor3d = new SubjectFor3d();
+        SubjectForSSQ subjectForSSQ = new SubjectForSSQ();
+
+        // 创建订阅者
+        Observer1 observer1 = new Observer1();
+        observer1.registerSubject(subjectFor3d);
+        observer1.registerSubject(subjectForSSQ);
+
+        // 发送信息
+        subjectFor3d.setMsg("hello 3d'nums : 110 ");
+        subjectForSSQ.setMsg("ssq'nums : 12,13,31,5,4,3 15");
     }
 
     @Override
