@@ -21,6 +21,6 @@ public class ObserverUser2 implements Observer {
     @Override
     public void update(String msg) {
         Log.e("-----ObserverUser2 ","得到 3D 号码:"+msg);
-        Toast.makeText(PatternApplication.getInstance(), "-----ObserverUser2 得到 3D 号码:" + msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(PatternApplication.getInstance(), "-----ObserverUser2 得到 3D 号码:" + msg, Toast.LENGTH_SHORT).show();
     }
 }
