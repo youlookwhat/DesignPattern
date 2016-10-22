@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:text="观察者模式" />
 
+    <Button
+        android:id="@+id/bt_factory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="工厂模式" />
+
 </LinearLayout>

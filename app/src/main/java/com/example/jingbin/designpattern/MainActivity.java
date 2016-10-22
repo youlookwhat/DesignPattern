@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.jingbin.designpattern.factory.RoujiaMoStoreActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 
 import butterknife.BindView;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.bt_observer)
     Button btObserver;
+    @BindView(R.id.bt_factory)
+    Button btFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initListener() {
         btObserver.setOnClickListener(this);
+        btFactory.setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_observer:// 观察者模式
                 startActivity(new Intent(this, ObserverActivity.class));
                 break;
+            case R.id.bt_factory:// 工厂模式
+                startActivity(new Intent(this, RoujiaMoStoreActivity.class));
             default:
                 break;
         }

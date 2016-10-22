@@ -5,7 +5,7 @@
     <application
         android:name=".app.PatternApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".observer.ObserverActivity" />
-        <activity android:name=".factory.RoujiaMoStoreActivity"></activity>
+        <activity android:name=".factory.RoujiaMoStoreActivity" />
     </application>
 
 </manifest>
