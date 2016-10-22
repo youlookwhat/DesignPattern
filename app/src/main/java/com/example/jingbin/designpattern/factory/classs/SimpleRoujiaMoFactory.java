@@ -7,20 +7,20 @@ package com.example.jingbin.designpattern.factory.classs;
 
 public class SimpleRoujiaMoFactory {
 
-    public RoujiaMo creatRojiaMo(String type) {
+    public RoujiaMo creatRoujiaMo(String type) {
         RoujiaMo roujiaMo = null;
         switch (type) {
             case "Suan":
-                roujiaMo = new SuanRoujiaMo();
+                roujiaMo = new ZSuanRoujiaMo();
                 break;
             case "La":
-                roujiaMo = new LaRoujiaMo();
+                roujiaMo = new ZLaRoujiaMo();
                 break;
             case "Tian":
-                roujiaMo = new TianRoujiaMo();
+                roujiaMo = new ZTianRoujiaMo();
                 break;
             default:// 默认为酸肉夹馍
-                roujiaMo = new SuanRoujiaMo();
+                roujiaMo = new ZSuanRoujiaMo();
                 break;
         }
         return roujiaMo;

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.jingbin.designpattern.R;
+import com.example.jingbin.designpattern.factory.classs.RoujiaMoStore;
+import com.example.jingbin.designpattern.factory.classs.SimpleRoujiaMoFactory;
 
 /**
  * Created by jingbin on 2016/10/22.
@@ -24,5 +26,13 @@ public class RoujiaMoStoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roujia_mo_store);
+
+        /**
+         * 简单工厂模式:
+         */
+        RoujiaMoStore roujiaMoStore = new RoujiaMoStore(new SimpleRoujiaMoFactory());
+        roujiaMoStore.sellRoujiaMo("Suan");
+        roujiaMoStore.sellRoujiaMo("Tian");
+        roujiaMoStore.sellRoujiaMo("La");
     }
 }

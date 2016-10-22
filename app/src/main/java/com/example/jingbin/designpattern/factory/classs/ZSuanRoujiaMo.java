@@ -4,9 +4,9 @@ package com.example.jingbin.designpattern.factory.classs;
  * Created by jingbin on 2016/10/22.
  */
 
-public class LaRoujiaMo extends RoujiaMo {
+public class ZSuanRoujiaMo extends RoujiaMo {
 
-    public LaRoujiaMo(){
-        this.name = "辣味肉夹馍";
+    public ZSuanRoujiaMo() {
+        this.name = "酸味肉夹馍";
     }
 }

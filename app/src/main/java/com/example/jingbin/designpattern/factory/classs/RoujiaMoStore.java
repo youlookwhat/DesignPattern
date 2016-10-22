@@ -15,13 +15,13 @@ public class RoujiaMoStore {
         RoujiaMo roujiaMo = null;
         switch (type) {
             case "Suan":
-                roujiaMo = new SuanRoujiaMo();
+                roujiaMo = new ZSuanRoujiaMo();
                 break;
             case "La":
-                roujiaMo = new LaRoujiaMo();
+                roujiaMo = new ZLaRoujiaMo();
                 break;
             case "Tian":
-                roujiaMo = new TianRoujiaMo();
+                roujiaMo = new ZTianRoujiaMo();
                 break;
             default:// 默认为酸肉夹馍
                 roujiaMo = new SuanRoujiaMo();
@@ -42,7 +42,7 @@ public class RoujiaMoStore {
 
     public RoujiaMo sellRoujiaMo(String type) {
 
-        RoujiaMo roujiaMo = factory.creatRojiaMo(type);
+        RoujiaMo roujiaMo = factory.creatRoujiaMo(type);
         roujiaMo.prepare();
         roujiaMo.fire();
         roujiaMo.pack();
