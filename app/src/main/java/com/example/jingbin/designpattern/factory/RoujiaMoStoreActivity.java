@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.factory.classs.RoujiaMoStore;
 import com.example.jingbin.designpattern.factory.classs.SimpleRoujiaMoFactory;
+import com.example.jingbin.designpattern.factory.gcff.XianRoujiaMoStore;
+import com.example.jingbin.designpattern.factory.gcff.XianSimpleRoujiaMoFactory;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +32,10 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
 
     @BindView(R.id.bt_simple_factory)
     Button btSimpleFactory;
+    @BindView(R.id.bt_factory_method)
+    Button btFactoryMethod;
+    @BindView(R.id.bt_static_factory)
+    Button btStaticFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +43,34 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_roujia_mo_store);
         ButterKnife.bind(this);
         setTitle("工厂模式");
+        initListener();
+    }
+
+    private void initListener() {
+        btStaticFactory.setOnClickListener(this);
         btSimpleFactory.setOnClickListener(this);
+        btFactoryMethod.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.bt_simple_factory: // 2.简单工厂模式
+            case R.id.bt_static_factory:// 1.静态工厂模式
+                Toast.makeText(this, "TextUtil.isEmpty等，类+静态方法.", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.bt_simple_factory: // 2.简单工厂模式(店里买肉夹馍)
                 RoujiaMoStore roujiaMoStore = new RoujiaMoStore(new SimpleRoujiaMoFactory());
                 roujiaMoStore.sellRoujiaMo("Suan");
                 roujiaMoStore.sellRoujiaMo("Tian");
                 roujiaMoStore.sellRoujiaMo("La");
+                break;
+            case R.id.bt_factory_method: // 3.工厂方法模式(开分店)
+                // 分店简单工厂
+                XianRoujiaMoStore xianRoujiaMoStore = new XianRoujiaMoStore(new XianSimpleRoujiaMoFactory());
+                xianRoujiaMoStore.sellRoujiaMo("Suan");
+                xianRoujiaMoStore.sellRoujiaMo("Tian");
+                xianRoujiaMoStore.sellRoujiaMo("La");
+                break;
             default:
                 break;
         }

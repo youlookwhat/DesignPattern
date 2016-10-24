@@ -12,6 +12,7 @@
     tools:context="com.example.jingbin.designpattern.factory.RoujiaMoStoreActivity">
 
     <Button
+        android:id="@+id/bt_static_factory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1.静态工厂模式" />
@@ -23,6 +24,7 @@
         android:text="2.简单工厂模式" />
 
     <Button
+        android:id="@+id/bt_factory_method"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="3.工厂方法模式" />
