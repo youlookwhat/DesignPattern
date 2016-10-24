@@ -35,7 +35,7 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roujia_mo_store);
         ButterKnife.bind(this);
-
+        setTitle("工厂模式");
         btSimpleFactory.setOnClickListener(this);
     }
 

@@ -44,7 +44,7 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_observer);
         ButterKnife.bind(this);
-
+        setTitle("观察者模式");
         objectFor3D = new ObjectFor3D();
         btObserver1.setOnClickListener(this);
         btObserver2.setOnClickListener(this);
