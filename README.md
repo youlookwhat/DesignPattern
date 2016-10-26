@@ -30,7 +30,7 @@
 
 	- 根据类型直接创建肉夹馍：[SimpleRoujiaMoFactory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/classs/SimpleRoujiaMoFactory.java)
 
-- 3、工厂方法模式(开分店)
+- 3、工厂方法模式（开分店）
 	-  定义：定义一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法模式把类实例化的过程推迟到子类。
 	-  对比定义：
   	 - 1、定义了创建对象的一个接口：public abstract RouJiaMo sellRoujiaMo(String type);
@@ -39,7 +39,7 @@
  - 实现抽象方法：[XianRoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianRoujiaMoStore.java)
  - 分店依旧使用简单工厂模式：[XianSimpleRoujiaMoFactory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianSimpleRoujiaMoFactory.java)
 
-- 4、抽象工厂模式
+- 4、抽象工厂模式（使用官方提供的原料）
 	 - 定义：提供一个接口，用于创建相关的或依赖对象的家族，而不需要明确指定具体类。
 	 - 对比定义：
 	 	- 1、提供一个接口：public interface RouJiaMoYLFactroy
