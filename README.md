@@ -35,8 +35,8 @@
 	-  对比定义：
   	 - 1、定义了创建对象的一个接口：public abstract RouJiaMo sellRoujiaMo(String type);
  	 - 2、由子类决定实例化的类，可以看到我们的馍是子类生成的。
- - 提供创建肉夹馍抽象方法：[RoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/RoujiaMoStore.java)
- - 实现抽象方法：[XianRoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianRoujiaMoStore.java)
+ - 提供创建肉夹馍店抽象方法：[RoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/RoujiaMoStore.java)
+ - 具体实现抽象方法：[XianRoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianRoujiaMoStore.java)
  - 分店依旧使用简单工厂模式：[XianSimpleRoujiaMoFactory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianSimpleRoujiaMoFactory.java)
 
 - 4、抽象工厂模式（使用官方提供的原料）
