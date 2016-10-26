@@ -24,5 +24,4 @@ public class SubjectForSSQ extends Observable {
         setChanged();
         notifyObservers();
     }
-
 }

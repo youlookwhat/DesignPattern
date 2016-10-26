@@ -30,5 +30,4 @@ public class SubjectFor3d extends Observable {
         setChanged();
         notifyObservers();
     }
-
 }

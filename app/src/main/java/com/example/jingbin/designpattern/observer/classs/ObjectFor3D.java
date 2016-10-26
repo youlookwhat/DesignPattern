@@ -30,7 +30,6 @@ public class ObjectFor3D implements Subject {
         if (index >= 0) {
             observers.remove(index);
         }
-
     }
 
     @Override

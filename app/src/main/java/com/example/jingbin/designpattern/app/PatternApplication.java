@@ -17,7 +17,6 @@ public class PatternApplication extends Application {
         return patternApplication;
     }
 
-
     @SuppressWarnings({"unused"})
     @Override
     public void onCreate() {
