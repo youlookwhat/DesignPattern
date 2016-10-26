@@ -1,6 +1,5 @@
-package com.example.jingbin.designpattern.factory.gcff;
+package com.example.jingbin.designpattern.factory.cxgc;
 
-import com.example.jingbin.designpattern.factory.jdgc.RoujiaMo;
 
 /**
  * Created by jingbin on 2016/10/25.

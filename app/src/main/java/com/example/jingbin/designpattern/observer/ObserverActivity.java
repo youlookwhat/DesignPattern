@@ -50,7 +50,7 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
         btObserver2.setOnClickListener(this);
 
         // 系统的观察者接口
-        loadSystemObserver();
+//        loadSystemObserver();
     }
 
     /**

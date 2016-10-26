@@ -7,10 +7,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.jingbin.designpattern.R;
-import com.example.jingbin.designpattern.factory.classs.RoujiaMoStore;
-import com.example.jingbin.designpattern.factory.classs.SimpleRoujiaMoFactory;
+import com.example.jingbin.designpattern.factory.cxgc.XianRoujiaMoTeSeStore;
+import com.example.jingbin.designpattern.factory.cxgc.XianSimpleRoujiaMoTeSeFactory;
 import com.example.jingbin.designpattern.factory.gcff.XianRoujiaMoStore;
 import com.example.jingbin.designpattern.factory.gcff.XianSimpleRoujiaMoFactory;
+import com.example.jingbin.designpattern.factory.jdgc.RoujiaMoStore;
+import com.example.jingbin.designpattern.factory.jdgc.SimpleRoujiaMoFactory;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +38,8 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
     Button btFactoryMethod;
     @BindView(R.id.bt_static_factory)
     Button btStaticFactory;
+    @BindView(R.id.bt_abstract_factory)
+    Button btAbstractFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,7 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
         btStaticFactory.setOnClickListener(this);
         btSimpleFactory.setOnClickListener(this);
         btFactoryMethod.setOnClickListener(this);
+        btAbstractFactory.setOnClickListener(this);
     }
 
     @Override
@@ -70,6 +75,10 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
                 xianRoujiaMoStore.sellRoujiaMo("Suan");
                 xianRoujiaMoStore.sellRoujiaMo("Tian");
                 xianRoujiaMoStore.sellRoujiaMo("La");
+                break;
+            case R.id.bt_abstract_factory:// 4.抽象工厂模式(使用官方提供的原料)
+                XianRoujiaMoTeSeStore xianRoujiaMoTeSeStore = new XianRoujiaMoTeSeStore(new XianSimpleRoujiaMoTeSeFactory());
+                xianRoujiaMoTeSeStore.sellRoujiaMo("suan");
                 break;
             default:
                 break;

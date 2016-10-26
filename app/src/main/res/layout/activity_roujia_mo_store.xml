@@ -30,6 +30,7 @@
         android:text="3.工厂方法模式" />
 
     <Button
+        android:id="@+id/bt_abstract_factory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="4.抽象工厂模式" />

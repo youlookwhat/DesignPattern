@@ -1,26 +1,27 @@
-package com.example.jingbin.designpattern.factory.classs;
+package com.example.jingbin.designpattern.factory.cxgc;
 
 /**
  * Created by jingbin on 2016/10/23.
- * 简单工厂模式
+ * 西安 简单工厂模式:
+ * 用来西安店生产自己店里的肉夹馍
  */
 
-public class SimpleRoujiaMoFactory {
+public class XianSimpleRoujiaMoTeSeFactory {
 
     public RoujiaMo creatRoujiaMo(String type) {
         RoujiaMo roujiaMo = null;
         switch (type) {
             case "Suan":
-                roujiaMo = new ZSuanRoujiaMo();
+                roujiaMo = new XianSuanRoujiMo();
                 break;
             case "La":
-                roujiaMo = new ZLaRoujiaMo();
+//                roujiaMo = new XianKuRoujiMo();
                 break;
             case "Tian":
-                roujiaMo = new ZTianRoujiaMo();
+//                roujiaMo = new XianlaRoujiMo();
                 break;
             default:// 默认为酸肉夹馍
-                roujiaMo = new ZSuanRoujiaMo();
+                roujiaMo = new XianSuanRoujiMo();
                 break;
         }
         return roujiaMo;

@@ -1,4 +1,4 @@
-package com.example.jingbin.designpattern.factory.classs;
+package com.example.jingbin.designpattern.factory.cxgc;
 
 import android.util.Log;
 
@@ -13,8 +13,11 @@ public abstract class RoujiaMo {
     /**
      * 准备工作
      */
-    public void prepare() {
-        Log.e("---RoujiaMo:", name + ": 揉面-剁肉-完成准备工作");
+    public void prepare(RoujiaMoYLFactory roujiaMoYLFactory) {
+        Meet meet = roujiaMoYLFactory.creatMeet();
+        YuanLiao yuanLiao = roujiaMoYLFactory.creatYuanLiao();
+
+        Log.e("---RoujiaMo:", "使用官方的原料  meet + yuanLiao---" + name + ": 揉面-剁肉-完成准备工作");
     }
 
     /**

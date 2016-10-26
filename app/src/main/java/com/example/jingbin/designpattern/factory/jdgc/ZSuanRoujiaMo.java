@@ -1,4 +1,4 @@
-package com.example.jingbin.designpattern.factory.classs;
+package com.example.jingbin.designpattern.factory.jdgc;
 
 /**
  * Created by jingbin on 2016/10/22.

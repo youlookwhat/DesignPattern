@@ -1,24 +1,23 @@
-package com.example.jingbin.designpattern.factory.gcff;
+package com.example.jingbin.designpattern.factory.cxgc;
 
-import com.example.jingbin.designpattern.factory.jdgc.RoujiaMo;
 
 /**
  * Created by jingbin on 2016/10/24.
  * 西安肉夹馍店   让分店自己去卖自己口味的肉夹馍
  */
 
-public class XianRoujiaMoStore extends RoujiaMoStore {
+public class XianRoujiaMoTeSeStore extends RoujiaMoStore {
 
-    private XianSimpleRoujiaMoFactory factory;
+    private XianSimpleRoujiaMoTeSeFactory factory;
 
-    public XianRoujiaMoStore(XianSimpleRoujiaMoFactory factory) {
+    public XianRoujiaMoTeSeStore(XianSimpleRoujiaMoTeSeFactory factory) {
         this.factory = factory;
     }
 
     public RoujiaMo sellRoujiaMo(String type) {
 
         RoujiaMo roujiaMo = factory.creatRoujiaMo(type);
-        roujiaMo.prepare();
+        roujiaMo.prepare(new XianRoujiaMoYLFoctory());
         roujiaMo.fire();
         roujiaMo.pack();
         return roujiaMo;
