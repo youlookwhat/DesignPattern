@@ -1,5 +1,5 @@
 # DesignPattern
-##Java 设计模式（观察者模式、工厂模式、策略模式等）
+##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式等）
 > 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
 ###主要参照张鸿洋的CSDN博客所写：
@@ -59,7 +59,7 @@
    - (1) 不允许其他程序用new对象。
    - (2) 在该类中创建对象
    - (3) 对外提供一个可以让其他程序获取该对象的方法
-- 对比定义：
+ - 对比定义：
   - (1) 私有化该类的构造函数
   - (2) 通过new在本类中创建一个本类对象
   - (3) 定义一个公有的方法，将在该类中所创建的对象返回
@@ -69,19 +69,19 @@
   ```java
  private SingletonLanHan() {}
  private static SingletonLanHan singletonLanHanFour;
-public static SingletonLanHan getSingletonLanHanFour() {
-    if (singletonLanHanFour == null) {
-        synchronized (SingletonLanHan.class) {
-            if (singletonLanHanFour == null) {
-                singletonLanHanFour = new SingletonLanHan();
-            }
-        }
-    }
-    return singletonLanHanFour;
+ public static SingletonLanHan getSingletonLanHanFour() {
+	    if (singletonLanHanFour == null) {
+	        synchronized (SingletonLanHan.class) {
+	            if (singletonLanHanFour == null) {
+	                singletonLanHanFour = new SingletonLanHan();
+	            }
+	        }
+	    }
+	    return singletonLanHanFour;
 }
     
  ```
-	 
+ 
 - 内部类[推荐用]：[SingletonIn.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/inclass/SingletonIn.java)
 - 枚举[推荐用]：[SingletonEnum.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/enums/SingletonEnum.java)
  
