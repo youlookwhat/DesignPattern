@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import com.example.jingbin.designpattern.emtag.EmTagActivity;
 import com.example.jingbin.designpattern.factory.RoujiaMoStoreActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
+import com.example.jingbin.designpattern.singleton.SingletonActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, RoujiaMoStoreActivity.class));
                 break;
             case R.id.bt_singleton:// 单例设计模式
+                startActivity(new Intent(this, SingletonActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));
