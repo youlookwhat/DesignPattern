@@ -2,7 +2,7 @@
 ##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式等）
 > 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
-###主要参照张鸿洋的CSDN博客所写：
+###主要参照Hongyang的CSDN博客所写：
 >[http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
 
 ###一. Blog Catalogue：
@@ -13,7 +13,7 @@
 ####3. [设计模式 单例设计模式(Singleton Pattern)完全解析](http://blog.csdn.net/dmk877/article/details/50311791)
 
 -----
-###二. 简单解释
+###二. Pattern Analysis
 ####1. 观察者模式
  - 定义了对象之间的一对多的依赖，这样一来，当一个对象改变时，它的所有的依赖者都会收到通知并自动更新。
 
@@ -56,7 +56,7 @@
 ####3. 单例设计模式
  - 单例模式主要是为了避免因为创建了多个实例造成资源的浪费，且多个实例由于多次调用容易导致结果出现错误，而**使用单例模式能够保证整个应用中有且只有一个实例**。
  - 定义：只需要三步就可以保证对象的唯一性
-   - (1) 不允许其他程序用new对象。
+   - (1) 不允许其他程序用new对象
    - (2) 在该类中创建对象
    - (3) 对外提供一个可以让其他程序获取该对象的方法
  - 对比定义：
@@ -91,4 +91,5 @@
 ---
 
 ###三. Thanks
-- [CSDN:张鸿洋](http://blog.csdn.net/lmj623565791)
+- [CSDN：张鸿洋](http://blog.csdn.net/lmj623565791)
+- [CSDN：dmk877](http://blog.csdn.net/dmk877/article/details/50311791)
