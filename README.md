@@ -63,26 +63,27 @@
   - (1) 私有化该类的构造函数
   - (2) 通过new在本类中创建一个本类对象
   - (3) 定义一个公有的方法，将在该类中所创建的对象返回
-- 饿汉式[可用]：[SingletonEHan.java]()
-- 含懒汉式[双重校验锁 推荐用]：[SingletonLanHan.java]()
-	  - ```java
-	 private SingletonLanHan() {}
-	 private static SingletonLanHan singletonLanHanFour;
-    public static SingletonLanHan getSingletonLanHanFour() {
-        if (singletonLanHanFour == null) {
-            synchronized (SingletonLanHan.class) {
-                if (singletonLanHanFour == null) {
-                    singletonLanHanFour = new SingletonLanHan();
-                }
+- 饿汉式[可用]：[SingletonEHan.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/ehan/SingletonEHan.java)
+- 含懒汉式[双重校验锁 推荐用]：[SingletonLanHan.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/lanhan/SingletonLanHan.java)
+
+  ```java
+ private SingletonLanHan() {}
+ private static SingletonLanHan singletonLanHanFour;
+public static SingletonLanHan getSingletonLanHanFour() {
+    if (singletonLanHanFour == null) {
+        synchronized (SingletonLanHan.class) {
+            if (singletonLanHanFour == null) {
+                singletonLanHanFour = new SingletonLanHan();
             }
         }
-        return singletonLanHanFour;
     }
+    return singletonLanHanFour;
+}
     
-	 ```
+ ```
 	 
-- 内部类[推荐用]：[SingletonIn.java]()
-- 枚举[推荐用]：[SingletonEnum.java]()
+- 内部类[推荐用]：[SingletonIn.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/inclass/SingletonIn.java)
+- 枚举[推荐用]：[SingletonEnum.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/enums/SingletonEnum.java)
  
 --
 
