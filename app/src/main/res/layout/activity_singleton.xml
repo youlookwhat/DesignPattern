@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_singleto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,30 +9,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jingbin.designpattern.MainActivity">
+    tools:context="com.example.jingbin.designpattern.singleton.SingletonActivity">
 
     <Button
-        android:id="@+id/bt_observer"
+        android:id="@+id/bt_ehan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="观察者模式" />
+        android:text="饿汉式[可用]" />
 
     <Button
-        android:id="@+id/bt_factory"
+        android:id="@+id/bt_lanhan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="工厂模式" />
+        android:text="懒汉式[双重校验锁 推荐用]" />
 
     <Button
-        android:id="@+id/bt_singleton"
+        android:id="@+id/bt_inclass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="单例设计模式" />
+        android:text="内部类[推荐用]" />
 
     <Button
-        android:id="@+id/bt_html"
+        android:id="@+id/bt_enum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义HTML标签" />
+        android:text="枚举[推荐用]" />
 
 </LinearLayout>

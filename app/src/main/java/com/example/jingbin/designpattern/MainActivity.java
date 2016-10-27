@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.jingbin.designpattern.emtag.EmTagActivity;
 import com.example.jingbin.designpattern.factory.RoujiaMoStoreActivity;
@@ -24,6 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btFactory;
     @BindView(R.id.bt_html)
     Button btHtml;
+    @BindView(R.id.bt_singleton)
+    Button btSingleton;
+    @BindView(R.id.activity_main)
+    LinearLayout activityMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btObserver.setOnClickListener(this);
         btFactory.setOnClickListener(this);
         btHtml.setOnClickListener(this);
+        btSingleton.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_factory:// 工厂模式
                 startActivity(new Intent(this, RoujiaMoStoreActivity.class));
+                break;
+            case R.id.bt_singleton:// 单例设计模式
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));

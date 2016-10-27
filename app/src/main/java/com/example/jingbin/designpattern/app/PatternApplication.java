@@ -2,6 +2,8 @@ package com.example.jingbin.designpattern.app;
 
 import android.app.Application;
 
+import com.example.jingbin.designpattern.singleton.lanhan.SingletonLanHan;
+
 /**
  * Created by jingbin on 2016/10/22.
  */
@@ -12,7 +14,11 @@ public class PatternApplication extends Application {
 
     public static PatternApplication getInstance() {
         if (patternApplication == null) {
-            patternApplication = new PatternApplication();
+            synchronized (PatternApplication.class) {
+                if (patternApplication == null) {
+                    patternApplication = new PatternApplication();
+                }
+            }
         }
         return patternApplication;
     }
