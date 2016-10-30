@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.jingbin.designpattern.adapter.AdapterActivity;
 import com.example.jingbin.designpattern.emtag.EmTagActivity;
 import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout activityMain;
     @BindView(R.id.bt_strategy)
     Button btStrategy;
+    @BindView(R.id.bt_adapter)
+    Button btAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btHtml.setOnClickListener(this);
         btSingleton.setOnClickListener(this);
         btStrategy.setOnClickListener(this);
+        btAdapter.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_strategy:// 策略模式
                 startActivity(new Intent(this, StrategyActivity.class));
+                break;
+            case R.id.bt_adapter:// 适配器模式
+                startActivity(new Intent(this, AdapterActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));

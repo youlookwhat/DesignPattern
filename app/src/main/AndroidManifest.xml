@@ -20,7 +20,8 @@
         <activity android:name=".factory.FactoryActivity" />
         <activity android:name=".emtag.EmTagActivity" />
         <activity android:name=".singleton.SingletonActivity" />
-        <activity android:name=".strategy.StrategyActivity"/>
+        <activity android:name=".strategy.StrategyActivity" />
+        <activity android:name=".adapter.AdapterActivity" />
     </application>
 
 </manifest>

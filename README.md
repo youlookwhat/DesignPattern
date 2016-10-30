@@ -94,7 +94,7 @@
 ####3. 策略模式
 > 策略模式：定义了算法族，分别封装起来，让它们之间可相互替换，此模式让算法的变化独立于使用算法的客户。
 
- - 已创建游戏角色为例子：
+ - 以创建游戏角色为例子：
  	 - 最初的游戏角色的父类：[Role.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/strategy/old/Role.java)
  	 - 发现有重复代码后，重构后的父类：[Role.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/strategy/better/Role.java)
  - 总结：
