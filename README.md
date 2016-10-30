@@ -10,9 +10,11 @@
 
 ####2. [设计模式 工厂模式(Factory Pattern) 从卖肉夹馍说起](http://blog.csdn.net/lmj623565791/article/details/24460585)
 
-####3. [设计模式 单例设计模式(Singleton Pattern)完全解析](http://blog.csdn.net/dmk877/article/details/50311791)
+####3. [设计模式 单例设计模式(Singleton Pattern) 完全解析](http://blog.csdn.net/dmk877/article/details/50311791)
 
 ####4. [设计模式 策略模式(Strategy Pattern) 以角色游戏为背景](http://blog.csdn.net/lmj623565791/article/details/24116745)
+
+####5. [设计模式 适配器模式(Adapter Pattern) 以手机充电器为例](http://blog.csdn.net/lmj623565791/article/details/25833393)
 
 -----
 ###二. Pattern Analysis
@@ -91,7 +93,7 @@
  
 --
 
-####3. 策略模式
+####4. 策略模式
 > 策略模式：定义了算法族，分别封装起来，让它们之间可相互替换，此模式让算法的变化独立于使用算法的客户。
 
  - 以创建游戏角色为例子：
@@ -101,7 +103,28 @@
 	 - 1、封装变化（把可能变化的代码封装起来）
 	 - 2、多用组合，少用继承（我们使用组合的方式，为客户设置了算法）
 	 - 3、针对接口编程，不针对实现（对于Role类的设计完全的针对角色，和技能的实现没有关系）
- 
+
+--
+####5. 适配器模式
+> 定义：将一个类的接口转换成客户期望的另一个接口，适配器让原本接口不兼容的类可以相互合作。这个定义还好，说适配器的功能就是把一个接口转成另一个接口。
+
+ - 以充电器为实例: 手机充电器一般都是5V左右吧，咱天朝的家用交流电压220V，所以手机充电需要一个适配器（降压器）
+ - 一部手机: [Mobile.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/Mobile.java)
+ - 手机依赖一个提供5V电压的接口: [V5Power.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V5Power.java)
+ - 我们拥有的是220V家用交流电: [V220Power.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V200Power.java)
+ - **适配器，完成220V转5V的作用**：[V5PowerAdapter.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V5PowerAdapter.java)
+ - 最后测试：给手机冲个电：
+ 	
+ 	```java
+ 	Mobile mobile = new Mobile();
+   V5Power v5Power = new V5PowerAdapter(new V200Power());
+   mobile.inputPower(v5Power);
+ 	```
+
+--
+
+
+
 ---
 
 ###三. Thanks
