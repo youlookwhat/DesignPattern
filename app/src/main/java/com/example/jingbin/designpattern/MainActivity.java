@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.jingbin.designpattern.emtag.EmTagActivity;
-import com.example.jingbin.designpattern.factory.RoujiaMoStoreActivity;
+import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.singleton.SingletonActivity;
 import com.example.jingbin.designpattern.strategy.StrategyActivity;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, ObserverActivity.class));
                 break;
             case R.id.bt_factory:// 工厂模式
-                startActivity(new Intent(this, RoujiaMoStoreActivity.class));
+                startActivity(new Intent(this, FactoryActivity.class));
                 break;
             case R.id.bt_singleton:// 单例设计模式
                 startActivity(new Intent(this, SingletonActivity.class));

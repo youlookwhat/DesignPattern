@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".observer.ObserverActivity" />
-        <activity android:name=".factory.RoujiaMoStoreActivity" />
+        <activity android:name=".factory.FactoryActivity" />
         <activity android:name=".emtag.EmTagActivity" />
         <activity android:name=".singleton.SingletonActivity" />
         <activity android:name=".strategy.StrategyActivity"/>

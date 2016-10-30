@@ -32,7 +32,7 @@ import butterknife.ButterKnife;
  * 1、静态工厂模式
  * 这个最常见了，项目中的辅助类，TextUtil.isEmpty等，类+静态方法。下面开始详细介绍：略
  */
-public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnClickListener {
+public class FactoryActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.bt_simple_factory)
     Button btSimpleFactory;
