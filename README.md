@@ -6,11 +6,13 @@
 >[http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
 
 ###一. Blog Catalogue：
-####1. [设计模式 观察者模式 以微信公众服务为例](http://blog.csdn.net/lmj623565791/article/details/24179699)
+####1. [设计模式 观察者模式(Observer Pattern) 以微信公众服务为例](http://blog.csdn.net/lmj623565791/article/details/24179699)
 
-####2. [设计模式 工厂模式 从卖肉夹馍说起](http://blog.csdn.net/lmj623565791/article/details/24460585)
+####2. [设计模式 工厂模式(Factory Pattern) 从卖肉夹馍说起](http://blog.csdn.net/lmj623565791/article/details/24460585)
 
 ####3. [设计模式 单例设计模式(Singleton Pattern)完全解析](http://blog.csdn.net/dmk877/article/details/50311791)
+
+####4. [设计模式 策略模式(Strategy Pattern) 以角色游戏为背景](http://blog.csdn.net/lmj623565791/article/details/24116745)
 
 -----
 ###二. Pattern Analysis
@@ -89,6 +91,17 @@
  
 --
 
+####3. 策略模式
+> 策略模式：定义了算法族，分别封装起来，让它们之间可相互替换，此模式让算法的变化独立于使用算法的客户。
+
+ - 已创建游戏觉得为例子：
+ 	 - 之前的游戏角色的父类：[Role.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/strategy/old/Role.java)
+ 	 - 发现有重复代码后，重构后的父类：[Role.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/strategy/better/Role.java)
+ - 总结：
+	 - 1、封装变化（把可能变化的代码封装起来）
+	 - 2、多用组合，少用继承（我们使用组合的方式，为客户设置了算法）
+	 - 3、针对接口编程，不针对实现（对于Role类的设计完全的针对角色，和技能的实现没有关系）
+ 
 ---
 
 ###三. Thanks
