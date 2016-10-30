@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
+import com.example.jingbin.designpattern.app.AppConstant;
+import com.example.jingbin.designpattern.emtag.LightTagHandler;
 import com.example.jingbin.designpattern.singleton.ehan.SingletonEHan;
 import com.example.jingbin.designpattern.singleton.enums.SingletonEnum;
 import com.example.jingbin.designpattern.singleton.inclass.SingletonIn;
@@ -25,15 +28,19 @@ public class SingletonActivity extends AppCompatActivity implements View.OnClick
     Button btInclass;
     @BindView(R.id.bt_enum)
     Button btEnum;
-    @BindView(R.id.activity_singleto)
-    LinearLayout activitySingleto;
+    @BindView(R.id.activity_singleton)
+    LinearLayout activitySingleton;
+    @BindView(R.id.tv_define)
+    TextView tvDefine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleton);
         ButterKnife.bind(this);
+        setTitle("单例设计模式");
 
+        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.SINGLETON_DEFINE));
         btEhan.setOnClickListener(this);
         btLanhan.setOnClickListener(this);
         btInclass.setOnClickListener(this);

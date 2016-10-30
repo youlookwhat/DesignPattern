@@ -19,7 +19,8 @@
         <activity android:name=".observer.ObserverActivity" />
         <activity android:name=".factory.RoujiaMoStoreActivity" />
         <activity android:name=".emtag.EmTagActivity" />
-        <activity android:name=".singleton.SingletonActivity"></activity>
+        <activity android:name=".singleton.SingletonActivity" />
+        <activity android:name=".strategy.StrategyActivity"/>
     </application>
 
 </manifest>

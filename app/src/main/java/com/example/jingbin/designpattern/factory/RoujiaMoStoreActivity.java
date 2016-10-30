@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jingbin.designpattern.R;
@@ -40,6 +42,10 @@ public class RoujiaMoStoreActivity extends AppCompatActivity implements View.OnC
     Button btStaticFactory;
     @BindView(R.id.bt_abstract_factory)
     Button btAbstractFactory;
+    @BindView(R.id.tv_define)
+    TextView tvDefine;
+    @BindView(R.id.activity_roujia_mo_store)
+    LinearLayout activityRoujiaMoStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

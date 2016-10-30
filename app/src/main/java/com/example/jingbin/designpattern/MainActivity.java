@@ -11,6 +11,7 @@ import com.example.jingbin.designpattern.emtag.EmTagActivity;
 import com.example.jingbin.designpattern.factory.RoujiaMoStoreActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.singleton.SingletonActivity;
+import com.example.jingbin.designpattern.strategy.StrategyActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btSingleton;
     @BindView(R.id.activity_main)
     LinearLayout activityMain;
+    @BindView(R.id.bt_strategy)
+    Button btStrategy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btFactory.setOnClickListener(this);
         btHtml.setOnClickListener(this);
         btSingleton.setOnClickListener(this);
+        btStrategy.setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_singleton:// 单例设计模式
                 startActivity(new Intent(this, SingletonActivity.class));
+                break;
+            case R.id.bt_strategy:// 策略模式
+                startActivity(new Intent(this, StrategyActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));

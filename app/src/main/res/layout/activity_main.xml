@@ -30,6 +30,12 @@
         android:text="单例设计模式" />
 
     <Button
+        android:id="@+id/bt_strategy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="策略模式" />
+
+    <Button
         android:id="@+id/bt_html"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -2,8 +2,6 @@ package com.example.jingbin.designpattern.emtag;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -34,12 +32,7 @@ public class EmTagActivity extends AppCompatActivity {
         setTitle("自定义HTML标签");
 
         String text = "血液检测有可能诊断的<em>黄金标准</em>借记卡<em>黄金标准</em>";
-        if (text.contains("em")) {
-            text = text.replace("em", "light");
-        }
-        tvTxt.setTextSize(20);
-        tvTxt.setClickable(true);
-        tvTxt.setMovementMethod(LinkMovementMethod.getInstance());
-        tvTxt.setText(Html.fromHtml(text, null, new GameTagHandler()));
+        tvTxt.setText(LightTagHandler.fromHtml(text));
+//        tvTxt.setText(EMTagHandler.fromHtml(text));
     }
 }

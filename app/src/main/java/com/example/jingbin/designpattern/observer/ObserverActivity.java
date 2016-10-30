@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
+import com.example.jingbin.designpattern.app.AppConstant;
+import com.example.jingbin.designpattern.emtag.LightTagHandler;
 import com.example.jingbin.designpattern.observer.classs.ObjectFor3D;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser1;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser2;
@@ -34,6 +37,8 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
     Button btObserver1;
     @BindView(R.id.bt_observer2)
     Button btObserver2;
+    @BindView(R.id.tv_define)
+    TextView tvDefine;
 
     private ObjectFor3D objectFor3D;
     private ObserverUser1 observerUser1;
@@ -45,6 +50,8 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_observer);
         ButterKnife.bind(this);
         setTitle("观察者模式");
+        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.OBSERVER_DEFINE));
+
         objectFor3D = new ObjectFor3D();
         btObserver1.setOnClickListener(this);
         btObserver2.setOnClickListener(this);
