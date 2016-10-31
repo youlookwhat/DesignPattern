@@ -43,13 +43,13 @@
                 android:id="@+id/bt_zero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="开灯" />
+                android:text="开门" />
 
             <Button
                 android:id="@+id/bt_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="关电脑" />
+                android:text="关门" />
 
             <Button
                 android:id="@+id/bt_six"
@@ -69,13 +69,13 @@
                 android:id="@+id/bt_one"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="关灯" />
+                android:text="开灯" />
 
             <Button
                 android:id="@+id/bt_four"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="开门" />
+                android:text="关灯" />
 
             <Button
                 android:id="@+id/bt_seven"
@@ -101,7 +101,7 @@
                 android:id="@+id/bt_five"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="关门" />
+                android:text="关电脑" />
 
             <Button
                 android:id="@+id/bt_no"

@@ -10,11 +10,11 @@ import android.util.Log;
 public class Light {
 
     public void on() {
-        Log.e("Light:", "---打开点灯");
+        Log.e("Light:", "---打开灯");
     }
 
     public void off() {
-        Log.e("Light:", "---关闭点灯");
+        Log.e("Light:", "---关闭灯");
     }
 
 
