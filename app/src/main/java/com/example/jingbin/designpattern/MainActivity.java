@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
+import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.emtag.EmTagActivity;
 import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btStrategy;
     @BindView(R.id.bt_adapter)
     Button btAdapter;
+    @BindView(R.id.bt_command)
+    Button btCommand;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +50,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initListener() {
+        btHtml.setOnClickListener(this);
         btObserver.setOnClickListener(this);
         btFactory.setOnClickListener(this);
-        btHtml.setOnClickListener(this);
         btSingleton.setOnClickListener(this);
         btStrategy.setOnClickListener(this);
         btAdapter.setOnClickListener(this);
+        btCommand.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_adapter:// 适配器模式
                 startActivity(new Intent(this, AdapterActivity.class));
+                break;
+            case R.id.bt_command:// 命令模式
+                startActivity(new Intent(this, CommandActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));

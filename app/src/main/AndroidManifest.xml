@@ -22,6 +22,7 @@
         <activity android:name=".singleton.SingletonActivity" />
         <activity android:name=".strategy.StrategyActivity" />
         <activity android:name=".adapter.AdapterActivity" />
+        <activity android:name=".command.CommandActivity"></activity>
     </application>
 
 </manifest>

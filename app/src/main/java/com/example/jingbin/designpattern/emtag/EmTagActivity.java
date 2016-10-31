@@ -31,7 +31,8 @@ public class EmTagActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setTitle("自定义HTML标签");
 
-        String text = "血液检测有可能诊断的<em>黄金标准</em>借记卡<em>黄金标准</em>";
+        String text = "血液检测有可能诊断的<em>黄金标准</em>借记卡<em>黄金标准金标准</em>";
+//        String text = "<em>黄金标准</em>借记卡血液检测有可能诊断的";
         tvTxt.setText(LightTagHandler.fromHtml(text));
 //        tvTxt.setText(EMTagHandler.fromHtml(text));
     }

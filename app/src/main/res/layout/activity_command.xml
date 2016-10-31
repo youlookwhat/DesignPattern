@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_command"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jingbin.designpattern.command.CommandActivity">
+
+    <Button
+        android:id="@+id/bt_command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="命令模式" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="智能家居遥控器"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_zero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开灯" />
+
+            <Button
+                android:id="@+id/bt_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关电脑" />
+
+            <Button
+                android:id="@+id/bt_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一键开启" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关灯" />
+
+            <Button
+                android:id="@+id/bt_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开门" />
+
+            <Button
+                android:id="@+id/bt_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一键关闭" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开电脑" />
+
+            <Button
+                android:id="@+id/bt_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关门" />
+
+            <Button
+                android:id="@+id/bt_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="你按试试" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20dp"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_define"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
