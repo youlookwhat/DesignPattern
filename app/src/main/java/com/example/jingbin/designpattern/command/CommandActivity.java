@@ -88,12 +88,12 @@ public class CommandActivity extends AppCompatActivity implements View.OnClickLi
          * 一个控制器,假设是我们的APP界面
          */
         controlPanel = new ControlPanel();
-        controlPanel.setCommands(0, new DoorOpenCommand(door));
-        controlPanel.setCommands(3, new DoorCloseCommand(door));
-        controlPanel.setCommands(1, new LightOnCommand(light));
-        controlPanel.setCommands(4, new LightOffCommand(light));
-        controlPanel.setCommands(2, new ComputerOnCommand(computer));
-        controlPanel.setCommands(5, new ComputerOffCommand(computer));
+        controlPanel.setCommands(0, new DoorOpenCommand(door));// 开门
+        controlPanel.setCommands(3, new DoorCloseCommand(door));// 关门
+        controlPanel.setCommands(1, new LightOnCommand(light));// 开灯
+        controlPanel.setCommands(4, new LightOffCommand(light));// 关灯
+        controlPanel.setCommands(2, new ComputerOnCommand(computer));// 开电脑
+        controlPanel.setCommands(5, new ComputerOffCommand(computer));// 关电脑
 //        controlPanel.keyPressed(8);//这个没有设置命令,但不会出问题,因为我们的NoCommand的功劳
 
         QuickCommand quickOpenCommand = new QuickCommand(new Command[]{new LightOnCommand(light), new ComputerOnCommand(computer), new DoorOpenCommand(door)});
