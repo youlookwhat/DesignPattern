@@ -23,6 +23,14 @@ public class EMTagHandler implements Html.TagHandler {
     private static final String EM_TAG_EXT_START = getStartTag(EM_TAG_EXT);
     private static final String EM_TAG_EXT_END = getStartend(EM_TAG_EXT);
 
+    private static final String HTML_TAG = "html";
+    private static final String HTML_TAG_START = getStartTag(HTML_TAG);
+    private static final String HTML_TAG_END = getStartend(EM_TAG_EXT);
+
+    private static final String BODY_TAG = "body";
+    private static final String BODY_TAG_START = getStartTag(BODY_TAG);
+    private static final String BODY_TAG_END = getStartend(EM_TAG_EXT);
+
 
     private static String getStartTag(String tag) {
         return "<" + tag + ">";
@@ -35,6 +43,9 @@ public class EMTagHandler implements Html.TagHandler {
     public static Spanned fromHtml(String text) {
         text = text.replaceAll(EM_TAG_START, EM_TAG_EXT_START);
         text = text.replaceAll(EM_TAG_END, EM_TAG_EXT_END);
+        if (!text.contains(HTML_TAG_START)) {
+            text = HTML_TAG_START + BODY_TAG_START + text + BODY_TAG_END + HTML_TAG_END;
+        }
         return Html.fromHtml(text, null, new EMTagHandler());
     }
 

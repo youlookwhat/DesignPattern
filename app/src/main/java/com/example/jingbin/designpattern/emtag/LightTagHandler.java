@@ -52,9 +52,10 @@ public class LightTagHandler implements Html.TagHandler {
         }
     }
 
-    public static Spanned fromHtml(String text){
+    public static Spanned fromHtml(String text) {
         if (text.contains("em")) {
             text = text.replace("em", "light");
+            text = "<html><body>" + text + "</html></body>";//首尾不加标签,如<em>放在开头,整条文字就会变色。
         }
 //        tvTxt.setClickable(true);
 //        tvTxt.setMovementMethod(LinkMovementMethod.getInstance());

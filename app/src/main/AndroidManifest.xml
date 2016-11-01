@@ -16,13 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".observer.ObserverActivity" />
-        <activity android:name=".factory.FactoryActivity" />
-        <activity android:name=".emtag.EmTagActivity" />
-        <activity android:name=".singleton.SingletonActivity" />
-        <activity android:name=".strategy.StrategyActivity" />
-        <activity android:name=".adapter.AdapterActivity" />
-        <activity android:name=".command.CommandActivity"></activity>
+        <activity
+            android:name=".observer.ObserverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".factory.FactoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".emtag.EmTagActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".singleton.SingletonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".strategy.StrategyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".adapter.AdapterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".command.CommandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".decorator.DecoratorActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

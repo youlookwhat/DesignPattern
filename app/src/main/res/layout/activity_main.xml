@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,46 +10,58 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jingbin.designpattern.MainActivity">
 
-    <Button
-        android:id="@+id/bt_observer"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="观察者模式" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_factory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="工厂模式" />
+        <Button
+            android:id="@+id/bt_observer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="观察者模式" />
 
-    <Button
-        android:id="@+id/bt_singleton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="单例设计模式" />
+        <Button
+            android:id="@+id/bt_factory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工厂模式" />
 
-    <Button
-        android:id="@+id/bt_strategy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="策略模式" />
+        <Button
+            android:id="@+id/bt_singleton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单例设计模式" />
 
-    <Button
-        android:id="@+id/bt_adapter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="适配器模式" />
+        <Button
+            android:id="@+id/bt_strategy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="策略模式" />
 
-    <Button
-        android:id="@+id/bt_command"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="命令模式" />
+        <Button
+            android:id="@+id/bt_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="适配器模式" />
 
-    <Button
-        android:id="@+id/bt_html"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义HTML标签" />
+        <Button
+            android:id="@+id/bt_command"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="命令模式" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/bt_decorator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="装饰者模式" />
+
+        <Button
+            android:id="@+id/bt_html"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义HTML标签" />
+    </LinearLayout>
+
+</ScrollView>
