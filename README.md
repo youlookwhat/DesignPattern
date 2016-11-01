@@ -141,6 +141,7 @@
 ####6. 命令模式
 > 定义：将“请求”封装成对象，以便使用不同的请求、队列或者日志来参数化其他对象。命令模式也支持可撤销的操作。(简化: 将请求封装成对象，将动作请求者和动作执行者解耦。)
 
+ - 需求：最近智能家电很火热，假设现在有电视、电脑、电灯等家电，现在需要你做个遥控器控制所有家电的开关，要求做到每个按钮对应的功能供用户个性化，对于新买入家电要有非常强的扩展性。
  - 1、家电的API：[Door.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/command/Door.java)
  - 2、把命令封装成类： 
  	- 统一的命令接口：[Command.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/command/Command.java)
@@ -161,7 +162,8 @@
 > 装饰者模式：若要扩展功能，装饰者提供了比集成更有弹性的替代方案，动态地将责任附加到对象上。
 
  - 先简单描述下装饰者模式发挥作用的地方，当我们设计好了一个类，我们需要给这个类添加一些辅助的功能，并且不希望改变这个类的代码，这时候就是装饰者模式大展雄威的时候了。这里还体现了一个**原则：类应该对扩展开放，对修改关闭。**
-
+ 
+ - 需求：设计游戏的装备系统，基本要求，要可以计算出每种装备在镶嵌了各种宝石后的攻击力和描述：
  - 1、装备的超类：[IEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/IEquip.java)
  - 2、各个装备的实现类：
    - eg：**武器**的实现类: [ArmEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/equip/ArmEquip.java)
