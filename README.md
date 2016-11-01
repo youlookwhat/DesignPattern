@@ -1,5 +1,5 @@
 # DesignPattern
-##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式等）
+##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式）
 > 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
 ###主要参照Hongyang的CSDN博客所写：
@@ -18,6 +18,8 @@
 
 ####6. [设计模式 命令模式(Command Pattern) 管理智能家电](http://blog.csdn.net/lmj623565791/article/details/24602057)
 
+####7. [设计模式 装饰者模式(Decorator Pattern) 带你重回传奇世界](http://blog.csdn.net/lmj623565791/article/details/24269409)
+
 -----
 
 ###二. Source Code
@@ -27,6 +29,7 @@
 > - 4. [Strategy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/strategy)
 > - 5. [Adapter](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/adapter)
 > - 6. [Command](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/command)
+> - 7. [Decorator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/decorator)
 
 ----
 
@@ -135,7 +138,7 @@
  	```
 
 --
-####5. 命令模式
+####6. 命令模式
 > 定义：将“请求”封装成对象，以便使用不同的请求、队列或者日志来参数化其他对象。命令模式也支持可撤销的操作。(简化: 将请求封装成对象，将动作请求者和动作执行者解耦。)
 
  - 1、家电的API：[Door.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/command/Door.java)
@@ -152,6 +155,27 @@
   
  - 5、遥控器面板执行：[CommandActivity.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/command/CommandActivity.java)
 
+--
+
+####7. 装饰者模式
+> 装饰者模式：若要扩展功能，装饰者提供了比集成更有弹性的替代方案，动态地将责任附加到对象上。
+
+ - 先简单描述下装饰者模式发挥作用的地方，当我们设计好了一个类，我们需要给这个类添加一些辅助的功能，并且不希望改变这个类的代码，这时候就是装饰者模式大展雄威的时候了。这里还体现了一个**原则：类应该对扩展开放，对修改关闭。**
+
+ - 1、装备的超类：[IEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/IEquip.java)
+ - 2、各个装备的实现类：
+   - eg：**武器**的实现类: [ArmEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/equip/ArmEquip.java)
+- 3、装饰品的超类（装饰品也属于装备）：[IEquipDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/IEuipDecotator.java)
+- 4、装饰品的实现类：
+  - eg：**蓝宝石**的实现类(可累加): [BlueGemDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/BlueGemDecotator.java) 
+- 5、最后测试：计算攻击力和查看描述：
+
+	```java
+	Log.e("---", "一个镶嵌2颗红宝石,1颗蓝宝石的靴子: ");
+    IEquip iEquip = new RedGemDecotator(new RedGemDecotator(new BlueGemDecotator(new ShoeEquip())));
+    Log.e("---", "攻击力:" + iEquip.caculateAttack());
+    Log.e("---", "描述语:" + iEquip.description());
+	```
 
 ---
 
