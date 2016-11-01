@@ -119,6 +119,19 @@
 	 - 1、封装变化（把可能变化的代码封装起来）
 	 - 2、多用组合，少用继承（我们使用组合的方式，为客户设置了算法）
 	 - 3、针对接口编程，不针对实现（对于Role类的设计完全的针对角色，和技能的实现没有关系）
+ - 最后测试：创建角色：
+ 
+ ```java
+ RoleA roleA = new RoleA("---A");
+ roleA.setiDisplayBehavior(new DisplayYZ())
+       .setiAttackBehavior(new AttackXL())
+       .setiDefendBehavior(new DefendTMS())
+       .setiRunBehavior(new RunJCTQ());
+ roleA.display();// 样子
+ roleA.attack();// 攻击
+ roleA.run();// 逃跑
+ roleA.defend();// 防御
+ ```
 
 --
 ####5. 适配器模式
@@ -152,9 +165,15 @@
   ```java
   QuickCommand quickCloseCommand = new QuickCommand(new Command[]{new LightOffCommand(light), new ComputerOffCommand(computer), new DoorCloseCommand(door)});
   controlPanel.setCommands(6, quickOpenCommand);
+  controlPanel.keyPressed(6);
   ```
   
  - 5、遥控器面板执行：[CommandActivity.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/command/CommandActivity.java)
+ 
+ ```java
+ controlPanel.setCommands(0, new DoorOpenCommand(door));// 开门
+ controlPanel.keyPressed(0);
+ ```
 
 --
 

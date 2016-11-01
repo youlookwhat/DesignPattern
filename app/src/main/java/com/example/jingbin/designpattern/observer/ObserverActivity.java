@@ -65,8 +65,8 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
      */
     private void loadSystemObserver() {
         // 创建服务号
-        SubjectFor3d subjectFor3d = new SubjectFor3d();
-        SubjectForSSQ subjectForSSQ = new SubjectForSSQ();
+        SubjectFor3d subjectFor3d = new SubjectFor3d();//3d
+        SubjectForSSQ subjectForSSQ = new SubjectForSSQ();//双色球
 
         // 创建订阅者
         Observer1 observer1 = new Observer1();
