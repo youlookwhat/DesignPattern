@@ -64,6 +64,12 @@
             android:text="外观模式" />
 
         <Button
+            android:id="@+id/bt_template_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="模板方法模式" />
+
+        <Button
             android:id="@+id/bt_html"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

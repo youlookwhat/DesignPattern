@@ -43,6 +43,9 @@
         <activity
             android:name=".facade.FacadeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".templatemethod.TemplateMethodActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.singleton.SingletonActivity;
 import com.example.jingbin.designpattern.strategy.StrategyActivity;
+import com.example.jingbin.designpattern.templatemethod.TemplateMethodActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btDecorator;
     @BindView(R.id.bt_facade)
     Button btFacade;
+    @BindView(R.id.bt_template_method)
+    Button btTemplateMethod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initListener() {
+        btHtml.setVisibility(View.GONE);
         btHtml.setOnClickListener(this);
         btObserver.setOnClickListener(this);
         btFactory.setOnClickListener(this);
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btCommand.setOnClickListener(this);
         btDecorator.setOnClickListener(this);
         btFacade.setOnClickListener(this);
+        btTemplateMethod.setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +95,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_facade:// 外观模式
                 startActivity(new Intent(this, FacadeActivity.class));
+                break;
+            case R.id.bt_template_method:// 模板方法模式
+                startActivity(new Intent(this, TemplateMethodActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));
