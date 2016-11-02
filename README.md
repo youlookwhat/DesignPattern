@@ -1,5 +1,5 @@
 # DesignPattern
-##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式）
+##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式）
 > 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
 ###主要参照Hongyang的CSDN博客所写：
@@ -20,6 +20,12 @@
 
 ####7. [设计模式 装饰者模式(Decorator Pattern) 带你重回传奇世界](http://blog.csdn.net/lmj623565791/article/details/24269409)
 
+####8. [设计模式 外观模式(Facade Pattern) 一键电影模式](http://blog.csdn.net/lmj623565791/article/details/25837275)
+
+####9. [设计模式 模版方法模式(Template Method Pattern) 展现程序员的一天](http://blog.csdn.net/lmj623565791/article/details/26276093)
+
+####10. [设计模式 状态模式(State Pattern) 以自动售货机为例](http://blog.csdn.net/lmj623565791/article/details/26350617)
+
 -----
 
 ###二. Source Code
@@ -30,6 +36,9 @@
 > - 5. [Adapter](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/adapter)
 > - 6. [Command](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/command)
 > - 7. [Decorator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/decorator)
+> - 8. [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/dacade)
+> - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
+> - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
 
 ----
 
@@ -46,24 +55,50 @@
 ####2. 工厂模式
 简单列一下这个模式的家族：
 
-- 1、静态工厂模式
+- **1、静态工厂模式**
 
 	- 这个最常见了，项目中的辅助类，TextUtil.isEmpty等，类+静态方法。
 
-- 2、简单工厂模式（店里买肉夹馍）
-
+- **2、简单工厂模式（店里买肉夹馍）**
+	- 定义：通过专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。
 	- 根据类型直接创建肉夹馍：[SimpleRoujiaMoFactory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/jdgc/SimpleRoujiaMoFactory.java)
+	
+	```java
+	public RoujiaMo creatRoujiaMo(String type) {
+        RoujiaMo roujiaMo = null;
+        switch (type) {
+            case "Suan":
+                roujiaMo = new ZSuanRoujiaMo();
+                break;
+            case "La":
+                roujiaMo = new ZLaRoujiaMo();
+                break;
+            case "Tian":
+                roujiaMo = new ZTianRoujiaMo();
+                break;
+            default:// 默认为酸肉夹馍
+                roujiaMo = new ZSuanRoujiaMo();
+                break;
+        }
+        return roujiaMo;
+    }
+	```
 
-- 3、工厂方法模式（开分店）
+- **3、工厂方法模式（开分店）**
 	-  定义：定义一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法模式把类实例化的过程推迟到子类。
 	-  对比定义：
   	 - 1、定义了创建对象的一个接口：public abstract RouJiaMo sellRoujiaMo(String type);
  	 - 2、由子类决定实例化的类，可以看到我们的馍是子类生成的。
  - 提供创建肉夹馍店抽象方法：[RoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/RoujiaMoStore.java)
+
+	 ```java
+ 	public abstract RoujiaMo sellRoujiaMo(String type);
+	 ```
+ 
  - 具体实现抽象方法：[XianRoujiaMoStore.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianRoujiaMoStore.java)
  - 分店依旧使用简单工厂模式：[XianSimpleRoujiaMoFactory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/gcff/XianSimpleRoujiaMoFactory.java)
 
-- 4、抽象工厂模式（使用官方提供的原料）
+- **4、抽象工厂模式（使用官方提供的原料）**
 	 - 定义：提供一个接口，用于创建相关的或依赖对象的家族，而不需要明确指定具体类。
 	 - 对比定义：
 	 	- 1、提供一个接口：public interface RouJiaMoYLFactroy
@@ -71,6 +106,17 @@
 	 - 创建用于提供原料的接口工厂：[RoujiaMoYLFactory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/cxgc/RoujiaMoYLFactory.java)
 	 - 各自分店实现接口，完成原料提供：[XianRoujiaMoYLFoctory.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/cxgc/XianRoujiaMoYLFoctory.java)
 	 - 准备时，使用官方的原料：[RoujiaMo.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/factory/cxgc/RoujiaMo.java)
+	 
+	 ```java
+	 /**
+     * 准备工作
+     */
+    public void prepare(RoujiaMoYLFactory roujiaMoYLFactory) {
+        	Meet meet = roujiaMoYLFactory.creatMeet();
+        	YuanLiao yuanLiao = roujiaMoYLFactory.creatYuanLiao();
+        	Log.e("---RoujiaMo:", "使用官方的原料 ---" + name + ": 揉面-剁肉-完成准备工作 yuanLiao:"+meet+"yuanLiao:"+yuanLiao);
+    }
+	 ```
 
 --
 ####3. 单例设计模式
@@ -199,6 +245,153 @@
     Log.e("---", "攻击力:" + iEquip.caculateAttack());
     Log.e("---", "描述语:" + iEquip.description());
 	```
+
+--
+####8. 外观模式
+> 定义：提供一个统一的接口，用来访问子系统中的一群接口，外观定义了一个高层的接口，让子系统更容易使用。**其实就是为了方便客户的使用，把一群操作，封装成一个方法。**
+
+ - 需求：我比较喜欢看电影，于是买了投影仪、电脑、音响、设计了房间的灯光、买了爆米花机，然后我想看电影的时候，我需要一键观影和一键关闭。
+ - 每个设备类的开关等操作：
+  - eg: 爆米花机：[PopcornPopper.java]()
+ - 电影院类：[HomeTheaterFacade.java]()
+ 	
+ 	```java
+ 	/**
+     * 一键观影
+     */
+    public void watchMovie() {
+        computer.on();
+        light.down();
+        popcornPopper.on();
+        popcornPopper.makePopcorn();
+        projector.on();
+        projector.open();
+        player.on();
+        player.make3DListener();
+    }
+	``` 
+- 最后测试：一键观影：
+	
+	```java
+	new HomeTheaterFacade(computer, light, player, popcornPopper, projector).watchMovie();
+	```
+
+--
+
+####9. 模板方法模式
+> 定义：定义了一个算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以在不改变算法结构的情况下，重新定义算法的步骤。
+
+- 需求：简单描述一下：本公司有程序猿、测试、HR、项目经理等人，下面使用模版方法模式，记录下所有人员的上班情况
+- 模板方法模式中的三类角色
+ - 1、具体方法(Concrete Method)
+ - 2、抽象方法(Abstract Method)
+ - 3、钩子方法(Hook Method)
+- 工人的超类：[Worker.java]()
+
+	```java
+	// 具体方法
+    public final void workOneDay() {
+        Log.e("workOneDay", "-----------------work start----------------");
+        enterCompany();
+        work();
+        exitCompany();
+        Log.e("workOneDay", "-----------------work end----------------");
+    }
+    // 工作  抽象方法
+    public abstract void work();
+    // 钩子方法
+    public boolean isNeedPrintDate() {
+        return false;
+    }
+    private void exitCompany() {
+        if (isNeedPrintDate()) {
+            Log.e("exitCompany", "---" + new Date().toLocaleString() + "--->");
+        }
+        Log.e("exitCompany", name + "---离开公司");
+    }
+	```
+- 程序员实现类（可得知时间）：[ITWorker.java]()
+	
+	```java
+	/**
+     * 重写父类的此方法,使可以查看离开公司时间
+     */
+    @Override
+    public boolean isNeedPrintDate() {
+        return true;
+    }
+	```
+- 最后测试：
+	- 查看所有人员的工作情况：
+	
+		```java
+		QAWorker qaWorker = new QAWorker("测试人员");
+	    qaWorker();
+	    HRWorker hrWorker = new HRWorker("莉莉姐");
+	    hrWorker.workOneDay();
+	    ...
+		```
+	- 查看程序猿离开公司的时间:
+		
+		```java
+		ITWorker itWorker = new ITWorker("jingbin");
+       itWorker.workOneDay();
+		```
+
+--
+
+####10. 状态模式
+> 定义：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。
+
+ - 定义又开始模糊了，理一下，当对象的内部状态改变时，它的行为跟随状态的改变而改变了，看起来好像重新初始化了一个类似的。
+
+ - 需求：已自动售货机为例（有已投币、未投币等状态和投币、投币等方法）
+ - 最初实现待改进的售货机：[VendingMachine.java]()
+ - 改进后的售货机（更具有延展性）:[VendingMachineBetter.java]()
+ 
+ 	```java
+ 	// 放钱
+    public void insertMoney() {
+        currentState.insertMoney();
+    }
+    // 退钱
+    public void backMoney() {
+        currentState.backMoney();
+    }
+    // 转动曲柄
+    public void turnCrank() {
+        currentState.turnCrank();
+        if (currentState == soldState || currentState == winnerState) {
+            currentState.dispense();//两种情况会出货
+        }
+    }
+    // 出商品
+    public void dispense() {
+        Log.e("VendingMachineBetter", "---发出一件商品");
+        if (count > 0) {
+            count--;
+        }
+    }
+    // 设置对应状态
+    public void setState(State state) {
+        this.currentState = state;
+    }
+ 	```
+ 
+ - 状态的接口：[State.java]()
+ - 对应状态的接口实现类：
+ 	- eg: 中奖状态：[WinnerState.java]()
+ 	- eg: 售卖状态：[SoldState.java]()
+ 		
+- 改进后的售货机测试：
+	
+	```java
+	// 初始化售货机,且里面有3个商品
+   VendingMachineBetter machineBetter = new VendingMachineBetter(3);
+   machineBetter.insertMoney();
+   machineBetter.turnCrank();
+	```
+
 
 ---
 
