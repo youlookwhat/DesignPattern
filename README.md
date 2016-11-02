@@ -186,9 +186,11 @@
  - 1、装备的超类：[IEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/IEquip.java)
  - 2、各个装备的实现类：
    - eg：**武器**的实现类: [ArmEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/equip/ArmEquip.java)
+
 - 3、装饰品的超类（装饰品也属于装备）：[IEquipDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/IEuipDecotator.java)
 - 4、装饰品的实现类：
   - eg：**蓝宝石**的实现类(可累加): [BlueGemDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/BlueGemDecotator.java) 
+
 - 5、最后测试：计算攻击力和查看描述：
 
 	```java
