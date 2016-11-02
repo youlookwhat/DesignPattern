@@ -4,6 +4,7 @@ import android.util.Log;
 
 /**
  * Created by jingbin on 2016/11/2.
+ * 售卖状态
  */
 
 public class SoldState implements State {
