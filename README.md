@@ -36,7 +36,7 @@
 > - 5. [Adapter](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/adapter)
 > - 6. [Command](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/command)
 > - 7. [Decorator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/decorator)
-> - 8. [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/dacade)
+> - 8. [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/facade)
 > - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
 > - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
 
@@ -48,9 +48,78 @@
 
  - 对于JDK或者Andorid中都有很多地方实现了观察者模式，比如XXXView.addXXXListenter ， 当然了 XXXView.setOnXXXListener不一定是观察者模式，因为观察者模式是一种一对多的关系，对于setXXXListener是1对1的关系，应该叫回调。
 
- - 专题接口：[Subject.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Subject.java) ;  3D服务号的实现类：[ObjectFor3D.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/classs/ObjectFor3D.java)
+ - 专题接口：[Subject.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Subject.java) ;  
+
+  ```java
+  	/**
+     * 注册一个观察者
+     */
+    public void registerObserver(Observer observer);
+
+    /**
+     * 移除一个观察者
+     */
+    public void removeObserver(Observer observer);
+
+    /**
+     * 通知所有观察者
+     */
+    public void notifyObservers();
+  ```
+ 
+ - 3D服务号的实现类：[ObjectFor3D.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/classs/ObjectFor3D.java)
+
+	```java
+	 @Override
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+    @Override
+    public void removeObserver(Observer observer) {
+        int index = observers.indexOf(observer);
+        if (index >= 0) {
+            observers.remove(index);
+        }
+    }
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(msg);
+        }
+    }
+    /**
+     * 主题更新信息
+     */
+    public void setMsg(String msg) {
+        this.msg = msg;
+        notifyObservers();
+    }
+	```
+ 
  - 所有观察者需要实现此接口:[Observer.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Observer.java)
 
+ ```java
+ public ObserverUser1(Subject subject) {
+        subject.registerObserver(this);
+    }
+    @Override
+    public void update(String msg) {
+        Log.e("-----ObserverUser1 ", "得到 3D 号码:" + msg + ", 我要记下来。 ");
+    }
+ ```
+- 最后测试：[ObserverActivity.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/ObserverActivity.java)
+	
+	```java
+	// 创建服务号
+    objectFor3D = new ObjectFor3D();
+    // 创建两个订阅者
+    observerUser1 = new ObserverUser1(objectFor3D);
+    observerUser2 = new ObserverUser2(objectFor3D);
+    // 两个观察者,发送两条信息
+    objectFor3D.setMsg("201610121 的3D号为:127");
+    objectFor3D.setMsg("20161022 的3D号为:000");
+	```
+	
 --
 ####2. 工厂模式
 简单列一下这个模式的家族：
@@ -252,8 +321,8 @@
 
  - 需求：我比较喜欢看电影，于是买了投影仪、电脑、音响、设计了房间的灯光、买了爆米花机，然后我想看电影的时候，我需要一键观影和一键关闭。
  - 每个设备类的开关等操作：
-  - eg: 爆米花机：[PopcornPopper.java]()
- - 电影院类：[HomeTheaterFacade.java]()
+  - eg: 爆米花机：[PopcornPopper.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/facade/device/PopcornPopper.java)
+ - 电影院类：[HomeTheaterFacade.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/facade/theater/HomeTheaterFacade.java)
  	
  	```java
  	/**
@@ -286,7 +355,7 @@
  - 1、具体方法(Concrete Method)
  - 2、抽象方法(Abstract Method)
  - 3、钩子方法(Hook Method)
-- 工人的超类：[Worker.java]()
+- 工人的超类：[Worker.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod/Worker.java)
 
 	```java
 	// 具体方法
@@ -310,7 +379,7 @@
         Log.e("exitCompany", name + "---离开公司");
     }
 	```
-- 程序员实现类（可得知时间）：[ITWorker.java]()
+- 程序员实现类（可得知时间）：[ITWorker.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod/worker/ITWorker.java)
 	
 	```java
 	/**
@@ -346,8 +415,8 @@
  - 定义又开始模糊了，理一下，当对象的内部状态改变时，它的行为跟随状态的改变而改变了，看起来好像重新初始化了一个类似的。
 
  - 需求：已自动售货机为例（有已投币、未投币等状态和投币、投币等方法）
- - 最初实现待改进的售货机：[VendingMachine.java]()
- - 改进后的售货机（更具有延展性）:[VendingMachineBetter.java]()
+ - 最初实现待改进的售货机：[VendingMachine.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/old/VendingMachine.java)
+ - 改进后的售货机（更具有延展性）:[VendingMachineBetter.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/VendingMachineBetter.java)
  
  	```java
  	// 放钱
@@ -378,10 +447,10 @@
     }
  	```
  
- - 状态的接口：[State.java]()
+ - 状态的接口：[State.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/State.java)
  - 对应状态的接口实现类：
- 	- eg: 中奖状态：[WinnerState.java]()
- 	- eg: 售卖状态：[SoldState.java]()
+ 	- eg: 中奖状态：[WinnerState.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/WinnerState.java)
+ 	- eg: 售卖状态：[SoldState.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/SoldState.java)
  		
 - 改进后的售货机测试：
 	
