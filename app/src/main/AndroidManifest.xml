@@ -46,6 +46,9 @@
         <activity
             android:name=".templatemethod.TemplateMethodActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".state.StateActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

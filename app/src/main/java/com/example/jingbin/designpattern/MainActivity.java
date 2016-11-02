@@ -14,6 +14,7 @@ import com.example.jingbin.designpattern.facade.FacadeActivity;
 import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.singleton.SingletonActivity;
+import com.example.jingbin.designpattern.state.StateActivity;
 import com.example.jingbin.designpattern.strategy.StrategyActivity;
 import com.example.jingbin.designpattern.templatemethod.TemplateMethodActivity;
 
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btFacade;
     @BindView(R.id.bt_template_method)
     Button btTemplateMethod;
+    @BindView(R.id.bt_state)
+    Button btState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btDecorator.setOnClickListener(this);
         btFacade.setOnClickListener(this);
         btTemplateMethod.setOnClickListener(this);
+        btState.setOnClickListener(this);
     }
 
     @Override
@@ -97,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_template_method:// 模板方法模式
                 startActivity(new Intent(this, TemplateMethodActivity.class));
+                break;
+            case R.id.bt_state:// 状态模式
+                startActivity(new Intent(this, StateActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));

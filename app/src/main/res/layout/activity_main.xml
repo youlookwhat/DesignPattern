@@ -70,6 +70,12 @@
             android:text="模板方法模式" />
 
         <Button
+            android:id="@+id/bt_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="状态模式" />
+
+        <Button
             android:id="@+id/bt_html"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

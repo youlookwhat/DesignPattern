@@ -17,4 +17,5 @@ public class AppConstant {
     public final static String JDGC_FACTORY_DEFINE = "<em>简单工厂模式</em>定义：通过专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。";
     public final static String GCFF_FACTORY_DEFINE = "<em>工厂方法模式</em>定义：定义一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法模式把类实例化的过程推迟到子类。";
     public final static String CXGC_FACTORY_DEFINE = "<em>抽象工厂模式</em>定义：提供一个接口，用于创建相关的或依赖对象的家族，而不需要明确指定具体类。";
+    public final static String STATE_DEFINE = "<em>状态模式</em>定义：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。定义又开始模糊了，理一下，<b>当对象的内部状态改变时，它的行为跟随状态的改变而改变了，看起来好像重新初始化了一个类似的。</b>";
 }
