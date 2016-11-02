@@ -1,9 +1,6 @@
 package com.example.jingbin.designpattern.observer.javautil;
 
 import android.util.Log;
-import android.widget.Toast;
-
-import com.example.jingbin.designpattern.app.PatternApplication;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -26,13 +23,13 @@ public class Observer1 implements Observer {
             SubjectFor3d subjectFor3d = (SubjectFor3d) o;
             Log.e("SubjectFor3d:", "subjectFor3d's msg -- >" + subjectFor3d.getMsg());
 
-            Toast.makeText(PatternApplication.getInstance(), "subjectFor3d's msg -- >" + subjectFor3d.getMsg(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(PatternApplication.getInstance(), "subjectFor3d's msg -- >" + subjectFor3d.getMsg(), Toast.LENGTH_SHORT).show();
         }
         if (o instanceof SubjectForSSQ) {
             SubjectForSSQ subjectForSSQ = (SubjectForSSQ) o;
             Log.e("SubjectForSSQ:", "subjectForSSQ's msg -- >" + subjectForSSQ.getMsg());
 
-            Toast.makeText(PatternApplication.getInstance(), "subjectForSSQ's msg -- >" + subjectForSSQ.getMsg(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(PatternApplication.getInstance(), "subjectForSSQ's msg -- >" + subjectForSSQ.getMsg(), Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -17,6 +17,25 @@
         android:layout_height="wrap_content"
         android:text="装饰者模式" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="计算攻击力和查看描述语"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/bt_demo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_demo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="match_parent"

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
@@ -33,12 +34,16 @@ import butterknife.ButterKnife;
  */
 public class ObserverActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_observer1)
-    Button btObserver1;
-    @BindView(R.id.bt_observer2)
-    Button btObserver2;
     @BindView(R.id.tv_define)
     TextView tvDefine;
+    @BindView(R.id.bt_observer)
+    Button btObserver;
+    @BindView(R.id.bt_myself)
+    Button btMyself;
+    @BindView(R.id.bt_system)
+    Button btSystem;
+    @BindView(R.id.activity_observer)
+    LinearLayout activityObserver;
 
     private ObjectFor3D objectFor3D;
     private ObserverUser1 observerUser1;
@@ -52,19 +57,39 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
         setTitle("观察者模式");
         tvDefine.setText(LightTagHandler.fromHtml(AppConstant.OBSERVER_DEFINE));
 
-        objectFor3D = new ObjectFor3D();
-        btObserver1.setOnClickListener(this);
-        btObserver2.setOnClickListener(this);
+        btMyself.setOnClickListener(this);
+        btSystem.setOnClickListener(this);
+    }
 
-        // 系统的观察者接口
-//        loadSystemObserver();
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bt_myself:// 自己实现的3D服务号
+                // 创建服务号
+                objectFor3D = new ObjectFor3D();
+
+                // 创建两个订阅者
+                observerUser1 = new ObserverUser1(objectFor3D);
+                observerUser2 = new ObserverUser2(objectFor3D);
+
+                // 两个观察者,发送两条信息
+                objectFor3D.setMsg("201610121 的3D号为:127");
+                objectFor3D.setMsg("20161022 的3D号为:000");
+                break;
+            case R.id.bt_system://使用Java内置的类实现观察者模式
+                loadSystemObserver();
+                break;
+            default:
+                break;
+        }
     }
 
     /**
      * 系统的观察者接口
      */
     private void loadSystemObserver() {
-        // 创建服务号
+        // 创建2个服务号
         SubjectFor3d subjectFor3d = new SubjectFor3d();//3d
         SubjectForSSQ subjectForSSQ = new SubjectForSSQ();//双色球
 
@@ -79,33 +104,13 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.bt_observer1:
-                if (observerUser1 == null) {
-                    observerUser1 = new ObserverUser1(objectFor3D);
-                }
-                observerUser1.update("20161021 的3D号为:127");
-                break;
-            case R.id.bt_observer2:
-                if (observerUser2 == null) {
-                    observerUser2 = new ObserverUser2(objectFor3D);
-                }
-                observerUser2.update("20161022 的3D号为:000");
-                break;
-            default:
-                break;
-        }
-    }
-
-    @Override
     protected void onStop() {
         super.onStop();
         if (observerUser1 != null) {
-            objectFor3D.registerObserver(observerUser1);
+            objectFor3D.removeObserver(observerUser1);
         }
         if (observerUser2 != null) {
-            objectFor3D.registerObserver(observerUser2);
+            objectFor3D.removeObserver(observerUser2);
         }
         objectFor3D = null;
     }

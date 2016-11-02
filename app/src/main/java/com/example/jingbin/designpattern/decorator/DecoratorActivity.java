@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
  * 2、蓝宝石（攻击力5/颗）、黄宝石（攻击力10/颗）、红宝石（攻击力15/颗）
  * 3、每个装备可以随意镶嵌3颗
  */
-public class DecoratorActivity extends AppCompatActivity {
+public class DecoratorActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.bt_decorator)
     Button btDecorator;
@@ -39,6 +39,10 @@ public class DecoratorActivity extends AppCompatActivity {
     TextView tvDefine;
     @BindView(R.id.activity_decorator)
     LinearLayout activityDecorator;
+    @BindView(R.id.bt_demo1)
+    Button btDemo1;
+    @BindView(R.id.bt_demo2)
+    Button btDemo2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,22 +52,36 @@ public class DecoratorActivity extends AppCompatActivity {
         setTitle("装饰者模式");
 
         tvDefine.setText(EMTagHandler.fromHtml(AppConstant.DECORATOR_DEFINE));
+        btDemo1.setText("一个镶嵌2颗红宝石,1颗蓝宝石的靴子");
+        btDemo2.setText("一个镶嵌1颗红宝石,1颗蓝宝石,1颗黄宝石的戒指");
 
-        btDecorator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btDecorator.setOnClickListener(this);
+        btDemo1.setOnClickListener(this);
+        btDemo2.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bt_decorator:// 外观模式
+                break;
+
+            case R.id.bt_demo1:
                 Log.e("---", "一个镶嵌2颗红宝石,1颗蓝宝石的靴子: ");
+
                 IEquip iEquip = new RedGemDecotator(new RedGemDecotator(new BlueGemDecotator(new ShoeEquip())));
                 Log.e("---", "攻击力:" + iEquip.caculateAttack());
                 Log.e("---", "描述语:" + iEquip.description());
+                break;
 
-                Log.e("---", "---------------------");
-
+            case R.id.bt_demo2:
                 Log.e("---", "一个镶嵌1颗红宝石,1颗蓝宝石,1颗黄宝石的戒指: ");
                 RedGemDecotator redGemDecotator = new RedGemDecotator(new BlueGemDecotator(new YellowGemDecotator(new RingEquip())));
                 Log.e("---", "攻击力:" + redGemDecotator.caculateAttack());
                 Log.e("---", "描述语:" + redGemDecotator.description());
-            }
-        });
+                break;
+            default:
+                break;
+        }
     }
 }

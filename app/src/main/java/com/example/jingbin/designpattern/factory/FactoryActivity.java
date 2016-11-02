@@ -69,7 +69,7 @@ public class FactoryActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.bt_static_factory:// 1.静态工厂模式
                 Toast.makeText(this, "TextUtil.isEmpty等，类+静态方法.", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.bt_simple_factory: // 2.简单工厂模式(店里买肉夹馍)
+            case R.id.bt_simple_factory: // 2.简单工厂模式(店里卖肉夹馍)
                 RoujiaMoStore roujiaMoStore = new RoujiaMoStore(new SimpleRoujiaMoFactory());
                 roujiaMoStore.sellRoujiaMo("Suan");
                 roujiaMoStore.sellRoujiaMo("Tian");

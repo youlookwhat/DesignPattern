@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_stategy"
+    android:id="@+id/activity_facade"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,14 +9,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jingbin.designpattern.strategy.StrategyActivity">
+    tools:context="com.example.jingbin.designpattern.facade.FacadeActivity">
 
 
     <Button
-        android:id="@+id/bt_strategy"
+        android:id="@+id/bt_facade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="策略模式" />
+        android:text="外观模式" />
 
     <TextView
         android:layout_width="match_parent"
@@ -24,14 +24,30 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="设计游戏角色超类"
+        android:text="家庭影院"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/bt_strategy_text"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_open"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一键观影" />
+
+
+        <Button
+            android:id="@+id/bt_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一键关闭" />
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"

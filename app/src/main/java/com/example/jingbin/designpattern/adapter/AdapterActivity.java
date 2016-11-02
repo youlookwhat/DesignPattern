@@ -28,6 +28,8 @@ public class AdapterActivity extends AppCompatActivity {
     LinearLayout activityAdapter;
     @BindView(R.id.by_adapter)
     Button byAdapter;
+    @BindView(R.id.bt_adapter_text)
+    Button btAdapterText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +38,16 @@ public class AdapterActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setTitle("适配器模式");
         tvDefine.setText(LightTagHandler.fromHtml(AppConstant.ADAPTER_DEFINE));
+        btAdapterText.setText("将220V家用电转换为5V");
 
-        byAdapter.setOnClickListener(new View.OnClickListener() {
+        btAdapterText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /**
                  * 给手机充电
                  */
                 Mobile mobile = new Mobile();
-                V5Power v5Power = new V5PowerAdapter(new V200Power());
+                V5Power v5Power = new V5PowerAdapter(new V220Power());
                 mobile.inputPower(v5Power);
             }
         });

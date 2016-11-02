@@ -12,16 +12,32 @@
     tools:context="com.example.jingbin.designpattern.observer.ObserverActivity">
 
     <Button
-        android:id="@+id/bt_observer1"
+        android:id="@+id/bt_observer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="20161021 的3D号为:127" />
+        android:text="观察者模式" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="以微信公众服务为例"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="15sp" />
 
     <Button
-        android:id="@+id/bt_observer2"
+        android:id="@+id/bt_myself"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="20161022 的3D号为:000" />
+        android:text="自己实现的3D服务号" />
+
+    <Button
+        android:id="@+id/bt_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用Java内置的类实现观察者模式" />
 
     <View
         android:layout_width="match_parent"

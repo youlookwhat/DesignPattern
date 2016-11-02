@@ -11,29 +11,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jingbin.designpattern.factory.FactoryActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="已卖肉夹馍为例"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="15sp" />
+
     <Button
         android:id="@+id/bt_static_factory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1.静态工厂模式" />
+        android:text="1.静态工厂模式  (类+静态方法)" />
 
     <Button
         android:id="@+id/bt_simple_factory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2.简单工厂模式" />
+        android:text="2.简单工厂模式  (店里卖肉夹馍)" />
 
     <Button
         android:id="@+id/bt_factory_method"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3.工厂方法模式" />
+        android:text="3.工厂方法模式  (西安开分店)" />
 
     <Button
         android:id="@+id/bt_abstract_factory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="4.抽象工厂模式" />
+        android:text="4.抽象工厂模式  (使用官方提供的原料)" />
 
     <View
         android:layout_width="match_parent"

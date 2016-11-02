@@ -31,6 +31,8 @@ public class StrategyActivity extends AppCompatActivity {
     LinearLayout activityStategy;
     @BindView(R.id.tv_define)
     TextView tvDefine;
+    @BindView(R.id.bt_strategy_text)
+    Button btStrategyText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,10 @@ public class StrategyActivity extends AppCompatActivity {
         setTitle("策略模式");
 
         tvDefine.setText(LightTagHandler.fromHtml(AppConstant.STRATEGY_DEFINE));
-        btStrategy.setOnClickListener(new View.OnClickListener() {
+        btStrategyText.setText("创建角色A,并设定样子,攻击,逃跑,防御");
+
+
+        btStrategyText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RoleA roleA = new RoleA("---A");

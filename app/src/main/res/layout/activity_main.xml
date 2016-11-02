@@ -58,6 +58,12 @@
             android:text="装饰者模式" />
 
         <Button
+            android:id="@+id/bt_facade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="外观模式" />
+
+        <Button
             android:id="@+id/bt_html"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -40,6 +40,9 @@
         <activity
             android:name=".decorator.DecoratorActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".facade.FacadeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

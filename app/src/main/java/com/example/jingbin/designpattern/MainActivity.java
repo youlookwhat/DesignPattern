@@ -10,6 +10,7 @@ import com.example.jingbin.designpattern.adapter.AdapterActivity;
 import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.decorator.DecoratorActivity;
 import com.example.jingbin.designpattern.emtag.EmTagActivity;
+import com.example.jingbin.designpattern.facade.FacadeActivity;
 import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.singleton.SingletonActivity;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btCommand;
     @BindView(R.id.bt_decorator)
     Button btDecorator;
+    @BindView(R.id.bt_facade)
+    Button btFacade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btAdapter.setOnClickListener(this);
         btCommand.setOnClickListener(this);
         btDecorator.setOnClickListener(this);
+        btFacade.setOnClickListener(this);
     }
 
     @Override
@@ -83,6 +87,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_decorator:// 装饰者模式
                 startActivity(new Intent(this, DecoratorActivity.class));
+                break;
+            case R.id.bt_facade:// 外观模式
+                startActivity(new Intent(this, FacadeActivity.class));
                 break;
             case R.id.bt_html:// 为TextView增加自定义HTML标签
                 startActivity(new Intent(this, EmTagActivity.class));
