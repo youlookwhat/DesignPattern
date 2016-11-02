@@ -42,7 +42,12 @@
 
 ----
 
-###三. Pattern Analysis
+###三. Picture
+
+
+----
+
+###四. Pattern Analysis
 ####1. 观察者模式
  >  定义了对象之间的一对多的依赖，这样一来，当一个对象改变时，它的所有的依赖者都会收到通知并自动更新。
 
@@ -464,6 +469,6 @@
 
 ---
 
-###四. Thanks
+###五. Thanks
 - [CSDN：张鸿洋](http://blog.csdn.net/lmj623565791)
 - [CSDN：dmk877](http://blog.csdn.net/dmk877/article/details/50311791)
