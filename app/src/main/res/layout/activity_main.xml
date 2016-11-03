@@ -11,69 +11,116 @@
     tools:context="com.example.jingbin.designpattern.MainActivity">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/bt_observer"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="观察者模式" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_factory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="工厂模式" />
+            <Button
+                android:id="@+id/bt_observer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="观察者模式" />
 
-        <Button
-            android:id="@+id/bt_singleton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="单例设计模式" />
+            <Button
+                android:id="@+id/bt_factory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="工厂模式" />
 
-        <Button
-            android:id="@+id/bt_strategy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="策略模式" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/bt_adapter"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="适配器模式" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_command"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="命令模式" />
+            <Button
+                android:id="@+id/bt_singleton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="单例设计模式" />
 
-        <Button
-            android:id="@+id/bt_decorator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="装饰者模式" />
+            <Button
+                android:id="@+id/bt_strategy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="策略模式" />
 
-        <Button
-            android:id="@+id/bt_facade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="外观模式" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/bt_template_method"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="模板方法模式" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_state"
+            <Button
+                android:id="@+id/bt_adapter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="适配器模式" />
+
+            <Button
+                android:id="@+id/bt_command"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="命令模式" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="状态模式" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_decorator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="装饰者模式" />
+
+            <Button
+                android:id="@+id/bt_facade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="外观模式" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_template_method"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="模板方法模式" />
+
+            <Button
+                android:id="@+id/bt_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="状态模式" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/bt_html"
