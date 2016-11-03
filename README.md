@@ -2,6 +2,13 @@
 ##Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式）
 > 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
+设计模式分为三种类型，共23种。
+
+ - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、抽象工厂模式、建造者模式、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、原型模式。
+ - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、桥接模式、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、享元模式、代理模式。
+ - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、迭代器模式、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
+
+
 ###主要参照Hongyang的CSDN博客所写：
 >[http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
 
@@ -42,12 +49,8 @@
 
 ----
 
-###三. Picture
 
-
-----
-
-###四. Pattern Analysis
+###三 Pattern Analysis
 ####1. 观察者模式
  >  定义了对象之间的一对多的依赖，这样一来，当一个对象改变时，它的所有的依赖者都会收到通知并自动更新。
 
@@ -112,6 +115,7 @@
         Log.e("-----ObserverUser1 ", "得到 3D 号码:" + msg + ", 我要记下来。 ");
     }
  ```
+
 - 最后测试：[ObserverActivity.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/ObserverActivity.java)
 	
 	```java
@@ -469,6 +473,6 @@
 
 ---
 
-###五. Thanks
+###四. Thanks
 - [CSDN：张鸿洋](http://blog.csdn.net/lmj623565791)
 - [CSDN：dmk877](http://blog.csdn.net/dmk877/article/details/50311791)
