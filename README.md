@@ -1,5 +1,5 @@
 # DesignPattern
-###Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式）
+####Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式）
 > 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
 设计模式分为三种类型，共23种。
@@ -8,11 +8,10 @@
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、桥接模式、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、享元模式、代理模式。
  - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、迭代器模式、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
 
---
-###主要参照Hongyang的CSDN博客所写：
->[http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
+----
 
-###一. Blog Catalogue：
+
+## Blog Catalogue：
 ####1. [设计模式 观察者模式(Observer Pattern) 以微信公众服务为例](http://blog.csdn.net/lmj623565791/article/details/24179699)
 
 ####2. [设计模式 工厂模式(Factory Pattern) 从卖肉夹馍说起](http://blog.csdn.net/lmj623565791/article/details/24460585)
@@ -35,7 +34,7 @@
 
 -----
 
-###二. Source Code
+## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
 > - 2. [Factory](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/factory)
 > - 3. [Singleton](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/singleton)
@@ -50,8 +49,8 @@
 ----
 
 
-###三 Pattern Analysis
-####1. 观察者模式
+## Pattern Analysis
+###1. 观察者模式
  >  定义了对象之间的一对多的依赖，这样一来，当一个对象改变时，它的所有的依赖者都会收到通知并自动更新。
 
  - 对于JDK或者Andorid中都有很多地方实现了观察者模式，比如XXXView.addXXXListenter ， 当然了 XXXView.setOnXXXListener不一定是观察者模式，因为观察者模式是一种一对多的关系，对于setXXXListener是1对1的关系，应该叫回调。
@@ -129,8 +128,8 @@
     objectFor3D.setMsg("20161022 的3D号为:000");
 	```
 	
---
-####2. 工厂模式
+
+###2. 工厂模式
 简单列一下这个模式的家族：
 
 - **1、静态工厂模式**
@@ -196,8 +195,7 @@
     }
 	 ```
 
---
-####3. 单例设计模式
+###3. 单例设计模式
  >  单例模式主要是为了避免因为创建了多个实例造成资源的浪费，且多个实例由于多次调用容易导致结果出现错误，而**使用单例模式能够保证整个应用中有且只有一个实例**。
  
  - 定义：只需要三步就可以保证对象的唯一性
@@ -231,9 +229,8 @@
 - 内部类[推荐用]：[SingletonIn.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/inclass/SingletonIn.java)
 - 枚举[推荐用]：[SingletonEnum.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/enums/SingletonEnum.java)
  
---
 
-####4. 策略模式
+###4. 策略模式
 > 策略模式：定义了算法族，分别封装起来，让它们之间可相互替换，此模式让算法的变化独立于使用算法的客户。
 
  - 以创建游戏角色为例子：
@@ -257,8 +254,7 @@
  roleA.defend();// 防御
  ```
 
---
-####5. 适配器模式
+###5. 适配器模式
 > 定义：将一个类的接口转换成客户期望的另一个接口，适配器让原本接口不兼容的类可以相互合作。这个定义还好，说适配器的功能就是把一个接口转成另一个接口。
 
  - 以充电器为实例: 手机充电器一般都是5V左右吧，咱天朝的家用交流电压220V，所以手机充电需要一个适配器（降压器）
@@ -274,8 +270,7 @@
    mobile.inputPower(v5Power);
  	```
 
---
-####6. 命令模式
+###6. 命令模式
 > 定义：将“请求”封装成对象，以便使用不同的请求、队列或者日志来参数化其他对象。命令模式也支持可撤销的操作。(简化: 将请求封装成对象，将动作请求者和动作执行者解耦。)
 
  - 需求：最近智能家电很火热，假设现在有电视、电脑、电灯等家电，现在需要你做个遥控器控制所有家电的开关，要求做到每个按钮对应的功能供用户个性化，对于新买入家电要有非常强的扩展性。
@@ -299,9 +294,7 @@
  controlPanel.keyPressed(0);
  ```
 
---
-
-####7. 装饰者模式
+###7. 装饰者模式
 > 装饰者模式：若要扩展功能，装饰者提供了比集成更有弹性的替代方案，动态地将责任附加到对象上。
 
  - 先简单描述下装饰者模式发挥作用的地方，当我们设计好了一个类，我们需要给这个类添加一些辅助的功能，并且不希望改变这个类的代码，这时候就是装饰者模式大展雄威的时候了。这里还体现了一个**原则：类应该对扩展开放，对修改关闭。**
@@ -324,8 +317,7 @@
     Log.e("---", "描述语:" + iEquip.description());
 	```
 
---
-####8. 外观模式
+###8. 外观模式
 > 定义：提供一个统一的接口，用来访问子系统中的一群接口，外观定义了一个高层的接口，让子系统更容易使用。**其实就是为了方便客户的使用，把一群操作，封装成一个方法。**
 
  - 需求：我比较喜欢看电影，于是买了投影仪、电脑、音响、设计了房间的灯光、买了爆米花机，然后我想看电影的时候，我需要一键观影和一键关闭。
@@ -354,9 +346,7 @@
 	new HomeTheaterFacade(computer, light, player, popcornPopper, projector).watchMovie();
 	```
 
---
-
-####9. 模板方法模式
+###9. 模板方法模式
 > 定义：定义了一个算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以在不改变算法结构的情况下，重新定义算法的步骤。
 
 - 需求：简单描述一下：本公司有程序猿、测试、HR、项目经理等人，下面使用模版方法模式，记录下所有人员的上班情况
@@ -416,9 +406,7 @@
        itWorker.workOneDay();
 		```
 
---
-
-####10. 状态模式
+###10. 状态模式
 > 定义：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。
 
  - 定义又开始模糊了，理一下，当对象的内部状态改变时，它的行为跟随状态的改变而改变了，看起来好像重新初始化了一个类似的。
@@ -471,8 +459,10 @@
 	```
 
 
----
+## Reference 
+ - [http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
 
-###四. Thanks
+
+## Thanks
 - [CSDN：张鸿洋](http://blog.csdn.net/lmj623565791)
 - [CSDN：dmk877](http://blog.csdn.net/dmk877/article/details/50311791)
