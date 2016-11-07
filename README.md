@@ -32,7 +32,6 @@
 
 ####10. [设计模式 状态模式(State Pattern) 以自动售货机为例](http://blog.csdn.net/lmj623565791/article/details/26350617)
 
------
 
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
@@ -45,8 +44,6 @@
 > - 8. [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/facade)
 > - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
 > - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
-
-----
 
 
 ## Pattern Analysis
