@@ -47,8 +47,8 @@
 
 ## Project Picture
 
-<img width="180" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/project_structure.png"></img>
-<img width="250" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/click.png"></img>
+<img width="180" height=“320” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/project_structure.png"></img>
+<img width="250" height=“350” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/click.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/command.png"></img>
 
