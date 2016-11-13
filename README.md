@@ -45,6 +45,12 @@
 > - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
 > - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
 
+## Project Picture
+
+<img width="180" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/project_structure.png"></img>
+<img width="250" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/click.png"></img>
+<img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view.png"></img>
+<img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/command.png"></img>
 
 ## Pattern Analysis
 ###1. 观察者模式
