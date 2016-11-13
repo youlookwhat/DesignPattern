@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.LightTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.observer.classs.ObjectFor3D;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser1;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser2;
@@ -55,7 +55,7 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_observer);
         ButterKnife.bind(this);
         setTitle("观察者模式");
-        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.OBSERVER_DEFINE));
+        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.OBSERVER_DEFINE));
 
         btMyself.setOnClickListener(this);
         btSystem.setOnClickListener(this);

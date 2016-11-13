@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.EMTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.state.better.VendingMachineBetter;
 import com.example.jingbin.designpattern.state.old.VendingMachine;
 

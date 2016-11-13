@@ -122,11 +122,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/bt_html"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="自定义HTML标签" />
     </LinearLayout>
 
 </ScrollView>

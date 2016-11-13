@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.LightTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,7 +37,7 @@ public class AdapterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adapter);
         ButterKnife.bind(this);
         setTitle("适配器模式");
-        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.ADAPTER_DEFINE));
+        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.ADAPTER_DEFINE));
         btAdapterText.setText("将220V家用电转换为5V");
 
         btAdapterText.setOnClickListener(new View.OnClickListener() {

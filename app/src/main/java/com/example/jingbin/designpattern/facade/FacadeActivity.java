@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.EMTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.facade.device.Computer;
 import com.example.jingbin.designpattern.facade.device.Light;
 import com.example.jingbin.designpattern.facade.device.Player;

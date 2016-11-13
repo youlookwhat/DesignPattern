@@ -15,7 +15,7 @@ import com.example.jingbin.designpattern.decorator.equip.ShoeEquip;
 import com.example.jingbin.designpattern.decorator.gem.BlueGemDecotator;
 import com.example.jingbin.designpattern.decorator.gem.RedGemDecotator;
 import com.example.jingbin.designpattern.decorator.gem.YellowGemDecotator;
-import com.example.jingbin.designpattern.emtag.EMTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

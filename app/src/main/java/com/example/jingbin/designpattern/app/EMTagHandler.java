@@ -1,4 +1,4 @@
-package com.example.jingbin.designpattern.emtag;
+package com.example.jingbin.designpattern.app;
 
 import android.graphics.Color;
 import android.text.Editable;
@@ -11,6 +11,8 @@ import org.xml.sax.XMLReader;
 
 /**
  * Created by yangcai on 16/10/24.
+ * 将<em></em>标签里的文字变色
+ * 朋友所写,自己也写过,不过没有这么规范,就此借鉴过来~
  */
 
 public class EMTagHandler implements Html.TagHandler {

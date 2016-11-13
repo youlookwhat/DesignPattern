@@ -9,7 +9,6 @@ import android.widget.Button;
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
 import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.decorator.DecoratorActivity;
-import com.example.jingbin.designpattern.emtag.EmTagActivity;
 import com.example.jingbin.designpattern.facade.FacadeActivity;
 import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
@@ -30,8 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btObserver;
     @BindView(R.id.bt_factory)
     Button btFactory;
-    @BindView(R.id.bt_html)
-    Button btHtml;
     @BindView(R.id.bt_singleton)
     Button btSingleton;
     @BindView(R.id.bt_strategy)
@@ -58,8 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initListener() {
-        btHtml.setVisibility(View.GONE);
-        btHtml.setOnClickListener(this);
         btObserver.setOnClickListener(this);
         btFactory.setOnClickListener(this);
         btSingleton.setOnClickListener(this);
@@ -104,9 +99,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_state:// 状态模式
                 startActivity(new Intent(this, StateActivity.class));
-                break;
-            case R.id.bt_html:// 为TextView增加自定义HTML标签
-                startActivity(new Intent(this, EmTagActivity.class));
                 break;
             default:
                 break;

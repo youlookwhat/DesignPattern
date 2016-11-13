@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.LightTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.strategy.better.AttackXL;
 import com.example.jingbin.designpattern.strategy.better.DefendTMS;
 import com.example.jingbin.designpattern.strategy.better.DisplayYZ;
@@ -41,7 +41,7 @@ public class StrategyActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setTitle("策略模式");
 
-        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.STRATEGY_DEFINE));
+        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.STRATEGY_DEFINE));
         btStrategyText.setText("创建角色A,并设定样子,攻击,逃跑,防御");
 
 

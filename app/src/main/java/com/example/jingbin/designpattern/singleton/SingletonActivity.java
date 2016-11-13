@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.LightTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.singleton.ehan.SingletonEHan;
 import com.example.jingbin.designpattern.singleton.enums.SingletonEnum;
 import com.example.jingbin.designpattern.singleton.inclass.SingletonIn;
@@ -40,7 +40,7 @@ public class SingletonActivity extends AppCompatActivity implements View.OnClick
         ButterKnife.bind(this);
         setTitle("单例设计模式");
 
-        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.SINGLETON_DEFINE));
+        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.SINGLETON_DEFINE));
         btEhan.setOnClickListener(this);
         btLanhan.setOnClickListener(this);
         btInclass.setOnClickListener(this);

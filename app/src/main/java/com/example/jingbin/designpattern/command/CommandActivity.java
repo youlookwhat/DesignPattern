@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.LightTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -59,7 +59,7 @@ public class CommandActivity extends AppCompatActivity implements View.OnClickLi
         ButterKnife.bind(this);
         setTitle("命令模式");
 
-        tvDefine.setText(LightTagHandler.fromHtml(AppConstant.COMMAND_DEFINE));
+        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.COMMAND_DEFINE));
         setCommands();
         initListener();
     }

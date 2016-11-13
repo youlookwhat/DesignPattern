@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
-import com.example.jingbin.designpattern.emtag.EMTagHandler;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.templatemethod.worker.CTOWorker;
 import com.example.jingbin.designpattern.templatemethod.worker.HRWorker;
 import com.example.jingbin.designpattern.templatemethod.worker.ITWorker;
