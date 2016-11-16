@@ -464,6 +464,8 @@
    machineBetter.turnCrank();
 	```
 
+##Download
+ - [DesignPattern.apk](http://download.csdn.net/detail/jingbin_/9684545)
 
 ## Reference 
  - [http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
