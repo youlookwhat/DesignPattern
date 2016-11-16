@@ -15,25 +15,26 @@
 
 
 ## Blog Catalogue：
-####1. [设计模式 观察者模式(Observer Pattern) 以微信公众服务为例](http://blog.csdn.net/lmj623565791/article/details/24179699)
 
-####2. [设计模式 工厂模式(Factory Pattern) 从卖肉夹馍说起](http://blog.csdn.net/lmj623565791/article/details/24460585)
+ - 1.[ 设计模式 观察者模式(Observer Pattern) 以微信公众服务为例](http://blog.csdn.net/lmj623565791/article/details/24179699)
 
-####3. [设计模式 单例设计模式(Singleton Pattern) 完全解析](http://blog.csdn.net/dmk877/article/details/50311791)
+ - 2.[ 设计模式 工厂模式(Factory Pattern) 从卖肉夹馍说起](http://blog.csdn.net/lmj623565791/article/details/24460585)
 
-####4. [设计模式 策略模式(Strategy Pattern) 以角色游戏为背景](http://blog.csdn.net/lmj623565791/article/details/24116745)
+ - 3.[ 设计模式 单例设计模式(Singleton Pattern) 完全解析](http://blog.csdn.net/dmk877/article/details/50311791)
 
-####5. [设计模式 适配器模式(Adapter Pattern) 以手机充电器为例](http://blog.csdn.net/lmj623565791/article/details/25833393)
+ - 4.[ 设计模式 策略模式(Strategy Pattern) 以角色游戏为背景](http://blog.csdn.net/lmj623565791/article/details/24116745)
 
-####6. [设计模式 命令模式(Command Pattern) 管理智能家电](http://blog.csdn.net/lmj623565791/article/details/24602057)
+ - 5.[ 设计模式 适配器模式(Adapter Pattern) 以手机充电器为例](http://blog.csdn.net/lmj623565791/article/details/25833393)
 
-####7. [设计模式 装饰者模式(Decorator Pattern) 带你重回传奇世界](http://blog.csdn.net/lmj623565791/article/details/24269409)
+ - 6.[ 设计模式 命令模式(Command Pattern) 管理智能家电](http://blog.csdn.net/lmj623565791/article/details/24602057)
 
-####8. [设计模式 外观模式(Facade Pattern) 一键电影模式](http://blog.csdn.net/lmj623565791/article/details/25837275)
+ - 7.[ 设计模式 装饰者模式(Decorator Pattern) 带你重回传奇世界](http://blog.csdn.net/lmj623565791/article/details/24269409)
 
-####9. [设计模式 模版方法模式(Template Method Pattern) 展现程序员的一天](http://blog.csdn.net/lmj623565791/article/details/26276093)
+ - 8.[ 设计模式 外观模式(Facade Pattern) 一键电影模式](http://blog.csdn.net/lmj623565791/article/details/25837275)
 
-####10. [设计模式 状态模式(State Pattern) 以自动售货机为例](http://blog.csdn.net/lmj623565791/article/details/26350617)
+ - 9.[ 设计模式 模版方法模式(Template Method Pattern) 展现程序员的一天](http://blog.csdn.net/lmj623565791/article/details/26276093)
+
+ - 10.[ 设计模式 状态模式(State Pattern) 以自动售货机为例](http://blog.csdn.net/lmj623565791/article/details/26350617)
 
 
 ## Source Code
@@ -54,6 +55,10 @@
 <img width="320" height=“320” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/click.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/command.png"></img>
+<img width="160" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_01.png"></img>
+<img width="160" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_02.png"></img>
+<img width="160" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_03.png"></img>
+<img width="160" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_04.png"></img>
 
 ## Pattern Analysis
 ###1. 观察者模式

@@ -23,9 +23,6 @@
             android:name=".factory.FactoryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".emtag.EmTagActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".singleton.SingletonActivity"
             android:screenOrientation="portrait" />
         <activity
