@@ -272,7 +272,7 @@
  - 以充电器为实例: 手机充电器一般都是5V左右吧，咱天朝的家用交流电压220V，所以手机充电需要一个适配器（降压器）
  - 一部手机: [Mobile.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/Mobile.java)
  - 手机依赖一个提供5V电压的接口: [V5Power.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V5Power.java)
- - 我们拥有的是220V家用交流电: [V220Power.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V200Power.java)
+ - 我们拥有的是220V家用交流电: [V220Power.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V220Power.java)
  - **适配器，完成220V转5V的作用**：[V5PowerAdapter.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V5PowerAdapter.java)
  - 最后测试：给手机冲个电：
  	
