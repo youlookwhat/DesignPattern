@@ -69,7 +69,7 @@
 
  - 专题接口：[Subject.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Subject.java) ;  
 
-  ```java
+	```java
   	/**
      * 注册一个观察者
      */
@@ -84,7 +84,7 @@
      * 通知所有观察者
      */
     public void notifyObservers();
-  ```
+	```
  
  - 3D服务号的实现类：[ObjectFor3D.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/classs/ObjectFor3D.java)
 
@@ -117,7 +117,7 @@
  
  - 所有观察者需要实现此接口:[Observer.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Observer.java)
 
- ```java
+	```java
  public ObserverUser1(Subject subject) {
         subject.registerObserver(this);
     }
@@ -125,7 +125,7 @@
     public void update(String msg) {
         Log.e("-----ObserverUser1 ", "得到 3D 号码:" + msg + ", 我要记下来。 ");
     }
- ```
+	```
 
 - 最后测试：[ObserverActivity.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/ObserverActivity.java)
 	
