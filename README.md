@@ -118,12 +118,12 @@
  - 所有观察者需要实现此接口:[Observer.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Observer.java)
 
 	```java
- public ObserverUser1(Subject subject) {
+	 public ObserverUser1(Subject subject) {
         subject.registerObserver(this);
     }
     @Override
     public void update(String msg) {
-        Log.e("-----ObserverUser1 ", "得到 3D 号码:" + msg + ", 我要记下来。 ");
+        Log.e("-----ObserverUser1 ", "得到 3D 号码:" + msg + ", 我要记下来。");
     }
 	```
 
