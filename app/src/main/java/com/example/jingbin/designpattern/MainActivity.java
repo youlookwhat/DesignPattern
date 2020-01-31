@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
+import com.example.jingbin.designpattern.builder.BuilderActivity;
 import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.decorator.DecoratorActivity;
 import com.example.jingbin.designpattern.facade.FacadeActivity;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btTemplateMethod;
     @BindView(R.id.bt_state)
     Button btState;
+    @BindView(R.id.bt_builder)
+    Button btBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btFacade.setOnClickListener(this);
         btTemplateMethod.setOnClickListener(this);
         btState.setOnClickListener(this);
+        btBuilder.setOnClickListener(this);
     }
 
     @Override
@@ -99,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_state:// 状态模式
                 startActivity(new Intent(this, StateActivity.class));
+                break;
+            case R.id.bt_builder:// 建造者模式
+                startActivity(new Intent(this, BuilderActivity.class));
                 break;
             default:
                 break;

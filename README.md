@@ -1,15 +1,16 @@
 # DesignPattern
-> 参照Hongyang的CSDN博客所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
-#### Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式）
+#### Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式、建造者模式）
 
->  设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
+设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
 设计模式分为三种类型，共23种：
 
- - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、抽象工厂模式、建造者模式、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、原型模式。
+ - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、[抽象工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、建造者模式、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、原型模式。
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、桥接模式、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、享元模式、代理模式。
  - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、迭代器模式、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
+
+> 参照Hongyang的CSDN博客所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
 ----
 
@@ -35,6 +36,8 @@
  - 9.[ 设计模式 模版方法模式(Template Method Pattern) 展现程序员的一天](http://blog.csdn.net/lmj623565791/article/details/26276093)
 
  - 10.[ 设计模式 状态模式(State Pattern) 以自动售货机为例](http://blog.csdn.net/lmj623565791/article/details/26350617)
+ 
+ - 11.[ 设计模式 建造者模式(Builder Pattern) 以造汽车买汽车为例](https://wiki.jikexueyuan.com/project/java-design-pattern/builder-pattern.html)
 
 
 ## Source Code
@@ -48,6 +51,7 @@
 > - 8. [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/facade)
 > - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
 > - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
+> - 11. [Builder](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/builder)
 
 ## Project Picture
 
@@ -469,6 +473,11 @@
    machineBetter.insertMoney();
    machineBetter.turnCrank();
 	```
+
+
+### 11. 建造者模式
+> 建造模式是对象的创建模式。建造模式可以将一个产品的内部表象（internal representation）与产品的生产过程分割开来，从而可以使一个建造过程生成具有不同的内部表象的产品对象。
+
 
 ## Download
  - [DesignPattern.apk](http://download.csdn.net/detail/jingbin_/9684545)

@@ -14,6 +14,7 @@ public class AppConstant {
     public final static String DECORATOR_DEFINE = "<em>装饰者模式（Decorator Pattern）</em>定义：若要扩展功能，装饰者提供了比集成更有弹性的替代方案，动态地将责任附加到对象上。(先简单描述下装饰者模式发挥作用的地方，当我们设计好了一个类，我们需要给这个类添加一些辅助的功能，并且不希望改变这个类的代码，这时候就是装饰者模式大展雄威的时候了。这里还体现了一个原则：<b>类应该对扩展开放，对修改关闭。</b>))";
     public final static String FACADE_DEFINE = "<em>外观模式（Facade Pattern）</em>定义：提供一个统一的接口，用来访问子系统中的一群接口，外观定义了一个高层的接口，让子系统更容易使用。其实就是<b>为了方便客户的使用，把一群操作，封装成一个方法。</b>)";
     public final static String TEMPLATEMETHOD_DEFINE = "<em>模板方法模式（Template Method Pattern）</em>定义：定义了一个算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以在不改变算法结构的情况下，重新定义算法的步骤。(模版方法定义了一个算法的步骤，并且允许子类为一个或多个步骤提供实现。)";
+    public final static String BUILDER_DEFINE = "<em>建造者模式（Builder Pattern）</em>建造模式是对象的创建模式。建造模式可以将一个产品的内部表象（internal representation）与产品的生产过程分割开来，从而可以使一个建造过程生成具有不同的内部表象的产品对象。";
     public final static String JDGC_FACTORY_DEFINE = "<em>简单工厂模式</em>定义：通过专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。";
     public final static String GCFF_FACTORY_DEFINE = "<em>工厂方法模式</em>定义：定义一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法模式把类实例化的过程推迟到子类。";
     public final static String CXGC_FACTORY_DEFINE = "<em>抽象工厂模式</em>定义：提供一个接口，用于创建相关的或依赖对象的家族，而不需要明确指定具体类。";
