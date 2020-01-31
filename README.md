@@ -240,7 +240,7 @@
 		    return singletonLanHanFour;
 	}
     
-```
+ ```
 
 - 内部类[推荐用]：[SingletonIn.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/inclass/SingletonIn.java)
 - 枚举[推荐用]：[SingletonEnum.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/singleton/enums/SingletonEnum.java)
@@ -477,6 +477,50 @@
 
 ### 11. 建造者模式
 > 建造模式是对象的创建模式。建造模式可以将一个产品的内部表象（internal representation）与产品的生产过程分割开来，从而可以使一个建造过程生成具有不同的内部表象的产品对象。
+
+ - 需求：用户去汽车店购买汽车。
+ - 分析：汽车店根据每个用户的需求提取对应汽车
+ - 建造者超类：[Builder](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/builder/Builder.java)
+
+	```java
+	public abstract class Builder {
+	
+	    public abstract void setPart(String name, String type);
+	
+	    public abstract Product getProduct();
+	}
+	```
+ 
+- 建造者对应实现类：[ConcreteBuilder](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/builder/ConcreteBuilder.java)
+
+	```java
+	public class ConcreteBuilder extends Builder {
+
+	    private Product product = new Product();
+	
+	    @Override
+	    public void setPart(String name, String type) {
+	        product.setName(name);
+	        product.setType(type);
+	    }
+	
+	    @Override
+	    public Product getProduct() {
+	        return product;
+	    }
+	}
+	```
+
+- 店长[Director](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/builder/Director.java)取汽车：
+
+	```java
+	// 店长
+	Director director = new Director();
+	// 得到宝马汽车，内部实现提取宝马汽车的详情操作
+	Product product = director.getBProduct();
+	// 展示汽车信息
+	product.showProduct();
+	```
 
 
 ## Download
