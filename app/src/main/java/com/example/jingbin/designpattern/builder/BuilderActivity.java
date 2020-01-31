@@ -10,8 +10,6 @@ import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.databinding.ActivityBuilderBinding;
 
-import butterknife.ButterKnife;
-
 /**
  * @author jingbin
  * 建造者模式（Builder Pattern）
@@ -35,7 +33,6 @@ public class BuilderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityBuilderBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_builder);
-        ButterKnife.bind(this);
         setTitle("建造者模式");
 
         binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.BUILDER_DEFINE));

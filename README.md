@@ -39,6 +39,7 @@
  
  - 11.[ 设计模式 建造者模式(Builder Pattern) 以造汽车买汽车为例](https://wiki.jikexueyuan.com/project/java-design-pattern/builder-pattern.html)
 
+ - 12.[ 设计模式 原型模式(Prototype Pattern) 以获取多种形状为例](https://www.runoob.com/design-pattern/prototype-pattern.html)
 
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
@@ -52,6 +53,7 @@
 > - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
 > - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
 > - 11. [Builder](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/builder)
+> - 12. [Prototype](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/prototype)
 
 ## Project Picture
 
@@ -521,6 +523,13 @@
 	// 展示汽车信息
 	product.showProduct();
 	```
+
+### 12. 原型模式
+> 原型模式是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+
+这种模式是实现了一个原型接口，该接口用于创建当前对象的克隆。当直接创建对象的代价比较大时，则采用这种模式。例如，一个对象需要在一个高代价的数据库操作之后被创建。我们可以缓存该对象，在下一个请求时返回它的克隆，在需要的时候更新数据库，以此来减少数据库调用。
+
+
 
 
 ## Download
