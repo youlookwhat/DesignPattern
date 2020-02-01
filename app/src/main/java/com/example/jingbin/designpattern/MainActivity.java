@@ -12,6 +12,7 @@ import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.decorator.DecoratorActivity;
 import com.example.jingbin.designpattern.facade.FacadeActivity;
 import com.example.jingbin.designpattern.factory.FactoryActivity;
+import com.example.jingbin.designpattern.flyweight.FlyweightActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.prototype.PrototypeActivity;
 import com.example.jingbin.designpattern.singleton.SingletonActivity;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btBuilder;
     @BindView(R.id.bt_prototype)
     Button btPrototype;
+    @BindView(R.id.bt_flyweight)
+    Button btFlyweight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btState.setOnClickListener(this);
         btBuilder.setOnClickListener(this);
         btPrototype.setOnClickListener(this);
+        btFlyweight.setOnClickListener(this);
     }
 
     @Override
@@ -113,6 +117,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_prototype:// 原型模式
                 startActivity(new Intent(this, PrototypeActivity.class));
+                break;
+            case R.id.bt_flyweight:// 享元模式
+                startActivity(new Intent(this, FlyweightActivity.class));
                 break;
             default:
                 break;

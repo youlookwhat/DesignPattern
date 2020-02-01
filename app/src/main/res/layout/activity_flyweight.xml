@@ -10,13 +10,13 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        tools:context=".prototype.PrototypeActivity">
+        tools:context=".flyweight.FlyweightActivity">
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="原型模式" />
+            android:text="享元模式" />
 
         <TextView
             android:layout_width="match_parent"
@@ -24,27 +24,15 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="以创建多种形状为例"
+            android:text="以随机获取多种形状为例"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/bt_circle"
+            android:id="@+id/bt_get_circle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="圆形" />
-
-        <Button
-            android:id="@+id/bt_rectangle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="矩形" />
-
-        <Button
-            android:id="@+id/bt_square"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="正方形" />
+            android:text="传递颜色信息来获取实体类的对象" />
 
         <View
             android:layout_width="match_parent"
