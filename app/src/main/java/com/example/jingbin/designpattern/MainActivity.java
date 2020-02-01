@@ -74,4 +74,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        binding.recyclerView.destroy();
+    }
 }

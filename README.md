@@ -4,7 +4,7 @@
 设计模式分为三种类型，共23种：
 
  - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、[抽象工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[建造者模式](https://github.com/youlookwhat/DesignPattern#11-建造者模式)、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[原型模式](https://github.com/youlookwhat/DesignPattern#12-原型模式)。
- - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、桥接模式、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、代理模式。
+ - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、桥接模式、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
  - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、迭代器模式、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
 
 > 参照Hongyang、菜鸟教程、极客学院等文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
@@ -40,6 +40,9 @@
 
  - 13.[ 设计模式 享元模式(Flyweight Pattern) 以随机获取多种形状为例](https://www.runoob.com/design-pattern/flyweight-pattern.html)
 
+ - 14.[ 设计模式 代理模式(Proxy Pattern) 以获取磁盘中的图片为例](https://www.runoob.com/design-pattern/proxy-pattern.html)
+
+
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
 > - 2. [Factory](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/factory)
@@ -54,6 +57,7 @@
 > - 11. [Builder](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/builder)
 > - 12. [Prototype](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/prototype)
 > - 13. [Flyweight](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/flyweight)
+> - 14. [Proxy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/proxy)
 
 ## Project Picture
 
@@ -705,6 +709,73 @@
     }
 	```
 
+### 14. 代理模式
+> 一个类代表另一个类的功能。在代理模式中，我们创建具有现有对象的对象，以便向外界提供功能接口。可以理解为内存中没有这个对象就创建，有就直接返回这个对象。
+
+ - 主要解决：在直接访问对象时带来的问题，比如说：要访问的对象在远程的机器上。在面向对象系统中，有些对象由于某些原因（比如对象创建开销很大，或者某些操作需要安全控制，或者需要进程外的访问），直接访问会给使用者或者系统结构带来很多麻烦，我们可以在访问此对象时加上一个对此对象的访问层。
+
+总共分三步：
+
+ - 1、创建一个接口。
+
+	```java
+	public interface Image {
+	   void display();
+	}
+	```
+
+ - 2、创建实现接口的实体类 RealImage。对应代理类：ProxyImage。
+
+	```java
+	public class RealImage implements Image {
+	
+	    private String fileName;
+	
+	    public RealImage(String fileName) {
+	        this.fileName = fileName;
+	        loadFromDisk(fileName);
+	    }
+	
+	    private void loadFromDisk(String fileName) {
+	        Log.e("RealImage", "loading " + fileName);
+	    }
+	
+	    @Override
+	    public void display() {
+	        Log.e("RealImage", "Displaying " + fileName);
+	    }
+	}
+	```
+
+	```java
+	public class ProxyImage implements Image {
+	
+	    private String fileName;
+	    private RealImage realImage;
+	
+	    public ProxyImage(String fileName) {
+	        this.fileName = fileName;
+	    }
+	
+	    @Override
+	    public void display() {
+	        if (realImage == null) {
+	            realImage = new RealImage(fileName);
+	        }
+	        realImage.display();
+	    }
+	}
+	```
+
+ - 3、当被请求时，使用 ProxyImage 来获取 RealImage 类的对象。
+
+	```java
+	Image image = new ProxyImage("test_10mb.png");
+	// 第一次是new的，图像从磁盘加载
+   image.display();
+   // 第二次取缓存，图像不需要从磁盘加载
+   image.display();
+	```
 
 
 ## Download
