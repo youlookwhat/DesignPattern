@@ -38,7 +38,7 @@
 
  - 12.[ 设计模式 原型模式(Prototype Pattern) 以获取多种形状为例](https://www.runoob.com/design-pattern/prototype-pattern.html)
 
- - 13.[ 设计模式 享元模式(Flyweight Pattern) 以获取多种形状为例](https://www.runoob.com/design-pattern/flyweight-pattern.html)
+ - 13.[ 设计模式 享元模式(Flyweight Pattern) 以随机获取多种形状为例](https://www.runoob.com/design-pattern/flyweight-pattern.html)
 
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
