@@ -18,7 +18,7 @@ import com.example.jingbin.designpattern.databinding.ActivityFlyweightBinding;
  */
 public class FlyweightActivity extends AppCompatActivity {
 
-    private static final String color[] = {"Red", "Green", "Blue", "Yellow", "White", "Black"};
+    private static final String color[] = {"Red", "Blue", "Yellow", "White", "Black"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
