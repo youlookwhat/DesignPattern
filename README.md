@@ -1,7 +1,4 @@
 # DesignPattern
-
-#### Java 设计模式（观察者模式、工厂模式、单例模式、策略模式、命令模式、装饰者模式、外观模式、模板方法模式、状态模式、建造者模式、原型模式）
-
 设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。
 
 设计模式分为三种类型，共23种：
@@ -531,10 +528,94 @@
 
 共分四步：
 
-- 1、创建一个实现了 Cloneable 接口的抽象类。Shape（implements Cloneable）
-- 2、创建扩展了上面抽象类的实体类。Circle Rectangle Square
-- 3、创建一个类，从数据库获取实体类，并把它们存储在一个 Hashtable 中。ShapeCache
+- 1、创建一个实现了 Cloneable 接口的抽象类。[Shape](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/prototype/Shape.java)（implements Cloneable）
+
+	```java
+	public abstract class Shape implements Cloneable {
+	
+	    private String id;
+	    protected String type;
+	
+	    public abstract void draw();
+	
+	    public String getId() {
+	        return id;
+	    }
+	
+	    public void setId(String id) {
+	        this.id = id;
+	    }
+	
+	    @Override
+	    public Object clone() {
+	        Object object = null;
+	        try {
+	            object = super.clone();
+	        } catch (CloneNotSupportedException e) {
+	            Log.e("--", e.getMessage());
+	        }
+	        return object;
+	    }
+	}
+	```
+
+- 2、创建扩展了上面抽象类的实体类。[Circle](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/prototype/shapeimpl/Circle.java)、[Rectangle](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/prototype/shapeimpl/Rectangle.java)、[Square](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/prototype/shapeimpl/Square.java)
+
+	```java
+	public class Circle extends Shape {
+	
+	    public Circle() {
+	        type = "Circle";
+	    }
+	
+	    @Override
+	    public void draw() {
+	        Log.e("---", "Inside Circle::draw() method.");
+	    }
+	    
+	}
+	```
+
+- 3、创建一个类，从数据库获取实体类，并把它们存储在一个 Hashtable 中。[ShapeCache](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/prototype/ShapeCache.java)
+
+	```java
+	public class ShapeCache {
+	
+	    private static Hashtable<String, Shape> shapeMap = new Hashtable<String, Shape>();
+	
+	    public static Shape getShape(String shapeId) {
+	        Shape shapeCache = shapeMap.get(shapeId);
+	        return (Shape) shapeCache.clone();
+	    }
+	
+	    // 对每种形状都运行数据库查询，并创建该形状
+	    // shapeMap.put(shapeKey, shape);
+	    // 例如，我们要添加三种形状
+	    public static void loadCache() {
+	        Circle circle = new Circle();
+	        circle.setId("1");
+	        shapeMap.put(circle.getId(), circle);
+	
+	        Rectangle rectangle = new Rectangle();
+	        rectangle.setId("2");
+	        shapeMap.put(rectangle.getId(), rectangle);
+	
+	        Square square = new Square();
+	        square.setId("3");
+	        shapeMap.put(square.getId(), square);
+	    }
+	}
+	```
+
 - 4、使用 ShapeCache 类来获取存储在 Hashtable 中的形状的克隆。
+
+	```java
+	// 使用 ShapeCache 类来获取存储在 Hashtable 中的形状的克隆。
+   ShapeCache.loadCache();
+   Shape shapeCache1 = ShapeCache.getShape("1");
+   Shape shapeCache2 = ShapeCache.getShape("2");
+   Shape shapeCache3 = ShapeCache.getShape("3");
+	```
 
 
 ## Download

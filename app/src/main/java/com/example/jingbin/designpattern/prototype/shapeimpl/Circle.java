@@ -19,5 +19,4 @@ public class Circle extends Shape {
         Log.e("---", "Inside Circle::draw() method.");
     }
 
-
 }
