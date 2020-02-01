@@ -61,6 +61,9 @@
         <activity
             android:name=".proxy.ProxyActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".bridge.BridgeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

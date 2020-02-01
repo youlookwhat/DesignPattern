@@ -8,6 +8,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.view.View;
 
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
+import com.example.jingbin.designpattern.bridge.BridgeActivity;
 import com.example.jingbin.designpattern.builder.BuilderActivity;
 import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.databinding.ActivityMainBinding;
@@ -40,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
             "策略模式", "适配器模式", "命令模式",
             "装饰者模式", "外观模式", "模板方法模式",
             "状态模式", "建造者模式", "原型模式",
-            "享元模式", "代理模式"
+            "享元模式", "代理模式", "桥接模式"
     };
     private Class[] classes = {
             ObserverActivity.class, FactoryActivity.class, SingletonActivity.class,
             StrategyActivity.class, AdapterActivity.class, CommandActivity.class,
             DecoratorActivity.class, FacadeActivity.class, TemplateMethodActivity.class,
             StateActivity.class, BuilderActivity.class, PrototypeActivity.class,
-            FlyweightActivity.class, ProxyActivity.class
+            FlyweightActivity.class, ProxyActivity.class, BridgeActivity.class
     };
 
 

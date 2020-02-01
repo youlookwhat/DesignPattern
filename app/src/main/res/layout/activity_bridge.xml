@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".bridge.BridgeActivity">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="桥接模式" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="以画不同颜色的圆为例"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/bt_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="画红圆" />
+
+        <Button
+            android:id="@+id/bt_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="画绿圆" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_define"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>
