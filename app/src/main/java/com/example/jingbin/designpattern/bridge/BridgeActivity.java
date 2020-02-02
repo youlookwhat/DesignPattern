@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.jingbin.designpattern.R;
+import com.example.jingbin.designpattern.app.AppConstant;
+import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.databinding.ActivityBridgeBinding;
 
 /**
@@ -21,6 +23,8 @@ public class BridgeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityBridgeBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_bridge);
+        setTitle("桥接模式");
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.BRIDGE_DEFINE));
 
         binding.btRed.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,7 +4,7 @@
 设计模式分为三种类型，共23种：
 
  - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、[抽象工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[建造者模式](https://github.com/youlookwhat/DesignPattern#11-建造者模式)、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[原型模式](https://github.com/youlookwhat/DesignPattern#12-原型模式)。
- - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
+ - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、[组合模式](https://github.com/youlookwhat/DesignPattern#16-组合模式)、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
  - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、迭代器模式、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
 
 > 参照Hongyang、菜鸟教程、极客学院等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
@@ -44,6 +44,8 @@
 
  - 15.[ 设计模式 桥接模式(Bridge Pattern) 以画不同颜色的圆为例](https://www.runoob.com/design-pattern/bridge-pattern.html)
 
+ - 16.[ 设计模式 组合模式(Composite Pattern) 以创建和打印员工的层次结构为例](https://www.runoob.com/design-pattern/composite-pattern.html)
+
 
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
@@ -61,6 +63,7 @@
 > - 13. [Flyweight](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/flyweight)
 > - 14. [Proxy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/proxy)
 > - 15. [Bridge](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/bridge)
+> - 16. [Composite](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/composite) 
 
 ## Project Picture
 
@@ -853,6 +856,94 @@
     // 画绿圆
     Circle circle2 = new Circle(20, 20, 100, new GreenCircle());
     circle2.draw();
+	```
+
+### 16. 组合模式
+> 又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。
+
+ - 主要解决：它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。
+
+ - 1、创建 Employee 类，该类带有 Employee 对象的列表。
+
+	```java
+	public class Employee {
+	
+	    private String name;
+	    // 部门
+	    private String dept;
+	    // 工资
+	    private int salary;
+	    // 员工 list
+	    private List<Employee> subordinates;
+	
+	    public Employee(String name, String dept, int salary) {
+	        this.name = name;
+	        this.dept = dept;
+	        this.salary = salary;
+	        this.subordinates = new ArrayList<Employee>();
+	    }
+	
+	    public void add(Employee e) {
+	        subordinates.add(e);
+	    }
+	
+	    public void remove(Employee e) {
+	        subordinates.remove(e);
+	    }
+	
+	    public List<Employee> getSubordinates() {
+	        return subordinates;
+	    }
+	
+	    @Override
+	    public String toString() {
+	        return "Employee{" +
+	                "name='" + name + '\'' +
+	                ", dept='" + dept + '\'' +
+	                ", salary=" + salary +
+	                ", subordinates=" + subordinates +
+	                '}';
+	    }
+	}
+	```
+
+ - 2.使用 Employee 类来创建和打印员工的层次结构。
+
+	```java
+    final Employee ceo = new Employee("John", "CEO", 30000);
+
+    Employee headSales = new Employee("Robert", "Head sales", 20000);
+
+    Employee headMarketing = new Employee("Michel", "Head Marketing", 20000);
+
+    Employee clerk1 = new Employee("Laura", "Marketing", 10000);
+    Employee clerk2 = new Employee("Bob", "Marketing", 10000);
+
+    Employee salesExecutive1 = new Employee("Richard", "Sales", 10000);
+    Employee salesExecutive2 = new Employee("Rob", "Sales", 10000);
+
+    ceo.add(headSales);
+    ceo.add(headMarketing);
+
+    headSales.add(salesExecutive1);
+    headSales.add(salesExecutive2);
+
+    headMarketing.add(clerk1);
+    headMarketing.add(clerk2);
+    
+    Log.e("---", ceo.toString());
+    
+    // 打印
+    /*
+     * Employee{name='John', dept='CEO', salary=30000,
+     * subordinates=[Employee{name='Robert', dept='Head sales', salary=20000,
+     * subordinates=[
+     * Employee{name='Richard', dept='Sales', salary=10000, subordinates=[]},
+     * Employee{name='Rob', dept='Sales', salary=10000, subordinates=[]}]},
+     * Employee{name='Michel', dept='Head Marketing', salary=20000,
+     * subordinates=[Employee{name='Laura', dept='Marketing', salary=10000, subordinates=[]},
+     * Employee{name='Bob', dept='Marketing', salary=10000, subordinates=[]}]}]}
+     */
 	```
 
 ## Download

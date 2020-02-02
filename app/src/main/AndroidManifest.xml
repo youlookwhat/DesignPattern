@@ -64,6 +64,9 @@
         <activity
             android:name=".bridge.BridgeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".composite.CompositeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

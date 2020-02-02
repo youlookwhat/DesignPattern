@@ -11,6 +11,6 @@ public class RedCircle implements DrawAPI {
     @Override
     public void drawCircle(int radius, int x, int y) {
         Log.e("---", "Drawing Circle[ color: red, radius: "
-                + radius + ", x: " + x + ", " + y + "]");
+                + radius + ", x: " + x + ", y: " + y + "]");
     }
 }
