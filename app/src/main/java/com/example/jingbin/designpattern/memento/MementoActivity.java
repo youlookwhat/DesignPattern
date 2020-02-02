@@ -54,6 +54,12 @@ public class MementoActivity extends AppCompatActivity {
                 Log.e("---", "First Saved State: " + fromMemento1);
                 String fromMemento2 = originator.getStateFromMemento(careTaker.get(1));
                 Log.e("---", "Second Saved State: " + fromMemento2);
+
+                /*
+                 * /---: Current State: State #4
+                 * /---: First Saved State: State #2
+                 * /---: Second Saved State: State #3
+                 */
             }
         });
 
