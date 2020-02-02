@@ -73,6 +73,9 @@
         <activity
             android:name=".mediator.MediatorActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".memento.MementoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

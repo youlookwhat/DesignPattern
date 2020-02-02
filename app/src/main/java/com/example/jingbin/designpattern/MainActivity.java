@@ -19,6 +19,7 @@ import com.example.jingbin.designpattern.factory.FactoryActivity;
 import com.example.jingbin.designpattern.flyweight.FlyweightActivity;
 import com.example.jingbin.designpattern.iterator.IteratorActivity;
 import com.example.jingbin.designpattern.mediator.MediatorActivity;
+import com.example.jingbin.designpattern.memento.MementoActivity;
 import com.example.jingbin.designpattern.observer.ObserverActivity;
 import com.example.jingbin.designpattern.prototype.PrototypeActivity;
 import com.example.jingbin.designpattern.proxy.ProxyActivity;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
             "装饰者模式", "外观模式", "模板方法模式",
             "状态模式", "建造者模式", "原型模式",
             "享元模式", "代理模式", "桥接模式",
-            "组合模式", "迭代器模式", "中介者模式"
+            "组合模式", "迭代器模式", "中介者模式",
+            "备忘录模式"
     };
     private Class[] classes = {
             ObserverActivity.class, FactoryActivity.class, SingletonActivity.class,
@@ -53,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
             DecoratorActivity.class, FacadeActivity.class, TemplateMethodActivity.class,
             StateActivity.class, BuilderActivity.class, PrototypeActivity.class,
             FlyweightActivity.class, ProxyActivity.class, BridgeActivity.class,
-            CompositeActivity.class, IteratorActivity.class, MediatorActivity.class
+            CompositeActivity.class, IteratorActivity.class, MediatorActivity.class,
+            MementoActivity.class
     };
 
 
