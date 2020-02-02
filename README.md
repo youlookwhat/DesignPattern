@@ -46,7 +46,7 @@
 
  - 16.[ 设计模式 组合模式(Composite Pattern) 以创建和打印员工的层次结构为例](https://www.runoob.com/design-pattern/composite-pattern.html)
 
- - 17.[ 设计模式 迭代器模式(Iterator Pattern) 以创建和打印员工的层次结构为例](https://www.runoob.com/design-pattern/iterator-pattern.html)
+ - 17.[ 设计模式 迭代器模式(Iterator Pattern) 以使用迭代器打印名字为例](https://www.runoob.com/design-pattern/iterator-pattern.html)
 
 
 ## Source Code

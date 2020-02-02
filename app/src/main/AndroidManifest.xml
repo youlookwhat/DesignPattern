@@ -70,6 +70,9 @@
         <activity
             android:name=".iterator.IteratorActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediator.MediatorActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

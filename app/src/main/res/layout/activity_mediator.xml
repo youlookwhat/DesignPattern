@@ -10,13 +10,13 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        tools:context=".composite.CompositeActivity">
+        tools:context=".mediator.MediatorActivity">
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="组合模式" />
+            android:text="中介者模式" />
 
         <TextView
             android:layout_width="match_parent"
@@ -24,29 +24,23 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="以创建和打印员工的层次结构为例"
+            android:text="以公共聊天室为例"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/bt_ceo"
+            android:id="@+id/bt_user1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CEO"
+            android:text="用户jingbin发消息"
             android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/bt_sales"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Head Sales(销售主管)"
-            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/bt_marketing"
+            android:id="@+id/bt_user2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Head Marketing(市场营销负责人)"
+            android:text="用户youlookwhat发消息"
             android:textAllCaps="false" />
 
         <View
