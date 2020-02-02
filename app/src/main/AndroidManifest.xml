@@ -67,6 +67,9 @@
         <activity
             android:name=".composite.CompositeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".iterator.IteratorActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
