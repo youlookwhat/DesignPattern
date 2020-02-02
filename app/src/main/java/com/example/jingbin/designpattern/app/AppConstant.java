@@ -27,4 +27,5 @@ public class AppConstant {
     public final static String ITERATOR_DEFINE = "<em>迭代器模式（Iterator Pattern）</em>是 Java 和 .Net 编程环境中非常常用的设计模式。这种模式用于顺序访问集合对象的元素，不需要知道集合对象的底层表示。迭代器模式属于行为型模式。<b>主要解决：不同的方式来遍历整个整合对象。</b>";
     public final static String MEDIATOR_DEFINE = "<em>中介者模式（Mediator Pattern）</em>是用来降低多个对象和类之间的通信复杂性。这种模式提供了一个中介类，该类通常处理不同类之间的通信，并支持松耦合，使代码易于维护。中介者模式属于行为型模式。";
     public final static String MEMENTO_DEFINE = "<em>备忘录模式（Memento Pattern）</em>保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。<b>主要解决：所谓备忘录模式就是在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存的状态。</b>";
+    public final static String INTERPRETER_DEFINE = "<em>解释器模式（Interpreter Pattern）</em>提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。";
 }
