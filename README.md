@@ -7,7 +7,7 @@
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、组合模式、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
  - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、迭代器模式、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
 
-> 参照Hongyang、菜鸟教程、极客学院等文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
+> 参照Hongyang、菜鸟教程、极客学院等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
 ----
 
@@ -782,6 +782,78 @@
 
 ### 15. 桥接模式
 > 桥接（Bridge）是用于把抽象化与实现化解耦，使得二者可以独立变化。这种类型的设计模式属于结构型模式，它通过提供抽象化和实现化之间的桥接结构，来实现二者的解耦。
+
+ - 主要解决：在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。
+
+实现共分五步：
+
+ - 1、创建桥接实现接口。
+
+	```java
+	public interface DrawAPI {
+	    void drawCircle(int radius, int x, int y);
+	}
+	```
+
+ - 2、创建实现了 DrawAPI 接口的实体桥接实现类。[RedCircle](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/bridge/RedCircle.java)、[GreenCircle](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/bridge/GreenCircle.java)
+
+	```java
+	public class RedCircle implements DrawAPI {
+	
+	    @Override
+	    public void drawCircle(int radius, int x, int y) {
+	        Log.e("---", "Drawing Circle[ color: red, radius: "
+	                + radius + ", x: " + x + ", " + y + "]");
+	    }
+	}
+	```
+
+ - 3、使用 DrawAPI 接口创建抽象类 [Shape](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/bridge/Shape.java)。
+
+	```java
+	public abstract class Shape {
+	
+	    protected DrawAPI drawAPI;
+	
+	    protected Shape(DrawAPI drawAPI) {
+	        this.drawAPI = drawAPI;
+	    }
+	
+	    public abstract void draw();
+	}
+	```
+
+ - 4、创建实现了 Shape 接口的实体类。
+
+	```java
+	public class Circle extends Shape {
+	
+	    private int x, y, radius;
+	
+	    protected Circle(int x, int y, int radius, DrawAPI drawAPI) {
+	        super(drawAPI);
+	        this.x = x;
+	        this.y = y;
+	        this.radius = radius;
+	    }
+	
+	    @Override
+	    public void draw() {
+	        drawAPI.drawCircle(radius, x, y);
+	    }
+	}
+	```
+
+ - 5、使用 Shape 和 DrawAPI 类画出不同颜色的圆。
+
+	```java
+    // 画红圆
+    Circle circle = new Circle(10, 10, 100, new RedCircle());s
+    circle.draw();
+    // 画绿圆
+    Circle circle2 = new Circle(20, 20, 100, new GreenCircle());
+    circle2.draw();
+	```
 
 ## Download
  - [DesignPattern.apk](http://download.csdn.net/detail/jingbin_/9684545)
