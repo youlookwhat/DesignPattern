@@ -5,7 +5,7 @@
 
  - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、[抽象工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[建造者模式](https://github.com/youlookwhat/DesignPattern#11-建造者模式)、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[原型模式](https://github.com/youlookwhat/DesignPattern#12-原型模式)。
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、[组合模式](https://github.com/youlookwhat/DesignPattern#16-组合模式)、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
- - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、中介者模式、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
+ - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、[中介者模式](https://github.com/youlookwhat/DesignPattern#18-中介者模式)、备忘录模式、解释器模式、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
 
 > 参照Hongyang、菜鸟教程、极客学院等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
@@ -48,6 +48,8 @@
 
  - 17.[ 设计模式 迭代器模式(Iterator Pattern) 以使用迭代器打印名字为例](https://www.runoob.com/design-pattern/iterator-pattern.html)
 
+ - 18.[ 设计模式 中介者模式(Mediator Pattern) 以公共聊天室为例](https://www.runoob.com/design-pattern/mediator-pattern.html)
+
 
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
@@ -67,6 +69,7 @@
 > - 15. [Bridge](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/bridge)
 > - 16. [Composite](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/composite)
 > - 17. [Iterator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/iterator)
+> - 18. [Mediator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/mediator)
 
 ## Project Picture
 
@@ -638,7 +641,7 @@
 
 享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。我们将通过创建 5 个对象来画出 20 个分布于不同位置的圆来演示这种模式。由于只有 5 种可用的颜色，所以 color 属性被用来检查现有的 Circle 对象。 
 
- - 主要解决：在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。
+ - **主要解决**：在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。
 
 共分四步：
 
@@ -721,7 +724,7 @@
 ### 14. 代理模式
 > 一个类代表另一个类的功能。在代理模式中，我们创建具有现有对象的对象，以便向外界提供功能接口。可以理解为内存中没有这个对象就创建，有就直接返回这个对象。
 
- - 主要解决：在直接访问对象时带来的问题，比如说：要访问的对象在远程的机器上。在面向对象系统中，有些对象由于某些原因（比如对象创建开销很大，或者某些操作需要安全控制，或者需要进程外的访问），直接访问会给使用者或者系统结构带来很多麻烦，我们可以在访问此对象时加上一个对此对象的访问层。
+ - **主要解决**：在直接访问对象时带来的问题，比如说：要访问的对象在远程的机器上。在面向对象系统中，有些对象由于某些原因（比如对象创建开销很大，或者某些操作需要安全控制，或者需要进程外的访问），直接访问会给使用者或者系统结构带来很多麻烦，我们可以在访问此对象时加上一个对此对象的访问层。
 
 总共分三步：
 
@@ -789,7 +792,7 @@
 ### 15. 桥接模式
 > 桥接（Bridge）是用于把抽象化与实现化解耦，使得二者可以独立变化。这种类型的设计模式属于结构型模式，它通过提供抽象化和实现化之间的桥接结构，来实现二者的解耦。
 
- - 主要解决：在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。
+ - **主要解决**：在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。
 
 实现共分五步：
 
@@ -864,7 +867,7 @@
 ### 16. 组合模式
 > 又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。
 
- - 主要解决：它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。
+ - **主要解决**：它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。
 
  - 1、创建 Employee 类，该类带有 Employee 对象的列表。
 
@@ -952,7 +955,7 @@
 ### 17. 迭代器模式
 >  Java 和 .Net 编程环境中非常常用的设计模式。这种模式用于顺序访问集合对象的元素，不需要知道集合对象的底层表示。迭代器模式属于行为型模式。
 
- - 主要解决：不同的方式来遍历整个整合对象。
+ - **主要解决**：不同的方式来遍历整个整合对象。
 
 总共分三步：
  
@@ -1023,6 +1026,61 @@
          * /---: lookthis
          */
     }
+	```
+
+### 18. 中介者模式
+> 用来降低多个对象和类之间的通信复杂性。这种模式提供了一个中介类，该类通常处理不同类之间的通信，并支持松耦合，使代码易于维护。中介者模式属于行为型模式。
+
+ - **主要解决**：对象与对象之间存在大量的关联关系，这样势必会导致系统的结构变得很复杂，同时若一个对象发生改变，我们也需要跟踪与之相关联的对象，同时做出相应的处理。
+
+最小单元示例步骤：
+
+ - 1、创建中介类。
+
+	```java
+	public class CharRoom {
+	    public static void showMessage(User user, String message) {
+	        Log.e("---", new Date().toString()
+	                + " [" + user.getName() + "] : " + message);
+	    }
+	}
+	```
+
+ - 2、创建 user 类。
+
+	```java
+	public class User {
+	    private String name;
+	
+	    public User(String name) {
+	        this.name = name;
+	    }
+	
+	    public String getName() {
+	        return name;
+	    }
+	
+	    public void setName(String name) {
+	        this.name = name;
+	    }
+	
+	    public void sendMessage(String message) {
+	    	  // 使用中介类
+	        CharRoom.showMessage(this, message);
+	    }
+	}
+	```
+
+ - 3、使用 User 对象来显示他们之间的通信。
+
+	```java
+        User jingbin = new User("jingbin");
+        jingbin.sendMessage("Hi~ youlookwhat!");
+        //---: Sun Feb 02 08:11:47 GMT+00:00 2020 [jingbin] : Hi~ youlookwhat!
+        
+        User jingbin = new User("youlookwhat");
+        jingbin.sendMessage("Hi~ jingbin!");
+        //---: Sun Feb 02 08:11:49 GMT+00:00 2020 [youlookwhat] : Hi~ jingbin!
 	```
 
 ## Download
