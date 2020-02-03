@@ -5,7 +5,7 @@
 
  - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、[抽象工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[建造者模式](https://github.com/youlookwhat/DesignPattern#11-建造者模式)、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[原型模式](https://github.com/youlookwhat/DesignPattern#12-原型模式)。
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、[组合模式](https://github.com/youlookwhat/DesignPattern#16-组合模式)、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
- - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、[中介者模式](https://github.com/youlookwhat/DesignPattern#18-中介者模式)、[备忘录模式](https://github.com/youlookwhat/DesignPattern#19-备忘录模式)、[解释器模式](https://github.com/youlookwhat/DesignPattern#20-解释器模式)、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、职责链模式(责任链模式)、访问者模式。
+ - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、[中介者模式](https://github.com/youlookwhat/DesignPattern#18-中介者模式)、[备忘录模式](https://github.com/youlookwhat/DesignPattern#19-备忘录模式)、[解释器模式](https://github.com/youlookwhat/DesignPattern#20-解释器模式)、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、[责任链模式](https://github.com/youlookwhat/DesignPattern#21-责任链模式)、访问者模式。
 
 > 参照Hongyang、菜鸟教程、极客学院等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
@@ -54,6 +54,7 @@
 
  - 20.[ 设计模式 解释器模式(Interpreter Pattern) 以解释一句话为例](https://www.runoob.com/design-pattern/interpreter-pattern.html)
 
+ - 21.[ 设计模式 责任链模式(Chain of Responsibility Pattern) 以Android Studio中打印日志为例](https://www.runoob.com/design-pattern/chain-of-responsibility-pattern.html)
 
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
@@ -75,7 +76,8 @@
 > - 17. [Iterator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/iterator)
 > - 18. [Mediator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/mediator)
 > - 19. [Memento](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/memento)
-> - 20. [Interpreter](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/interpreter)
+> - 20. [Chain of Responsibility](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/chainofresponsibility)
+> - 21. []()
 
 ## Project Picture
 
@@ -551,7 +553,7 @@
 
 这种模式是实现了一个原型接口，该接口用于创建当前对象的克隆。当直接创建对象的代价比较大时，则采用这种模式。例如，一个对象需要在一个高代价的数据库操作之后被创建。我们可以缓存该对象，在下一个请求时返回它的克隆，在需要的时候更新数据库，以此来减少数据库调用。
 
-共分四步：
+以获取多种形状为例，共分四步：
 
 - 1、创建一个实现了 Cloneable 接口的抽象类。[Shape](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/prototype/Shape.java)（implements Cloneable）
 
@@ -649,7 +651,7 @@
 
  - **主要解决**：在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。
 
-共分四步：
+以随机获取多种形状为例，共分四步：
 
  - 1、创建一个接口。
 
@@ -732,7 +734,7 @@
 
  - **主要解决**：在直接访问对象时带来的问题，比如说：要访问的对象在远程的机器上。在面向对象系统中，有些对象由于某些原因（比如对象创建开销很大，或者某些操作需要安全控制，或者需要进程外的访问），直接访问会给使用者或者系统结构带来很多麻烦，我们可以在访问此对象时加上一个对此对象的访问层。
 
-总共分三步：
+以获取磁盘中的图片为例，总共分三步：
 
  - 1、创建一个接口。
 
@@ -800,7 +802,7 @@
 
  - **主要解决**：在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。
 
-实现共分五步：
+以画不同颜色的圆为例，实现共分五步：
 
  - 1、创建桥接实现接口。
 
@@ -874,6 +876,8 @@
 > 又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。
 
  - **主要解决**：它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。
+
+以创建和打印员工的层次结构为例，最小单元示例：
 
  - 1、创建 Employee 类，该类带有 Employee 对象的列表。
 
@@ -963,7 +967,7 @@
 
  - **主要解决**：不同的方式来遍历整个整合对象。
 
-总共分三步：
+以使用迭代器打印名字为例，总共分三步：
  
  - 1、创建接口:
 
@@ -1039,7 +1043,7 @@
 
  - **主要解决**：对象与对象之间存在大量的关联关系，这样势必会导致系统的结构变得很复杂，同时若一个对象发生改变，我们也需要跟踪与之相关联的对象，同时做出相应的处理。
 
-最小单元示例步骤：
+以公共聊天室为例，最小单元示例步骤：
 
  - 1、创建中介类。
 
@@ -1094,7 +1098,7 @@
 
 - **主要解决**：所谓备忘录模式就是在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存的状态。
 
-最小单元步骤：
+以使用备忘录为例，最小单元步骤：
 
  - 1、创建 备忘录 Memento 类。
 
@@ -1198,7 +1202,7 @@
 
  - **主要解决**：对于一些固定文法构建一个解释句子的解释器。
 
-最小单元步骤：
+以解释一句话为例，最小单元步骤：
 
  - 1、创建一个表达式接口 Expression。
 
@@ -1294,6 +1298,117 @@
 
 	```
 
+
+### 21. 责任链模式
+> 责任链模式（Chain of Responsibility Pattern）为请求创建了一个接收者对象的链。这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。**在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。**
+
+ - **主要解决**：职责链上的处理者负责处理请求，客户只需要将请求发送到职责链上即可，无须关心请求的处理细节和请求的传递，所以职责链将请求的发送者和请求的处理者解耦了。
+
+以Android Studio中打印日志为例，最小单元步骤：
+
+ - 1、创建抽象的记录器类 AbstractLogger。
+
+	```java
+	public abstract class AbstractLogger {
+	
+	    public static int INFO = 1;
+	    public static int DEBUG = 2;
+	    public static int ERROR = 3;
+	
+	    protected int level;
+	
+	    // 责任链中的下一个元素
+	    protected AbstractLogger nextLogger;
+	
+	    public void setNextLogger(AbstractLogger nextLogger) {
+	        this.nextLogger = nextLogger;
+	    }
+	
+	    public void logMessage(int level, String message) {
+	        if (this.level <= level) {
+	            write(message);
+	        }
+	        // 递归效果，不断调用下一级 logMessage
+	        if (nextLogger != null) {
+	            nextLogger.logMessage(level, message);
+	        }
+	    }
+	
+	    protected abstract void write(String message);
+	}
+	```
+
+- 2、创建扩展了该记录器类的实体类。
+
+	```java
+	public class ConsoleLogger extends AbstractLogger {
+	
+	    public ConsoleLogger(int level) {
+	        this.level = level;
+	    }
+	
+	    @Override
+	    protected void write(String message) {
+	        Log.e("---", "Standard Console::Logger  " + message);
+	    }
+	}
+	```
+
+	```java
+	public class FileLogger extends AbstractLogger {
+	
+	    public FileLogger(int level) {
+	        this.level = level;
+	    }
+	
+	    @Override
+	    protected void write(String message) {
+	        Log.e("---", "File::Logger  " + message);
+	    }
+	}
+	```
+
+	```java
+	public class ErrorLogger extends AbstractLogger {
+	
+	    public ErrorLogger(int level) {
+	        this.level = level;
+	    }
+	
+	    @Override
+	    protected void write(String message) {
+	        Log.e("---", "Error Console::Logger  " + message);
+	    }
+	}
+	```
+
+- 3、创建不同类型的记录器。赋予它们不同的错误级别，并在每个记录器中设置下一个记录器。每个记录器中的下一个记录器代表的是链的一部分。
+
+	```java
+	public static AbstractLogger getChainOfLoggers() {
+        ErrorLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
+        FileLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
+        ConsoleLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
+        errorLogger.setNextLogger(fileLogger);
+        fileLogger.setNextLogger(consoleLogger);
+        return errorLogger;
+	}
+	
+	AbstractLogger logger = getChainOfLoggers();
+	
+    // ---: Standard Console::Logger  this is an information.
+    logger.logMessage(AbstractLogger.INFO, "this is an information.");
+    
+    // ---: File::Logger  this is a debug level information.
+    // ---: Standard Console::Logger  this is a debug level information.
+    logger.logMessage(AbstractLogger.DEBUG, "this is a debug level information.");
+
+    // ---: Error Console::Logger  this is a error level information.
+    // ---: File::Logger  this is a error level information.
+    // ---: Standard Console::Logger  this is a error level information.
+    logger.logMessage(AbstractLogger.ERROR, "this is a error level information.");
+
+	```
 
 ## Download
  - [DesignPattern.apk](http://download.csdn.net/detail/jingbin_/9684545)

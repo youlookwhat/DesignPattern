@@ -30,7 +30,6 @@ public class ChainOfResponsibilityActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chain_of_responsibility);
         ActivityChainOfResponsibilityBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_chain_of_responsibility);
         setTitle("责任链模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.CHAIN_OF_RESPONSIBILITY_DEFINE));

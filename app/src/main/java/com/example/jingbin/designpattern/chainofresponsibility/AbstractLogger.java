@@ -23,6 +23,7 @@ public abstract class AbstractLogger {
         if (this.level <= level) {
             write(message);
         }
+        // 递归效果，不断调用下一级 logMessage
         if (nextLogger != null) {
             nextLogger.logMessage(level, message);
         }
