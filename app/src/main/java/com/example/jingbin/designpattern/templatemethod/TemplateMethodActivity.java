@@ -46,7 +46,7 @@ public class TemplateMethodActivity extends AppCompatActivity implements View.On
         setContentView(R.layout.activity_template_method);
         ButterKnife.bind(this);
         setTitle("模板方法模式");
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.TEMPLATEMETHOD_DEFINE));
+        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.TEMPLATE_METHOD_DEFINE));
 
         btTemplateMethodText.setText("查看所有人员的工作情况");
         btTemplateMethodText2.setText("查看程序猿离开公司的时间");

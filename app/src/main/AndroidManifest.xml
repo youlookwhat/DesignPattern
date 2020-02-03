@@ -79,6 +79,9 @@
         <activity
             android:name=".interpreter.InterpreterActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".chainofresponsibility.ChainOfResponsibilityActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

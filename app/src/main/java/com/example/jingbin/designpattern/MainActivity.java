@@ -10,6 +10,7 @@ import android.view.View;
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
 import com.example.jingbin.designpattern.bridge.BridgeActivity;
 import com.example.jingbin.designpattern.builder.BuilderActivity;
+import com.example.jingbin.designpattern.chainofresponsibility.ChainOfResponsibilityActivity;
 import com.example.jingbin.designpattern.command.CommandActivity;
 import com.example.jingbin.designpattern.composite.CompositeActivity;
 import com.example.jingbin.designpattern.databinding.ActivityMainBinding;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             "状态模式", "建造者模式", "原型模式",
             "享元模式", "代理模式", "桥接模式",
             "组合模式", "迭代器模式", "中介者模式",
-            "备忘录模式", "解释器模式"
+            "备忘录模式", "解释器模式", "责任链模式"
     };
     private Class[] classes = {
             ObserverActivity.class, FactoryActivity.class, SingletonActivity.class,
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             StateActivity.class, BuilderActivity.class, PrototypeActivity.class,
             FlyweightActivity.class, ProxyActivity.class, BridgeActivity.class,
             CompositeActivity.class, IteratorActivity.class, MediatorActivity.class,
-            MementoActivity.class, InterpreterActivity.class
+            MementoActivity.class, InterpreterActivity.class, ChainOfResponsibilityActivity.class
     };
 
 
