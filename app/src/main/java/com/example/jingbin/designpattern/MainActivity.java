@@ -29,6 +29,7 @@ import com.example.jingbin.designpattern.singleton.SingletonActivity;
 import com.example.jingbin.designpattern.state.StateActivity;
 import com.example.jingbin.designpattern.strategy.StrategyActivity;
 import com.example.jingbin.designpattern.templatemethod.TemplateMethodActivity;
+import com.example.jingbin.designpattern.visitor.VisitorActivity;
 
 import java.util.Arrays;
 
@@ -43,22 +44,30 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private String[] patterns = {
-            "观察者模式", "工厂模式", "单例设计模式",
-            "策略模式", "适配器模式", "命令模式",
-            "装饰者模式", "外观模式", "模板方法模式",
-            "状态模式", "建造者模式", "原型模式",
-            "享元模式", "代理模式", "桥接模式",
-            "组合模式", "迭代器模式", "中介者模式",
-            "备忘录模式", "解释器模式", "责任链模式"
+            "观察者模式", "工厂模式",
+            "单例设计模式", "策略模式",
+            "适配器模式", "命令模式",
+            "装饰者模式", "外观模式",
+            "模板方法模式", "状态模式",
+            "建造者模式", "原型模式",
+            "享元模式", "代理模式",
+            "桥接模式", "组合模式",
+            "迭代器模式", "中介者模式",
+            "备忘录模式", "解释器模式",
+            "责任链模式", "访问者模式"
     };
     private Class[] classes = {
-            ObserverActivity.class, FactoryActivity.class, SingletonActivity.class,
-            StrategyActivity.class, AdapterActivity.class, CommandActivity.class,
-            DecoratorActivity.class, FacadeActivity.class, TemplateMethodActivity.class,
-            StateActivity.class, BuilderActivity.class, PrototypeActivity.class,
-            FlyweightActivity.class, ProxyActivity.class, BridgeActivity.class,
-            CompositeActivity.class, IteratorActivity.class, MediatorActivity.class,
-            MementoActivity.class, InterpreterActivity.class, ChainOfResponsibilityActivity.class
+            ObserverActivity.class, FactoryActivity.class,
+            SingletonActivity.class, StrategyActivity.class,
+            AdapterActivity.class, CommandActivity.class,
+            DecoratorActivity.class, FacadeActivity.class,
+            TemplateMethodActivity.class, StateActivity.class,
+            BuilderActivity.class, PrototypeActivity.class,
+            FlyweightActivity.class, ProxyActivity.class,
+            BridgeActivity.class, CompositeActivity.class,
+            IteratorActivity.class, MediatorActivity.class,
+            MementoActivity.class, InterpreterActivity.class,
+            ChainOfResponsibilityActivity.class, VisitorActivity.class
     };
 
 

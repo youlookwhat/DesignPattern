@@ -29,4 +29,5 @@ public class AppConstant {
     public final static String MEMENTO_DEFINE = "<em>备忘录模式（Memento Pattern）</em>保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。<b>主要解决：所谓备忘录模式就是在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存的状态。</b>";
     public final static String INTERPRETER_DEFINE = "<em>解释器模式（Interpreter Pattern）</em>提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。";
     public final static String CHAIN_OF_RESPONSIBILITY_DEFINE = "<em>责任链模式（Chain of Responsibility Pattern）</em>为请求创建了一个接收者对象的链。这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。\n\n 在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。";
+    public final static String VISITOR_DEFINE = "<em>访问者模式（Visitor Pattern）：</em>在访问者模式中，我们使用了一个访问者类，它改变了元素类的执行算法。通过这种方式，元素的执行算法可以随着访问者改变而改变。这种类型的设计模式属于行为型模式。根据模式，元素对象已接受访问者对象，这样访问者对象就可以处理元素对象上的操作。";
 }

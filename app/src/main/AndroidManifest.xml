@@ -82,6 +82,9 @@
         <activity
             android:name=".chainofresponsibility.ChainOfResponsibilityActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".visitor.VisitorActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
