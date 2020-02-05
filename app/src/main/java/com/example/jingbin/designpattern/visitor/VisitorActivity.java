@@ -34,6 +34,13 @@ public class VisitorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ComputerPart computer = new Computer();
                 computer.accept(new ComputerPartDisplayVisitor());
+                /*
+                 *打印：
+                 *---: Displaying Mouse.
+                 *---: Displaying Keyboard.
+                 *---: Displaying Monitor.
+                 *---: Displaying Computer.
+                 */
             }
         });
     }

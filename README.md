@@ -5,7 +5,7 @@
 
  - **创建型模式**：[单例模式](https://github.com/youlookwhat/DesignPattern#3-单例设计模式)、[抽象工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[建造者模式](https://github.com/youlookwhat/DesignPattern#11-建造者模式)、[工厂模式](https://github.com/youlookwhat/DesignPattern#2-工厂模式)、[原型模式](https://github.com/youlookwhat/DesignPattern#12-原型模式)。
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、[组合模式](https://github.com/youlookwhat/DesignPattern#16-组合模式)、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
- - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、[中介者模式](https://github.com/youlookwhat/DesignPattern#18-中介者模式)、[备忘录模式](https://github.com/youlookwhat/DesignPattern#19-备忘录模式)、[解释器模式](https://github.com/youlookwhat/DesignPattern#20-解释器模式)、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、[责任链模式](https://github.com/youlookwhat/DesignPattern#21-责任链模式)、访问者模式。
+ - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、[中介者模式](https://github.com/youlookwhat/DesignPattern#18-中介者模式)、[备忘录模式](https://github.com/youlookwhat/DesignPattern#19-备忘录模式)、[解释器模式](https://github.com/youlookwhat/DesignPattern#20-解释器模式)、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、[责任链模式](https://github.com/youlookwhat/DesignPattern#21-责任链模式)、[访问者模式](https://github.com/youlookwhat/DesignPattern#22-访问者模式)。
 
 > 参照Hongyang、菜鸟教程、极客学院等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
@@ -56,6 +56,9 @@
 
  - 21.[ 设计模式 责任链模式(Chain of Responsibility Pattern) 以Android Studio中打印日志为例](https://www.runoob.com/design-pattern/chain-of-responsibility-pattern.html)
 
+ - 22.[ 设计模式 访问者模式(Visitor Pattern) 以显示计算机的组成部分为例](https://www.runoob.com/design-pattern/visitor-pattern.html)
+
+
 ## Source Code
 > - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
 > - 2. [Factory](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/factory)
@@ -77,7 +80,7 @@
 > - 18. [Mediator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/mediator)
 > - 19. [Memento](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/memento)
 > - 20. [Chain of Responsibility](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/chainofresponsibility)
-> - 21. []()
+> - 21. [Visitor](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/visitor)
 
 ## Project Picture
 
@@ -1409,6 +1412,108 @@
     logger.logMessage(AbstractLogger.ERROR, "this is a error level information.");
 
 	```
+
+### 22. 访问者模式
+> 在访问者模式中，我们使用了一个访问者类，它改变了元素类的执行算法。通过这种方式，元素的执行算法可以随着访问者改变而改变。这种类型的设计模式属于行为型模式。根据模式，元素对象已接受访问者对象，这样访问者对象就可以处理元素对象上的操作。
+
+ - **主要解决**：稳定的数据结构和易变的操作耦合问题。
+
+以显示计算机的组成部分为例，主要分五步实现：
+
+ - 1、定义一个表示元素的接口。
+
+	```java
+	public interface ComputerPart {
+	    public void accept(ComputerPartVisitor computerPartVisitor);
+	}
+	```
+
+ - 2、创建扩展了上述类的实体类。[Keyboard](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/visitor/impl/Keyboard.java)、[Monitor](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/visitor/impl/Monitor.java)、[Mouse](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/visitor/impl/Mouse.java)、[Computer](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/visitor/impl/Computer.java)
+
+	```java
+	public class Computer implements ComputerPart {
+	
+	    private ComputerPart[] parts;
+	
+	    public Computer() {
+	        this.parts = new ComputerPart[]{new Mouse(), new Keyboard(), new Monitor()};
+	    }
+	
+	    @Override
+	    public void accept(ComputerPartVisitor computerPartVisitor) {
+	        for (ComputerPart part : parts) {
+	            part.accept(computerPartVisitor);
+	        }
+	        computerPartVisitor.visit(this);
+	    }
+	}
+	```
+
+	```java
+	public class Mouse implements ComputerPart {
+	    @Override
+	    public void accept(ComputerPartVisitor computerPartVisitor) {
+	        computerPartVisitor.visit(this);
+	    }
+	}
+	```
+
+ - 3、定义一个表示访问者的接口。
+
+	```java
+	public interface ComputerPartVisitor {
+	
+	    public void visit(Computer computer);
+	
+	    public void visit(Mouse mouse);
+	
+	    public void visit(Keyboard keyboard);
+	
+	    public void visit(Monitor monitor);
+	}
+	```
+
+ - 4、创建实现了上述类的实体访问者。
+
+	```java
+	public class ComputerPartDisplayVisitor implements ComputerPartVisitor {
+	
+	    @Override
+	    public void visit(Computer computer) {
+	        Log.e("---", "Displaying Computer.");
+	    }
+	
+	    @Override
+	    public void visit(Mouse mouse) {
+	        Log.e("---", "Displaying Mouse.");
+	    }
+	
+	    @Override
+	    public void visit(Keyboard keyboard) {
+	        Log.e("---", "Displaying Keyboard.");
+	    }
+	
+	    @Override
+	    public void visit(Monitor monitor) {
+	        Log.e("---", "Displaying Monitor.");
+	    }
+	}
+	```
+
+ - 5、使用 ComputerPartDisplayVisitor 来显示 Computer 的组成部分。
+
+	```java
+        ComputerPart computer = new Computer();
+        computer.accept(new ComputerPartDisplayVisitor());
+        /*
+	     *打印：
+	     *---: Displaying Mouse.
+	     *---: Displaying Keyboard.
+	     *---: Displaying Monitor.
+	     *---: Displaying Computer.
+	     */
+	```
+
 
 ## Download
  - [DesignPattern.apk](http://download.csdn.net/detail/jingbin_/9684545)
