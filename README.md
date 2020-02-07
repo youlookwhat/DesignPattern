@@ -310,7 +310,7 @@
  - 最后测试：给手机冲个电：
 
 	```java
- 	Mobile mobile = new Mobile();
+	Mobile mobile = new Mobile();
    V5Power v5Power = new V5PowerAdapter(new V200Power());
    mobile.inputPower(v5Power);
 	```
@@ -371,7 +371,7 @@
  - 电影院类：[HomeTheaterFacade.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/facade/theater/HomeTheaterFacade.java)
  	
 	```java
- 	/**
+	/**
      * 一键观影
      */
     public void watchMovie() {
@@ -1522,6 +1522,7 @@
 
 ## Reference 
  - [http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
+ - [https://www.runoob.com/design-pattern/design-pattern-intro.html](https://www.runoob.com/design-pattern/design-pattern-intro.html)
 
 
 ## Thanks
