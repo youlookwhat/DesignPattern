@@ -80,7 +80,7 @@
 > - 18. [Mediator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/mediator)
 > - 19. [Memento](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/memento)
 > - 20. [Chain of Responsibility](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/chainofresponsibility)
-> - 21. [Visitor](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/visitor)
+> - [Visitor](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/visitor)
 
 ## Project Picture
 
@@ -103,26 +103,26 @@
  - 专题接口：[Subject.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/interfaces/Subject.java) ;  
 
 	```java
-  	/**
-     * 注册一个观察者
-     */
-    public void registerObserver(Observer observer);
-
-    /**
-     * 移除一个观察者
-     */
-    public void removeObserver(Observer observer);
-
-    /**
-     * 通知所有观察者
-     */
-    public void notifyObservers();
+	/**
+	 * 注册一个观察者
+	 */
+	public void registerObserver(Observer observer);
+	
+	/**
+	 * 移除一个观察者
+	 */
+	public void removeObserver(Observer observer);
+	
+	/**
+	 * 通知所有观察者
+	 */
+	public void notifyObservers();
 	```
  
  - 3D服务号的实现类：[ObjectFor3D.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/observer/classs/ObjectFor3D.java)
 
 	```java
-	 @Override
+	@Override
     public void registerObserver(Observer observer) {
         observers.add(observer);
     }
