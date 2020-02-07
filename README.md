@@ -60,26 +60,26 @@
 
 
 ## Source Code
-> - 1. [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
-> - 2. [Factory](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/factory)
-> - 3. [Singleton](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/singleton)
-> - 4. [Strategy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/strategy)
-> - 5. [Adapter](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/adapter)
-> - 6. [Command](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/command)
-> - 7. [Decorator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/decorator)
-> - 8. [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/facade)
-> - 9. [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
-> - 10. [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
-> - 11. [Builder](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/builder)
-> - 12. [Prototype](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/prototype)
-> - 13. [Flyweight](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/flyweight)
-> - 14. [Proxy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/proxy)
-> - 15. [Bridge](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/bridge)
-> - 16. [Composite](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/composite)
-> - 17. [Iterator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/iterator)
-> - 18. [Mediator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/mediator)
-> - 19. [Memento](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/memento)
-> - 20. [Chain of Responsibility](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/chainofresponsibility)
+> - [Observer](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/observer)
+> - [Factory](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/factory)
+> - [Singleton](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/singleton)
+> - [Strategy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/strategy)
+> - [Adapter](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/adapter)
+> - [Command](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/command)
+> - [Decorator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/decorator)
+> - [Facade](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/facade)
+> - [Template Method](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/templatemethod)
+> - [State](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/state)
+> - [Builder](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/builder)
+> - [Prototype](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/prototype)
+> - [Flyweight](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/flyweight)
+> - [Proxy](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/proxy)
+> - [Bridge](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/bridge)
+> - [Composite](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/composite)
+> - [Iterator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/iterator)
+> - [Mediator](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/mediator)
+> - [Memento](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/memento)
+> - [Chain of Responsibility](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/chainofresponsibility)
 > - [Visitor](https://github.com/youlookwhat/DesignPattern/tree/master/app/src/main/java/com/example/jingbin/designpattern/visitor)
 
 ## Project Picture
@@ -308,12 +308,12 @@
  - 我们拥有的是220V家用交流电: [V220Power.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V220Power.java)
  - **适配器，完成220V转5V的作用**：[V5PowerAdapter.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/adapter/V5PowerAdapter.java)
  - 最后测试：给手机冲个电：
- 	
- 	```java
+
+	```java
  	Mobile mobile = new Mobile();
    V5Power v5Power = new V5PowerAdapter(new V200Power());
    mobile.inputPower(v5Power);
- 	```
+	```
 
 ### 6. 命令模式
 > 定义：将“请求”封装成对象，以便使用不同的请求、队列或者日志来参数化其他对象。命令模式也支持可撤销的操作。(简化: 将请求封装成对象，将动作请求者和动作执行者解耦。)
@@ -370,7 +370,7 @@
   - eg: 爆米花机：[PopcornPopper.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/facade/device/PopcornPopper.java)
  - 电影院类：[HomeTheaterFacade.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/facade/theater/HomeTheaterFacade.java)
  	
- 	```java
+	```java
  	/**
      * 一键观影
      */
@@ -384,9 +384,10 @@
         player.on();
         player.make3DListener();
     }
-	``` 
+	```
+
 - 最后测试：一键观影：
-	
+
 	```java
 	new HomeTheaterFacade(computer, light, player, popcornPopper, projector).watchMovie();
 	```
@@ -459,9 +460,9 @@
  - 需求：已自动售货机为例（有已投币、未投币等状态和投币、投币等方法）
  - 最初实现待改进的售货机：[VendingMachine.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/old/VendingMachine.java)
  - 改进后的售货机（更具有延展性）:[VendingMachineBetter.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/VendingMachineBetter.java)
- 
- 	```java
- 	// 放钱
+
+	```java
+	// 放钱
     public void insertMoney() {
         currentState.insertMoney();
     }
@@ -487,8 +488,9 @@
     public void setState(State state) {
         this.currentState = state;
     }
- 	```
- 
+	```
+
+
  - 状态的接口：[State.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/State.java)
  - 对应状态的接口实现类：
  	- eg: 中奖状态：[WinnerState.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/WinnerState.java)
