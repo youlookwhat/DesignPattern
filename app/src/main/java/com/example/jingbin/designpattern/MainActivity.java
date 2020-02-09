@@ -2,9 +2,12 @@ package com.example.jingbin.designpattern;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
@@ -93,6 +96,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(v.getContext(), classes[position]));
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.actionbar_about:
+                Uri issuesUrl = Uri.parse("https://github.com/youlookwhat/DesignPattern");
+                Intent intent = new Intent(Intent.ACTION_VIEW, issuesUrl);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
