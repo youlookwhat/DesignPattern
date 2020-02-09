@@ -7,8 +7,8 @@ android {
         applicationId "com.example.jingbin.designpattern"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -21,6 +21,22 @@ android {
     // databinding
     dataBinding {
         enabled = true
+    }
+
+    // 其他 designpattern
+    signingConfigs {
+        release {
+            storeFile file("./designpattern")
+            storePassword "designpattern"
+            keyAlias "designpattern"
+            keyPassword "designpattern"
+        }
+        debug {
+            storeFile file("./designpattern")
+            storePassword "designpattern"
+            keyAlias "designpattern"
+            keyPassword "designpattern"
+        }
     }
 }
 
