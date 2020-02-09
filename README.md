@@ -84,7 +84,9 @@
 
 ## Project Picture
 
-<img width="210" height=“310” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/project_structure.png"></img>
+![](https://github.com/youlookwhat/DesignPattern/blob/master/image/ds1.png)
+![](https://github.com/youlookwhat/DesignPattern/blob/master/image/ds2.png)
+<!--<img width="210" height=“310” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/project_structure.png"></img>
 <img width="320" height=“320” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/click.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/command.png"></img>
@@ -92,7 +94,7 @@
 <img width="165" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_02.png"></img>
 <img width="165" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_03.png"></img>
 <img width="165" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_04.png"></img>
-<img width="165" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_05.png"></img>
+<img width="165" height=“274” src="https://github.com/youlookwhat/DesignPattern/blob/master/image/view_05.png"></img>-->
 
 ## Pattern Analysis
 ### 1. 观察者模式
