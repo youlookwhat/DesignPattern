@@ -7,7 +7,7 @@
  - **结构型模式**：[适配器模式](https://github.com/youlookwhat/DesignPattern#5-适配器模式)、[桥接模式](https://github.com/youlookwhat/DesignPattern#15-桥接模式)、[装饰模式](https://github.com/youlookwhat/DesignPattern#7-装饰者模式)、[组合模式](https://github.com/youlookwhat/DesignPattern#16-组合模式)、[外观模式](https://github.com/youlookwhat/DesignPattern#8-外观模式)、[享元模式](https://github.com/youlookwhat/DesignPattern#13-享元模式)、[代理模式](https://github.com/youlookwhat/DesignPattern#14-代理模式)。
  - **行为型模式**：[模版方法模式](https://github.com/youlookwhat/DesignPattern#9-模板方法模式)、[命令模式](https://github.com/youlookwhat/DesignPattern#6-命令模式)、[迭代器模式](https://github.com/youlookwhat/DesignPattern#17-迭代器模式)、[观察者模式](https://github.com/youlookwhat/DesignPattern#1-观察者模式)、[中介者模式](https://github.com/youlookwhat/DesignPattern#18-中介者模式)、[备忘录模式](https://github.com/youlookwhat/DesignPattern#19-备忘录模式)、[解释器模式](https://github.com/youlookwhat/DesignPattern#20-解释器模式)、[状态模式](https://github.com/youlookwhat/DesignPattern#10-状态模式)、[策略模式](https://github.com/youlookwhat/DesignPattern#4-策略模式)、[责任链模式](https://github.com/youlookwhat/DesignPattern#21-责任链模式)、[访问者模式](https://github.com/youlookwhat/DesignPattern#22-访问者模式)。
 
-> 参照Hongyang、菜鸟教程、极客学院等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
+> 参照Hongyang、菜鸟教程等处文章所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
 ----
 
@@ -1511,13 +1511,16 @@
 
 
 ## Download
- - [DesignPattern.apk](http://download.csdn.net/detail/jingbin_/9684545)
+ - [DesignPattern.apk](https://download.csdn.net/download/jingbin_/12146492)
 
 ## Reference 
- - [http://blog.csdn.net/lmj623565791/article/category/2206597](http://blog.csdn.net/lmj623565791/article/category/2206597)
- - [https://www.runoob.com/design-pattern/design-pattern-intro.html](https://www.runoob.com/design-pattern/design-pattern-intro.html)
+ - [CSDN：张鸿洋](http://blog.csdn.net/lmj623565791/article/category/2206597)
+ - [CSDN：dmk877](http://blog.csdn.net/dmk877/article/details/50311791)
+ - [菜鸟教程：设计模式](https://www.runoob.com/design-pattern/design-pattern-intro.html)
 
 
-## Thanks
-- [CSDN：张鸿洋](http://blog.csdn.net/lmj623565791)
-- [CSDN：dmk877](http://blog.csdn.net/dmk877/article/details/50311791)
+## About me
+ - **QQ：** 770413277
+ - **掘金：**[https://juejin.im/user/56eec46d1ea49300555a176b/posts](https://juejin.im/user/56eec46d1ea49300555a176b/posts)
+ - **简书：**[https://www.jianshu.com/u/e43c6e979831](https://www.jianshu.com/u/e43c6e979831)
+ - **Email：** jingbin127@163.com
