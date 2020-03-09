@@ -39,6 +39,7 @@ import java.util.Arrays;
 import me.jingbin.library.ByRecyclerView;
 import me.jingbin.library.adapter.BaseByViewHolder;
 import me.jingbin.library.adapter.BaseRecyclerAdapter;
+import me.jingbin.library.decoration.GridSpaceItemDecoration;
 
 /**
  * Created by jingbin on 2016/10/21.
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         binding.recyclerView.setLayoutManager(gridLayoutManager);
+        binding.recyclerView.addItemDecoration(new GridSpaceItemDecoration(2, 10).setEndFromSize(0));
         binding.recyclerView.setAdapter(new BaseRecyclerAdapter<String>(R.layout.item_main, Arrays.asList(patterns)) {
             @Override
             protected void bindView(BaseByViewHolder holder, String title, int position) {
