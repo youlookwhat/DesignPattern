@@ -450,7 +450,7 @@
 
  - 定义又开始模糊了，理一下，当对象的内部状态改变时，它的行为跟随状态的改变而改变了，看起来好像重新初始化了一个类似的。
 
- - 需求：已自动售货机为例（有已投币、未投币等状态和投币、投币等方法）
+ - 需求：以自动售货机为例（有已投币、未投币等状态和投币、退币等方法）
  - 最初实现待改进的售货机：[VendingMachine.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/old/VendingMachine.java)
  - 改进后的售货机（更具有延展性）:[VendingMachineBetter.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/state/better/VendingMachineBetter.java)
 
