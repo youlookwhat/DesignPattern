@@ -1,0 +1,24 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# SVN
+.svn/
+
+# Maven
+log/
+target/
+
+# Syswin
+disconf/
+logs/
+/NewInnerAPI/
