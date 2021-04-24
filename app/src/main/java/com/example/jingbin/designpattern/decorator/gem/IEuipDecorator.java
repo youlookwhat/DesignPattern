@@ -7,6 +7,6 @@ import com.example.jingbin.designpattern.decorator.IEquip;
  * 装饰品的接口
  */
 
-public interface IEuipDecotator extends IEquip {
+public interface IEuipDecorator extends IEquip {
 
 }

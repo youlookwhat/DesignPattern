@@ -12,9 +12,9 @@ import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.decorator.equip.RingEquip;
 import com.example.jingbin.designpattern.decorator.equip.ShoeEquip;
-import com.example.jingbin.designpattern.decorator.gem.BlueGemDecotator;
-import com.example.jingbin.designpattern.decorator.gem.RedGemDecotator;
-import com.example.jingbin.designpattern.decorator.gem.YellowGemDecotator;
+import com.example.jingbin.designpattern.decorator.gem.BlueGemDecorator;
+import com.example.jingbin.designpattern.decorator.gem.RedGemDecorator;
+import com.example.jingbin.designpattern.decorator.gem.YellowGemDecorator;
 import com.example.jingbin.designpattern.app.EMTagHandler;
 
 import butterknife.BindView;
@@ -69,16 +69,16 @@ public class DecoratorActivity extends AppCompatActivity implements View.OnClick
             case R.id.bt_demo1:
                 Log.e("---", "一个镶嵌2颗红宝石,1颗蓝宝石的靴子: ");
 
-                IEquip iEquip = new RedGemDecotator(new RedGemDecotator(new BlueGemDecotator(new ShoeEquip())));
+                IEquip iEquip = new RedGemDecorator(new RedGemDecorator(new BlueGemDecorator(new ShoeEquip())));
                 Log.e("---", "攻击力:" + iEquip.caculateAttack());
                 Log.e("---", "描述语:" + iEquip.description());
                 break;
 
             case R.id.bt_demo2:
                 Log.e("---", "一个镶嵌1颗红宝石,1颗蓝宝石,1颗黄宝石的戒指: ");
-                RedGemDecotator redGemDecotator = new RedGemDecotator(new BlueGemDecotator(new YellowGemDecotator(new RingEquip())));
-                Log.e("---", "攻击力:" + redGemDecotator.caculateAttack());
-                Log.e("---", "描述语:" + redGemDecotator.description());
+                RedGemDecorator redGemDecorator = new RedGemDecorator(new BlueGemDecorator(new YellowGemDecorator(new RingEquip())));
+                Log.e("---", "攻击力:" + redGemDecorator.caculateAttack());
+                Log.e("---", "描述语:" + redGemDecorator.description());
                 break;
             default:
                 break;

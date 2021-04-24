@@ -342,15 +342,15 @@
  - 2、各个装备的实现类：
    - eg：**武器**的实现类: [ArmEquip.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/equip/ArmEquip.java)
 
-- 3、装饰品的超类（装饰品也属于装备）：[IEquipDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/IEuipDecotator.java)
+- 3、装饰品的超类（装饰品也属于装备）：[IEquipDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/IEuipDecorator.java)
 - 4、装饰品的实现类：
-  - eg：**蓝宝石**的实现类(可累加): [BlueGemDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/BlueGemDecotator.java) 
+  - eg：**蓝宝石**的实现类(可累加): [BlueGemDecorator.java](https://github.com/youlookwhat/DesignPattern/blob/master/app/src/main/java/com/example/jingbin/designpattern/decorator/gem/BlueGemDecorator.java)
 
 - 5、最后测试：计算攻击力和查看描述：
 
 	```java
 	Log.e("---", "一个镶嵌2颗红宝石,1颗蓝宝石的靴子: ");
-    IEquip iEquip = new RedGemDecotator(new RedGemDecotator(new BlueGemDecotator(new ShoeEquip())));
+    IEquip iEquip = new RedGemDecorator(new RedGemDecorator(new BlueGemDecorator(new ShoeEquip())));
     Log.e("---", "攻击力:" + iEquip.caculateAttack());
     Log.e("---", "描述语:" + iEquip.description());
 	```
