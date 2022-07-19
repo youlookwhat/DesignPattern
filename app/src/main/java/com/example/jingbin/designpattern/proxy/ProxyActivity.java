@@ -1,9 +1,10 @@
 package com.example.jingbin.designpattern.proxy;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;

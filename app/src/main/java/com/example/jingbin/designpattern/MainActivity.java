@@ -1,14 +1,15 @@
 package com.example.jingbin.designpattern;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.jingbin.designpattern.adapter.AdapterActivity;
 import com.example.jingbin.designpattern.bridge.BridgeActivity;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         binding.recyclerView.setLayoutManager(gridLayoutManager);
-        binding.recyclerView.addItemDecoration(new GridSpaceItemDecoration(2, 10).setEndFromSize(0));
+        binding.recyclerView.addItemDecoration(new GridSpaceItemDecoration(10).setEndFromSize(0));
         binding.recyclerView.setAdapter(new BaseRecyclerAdapter<String>(R.layout.item_main, Arrays.asList(patterns)) {
             @Override
             protected void bindView(BaseByViewHolder holder, String title, int position) {

@@ -1,11 +1,12 @@
 package com.example.jingbin.designpattern.adapter;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
