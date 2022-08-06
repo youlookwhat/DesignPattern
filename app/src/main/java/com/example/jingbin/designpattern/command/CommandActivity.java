@@ -1,18 +1,15 @@
 package com.example.jingbin.designpattern.command;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.example.jingbin.designpattern.databinding.ActivityCommandBinding;
 
 /**
  * 命令模式:
@@ -25,55 +22,30 @@ import butterknife.ButterKnife;
  */
 public class CommandActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.activity_command)
-    LinearLayout activityCommand;
-    @BindView(R.id.bt_command)
-    Button btCommand;
-    @BindView(R.id.bt_zero)
-    Button btZero;
-    @BindView(R.id.bt_three)
-    Button btThree;
-    @BindView(R.id.bt_six)
-    Button btSix;
-    @BindView(R.id.bt_one)
-    Button btOne;
-    @BindView(R.id.bt_four)
-    Button btFour;
-    @BindView(R.id.bt_seven)
-    Button btSeven;
-    @BindView(R.id.bt_two)
-    Button btTwo;
-    @BindView(R.id.bt_five)
-    Button btFive;
-    @BindView(R.id.bt_no)
-    Button btNo;
-
     private ControlPanel controlPanel;
+    private ActivityCommandBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_command);
-        ButterKnife.bind(this);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_command);
         setTitle("命令模式");
 
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.COMMAND_DEFINE));
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.COMMAND_DEFINE));
         setCommands();
         initListener();
     }
 
     private void initListener() {
-        btZero.setOnClickListener(this);
-        btOne.setOnClickListener(this);
-        btTwo.setOnClickListener(this);
-        btThree.setOnClickListener(this);
-        btFour.setOnClickListener(this);
-        btFive.setOnClickListener(this);
-        btSix.setOnClickListener(this);
-        btSeven.setOnClickListener(this);
-        btNo.setOnClickListener(this);
+        binding.btZero.setOnClickListener(this);
+        binding.btOne.setOnClickListener(this);
+        binding.btTwo.setOnClickListener(this);
+        binding.btThree.setOnClickListener(this);
+        binding.btFour.setOnClickListener(this);
+        binding.btFive.setOnClickListener(this);
+        binding.btSix.setOnClickListener(this);
+        binding.btSeven.setOnClickListener(this);
+        binding.btNo.setOnClickListener(this);
     }
 
     private void setCommands() {

@@ -2,18 +2,14 @@ package com.example.jingbin.designpattern.adapter;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.example.jingbin.designpattern.databinding.ActivityAdapterBinding;
 
 /**
  * 适配器模式:
@@ -23,25 +19,15 @@ import butterknife.ButterKnife;
  */
 public class AdapterActivity extends AppCompatActivity {
 
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.activity_adapter)
-    LinearLayout activityAdapter;
-    @BindView(R.id.by_adapter)
-    Button byAdapter;
-    @BindView(R.id.bt_adapter_text)
-    Button btAdapterText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adapter);
-        ButterKnife.bind(this);
+        ActivityAdapterBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_adapter);
         setTitle("适配器模式");
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.ADAPTER_DEFINE));
-        btAdapterText.setText("将220V家用电转换为5V");
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.ADAPTER_DEFINE));
+        binding.btAdapterText.setText("将220V家用电转换为5V");
 
-        btAdapterText.setOnClickListener(new View.OnClickListener() {
+        binding.btAdapterText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /**

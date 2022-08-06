@@ -1,50 +1,33 @@
 package com.example.jingbin.designpattern.singleton;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivitySingletonBinding;
 import com.example.jingbin.designpattern.singleton.ehan.SingletonEHan;
 import com.example.jingbin.designpattern.singleton.enums.SingletonEnum;
 import com.example.jingbin.designpattern.singleton.inclass.SingletonIn;
 import com.example.jingbin.designpattern.singleton.lanhan.SingletonLanHan;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class SingletonActivity extends AppCompatActivity implements View.OnClickListener {
-
-    @BindView(R.id.bt_ehan)
-    Button btEhan;
-    @BindView(R.id.bt_lanhan)
-    Button btLanhan;
-    @BindView(R.id.bt_inclass)
-    Button btInclass;
-    @BindView(R.id.bt_enum)
-    Button btEnum;
-    @BindView(R.id.activity_singleton)
-    LinearLayout activitySingleton;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_singleton);
-        ButterKnife.bind(this);
+        ActivitySingletonBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_singleton);
         setTitle("单例设计模式");
 
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.SINGLETON_DEFINE));
-        btEhan.setOnClickListener(this);
-        btLanhan.setOnClickListener(this);
-        btInclass.setOnClickListener(this);
-        btEnum.setOnClickListener(this);
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.SINGLETON_DEFINE));
+        binding.btEhan.setOnClickListener(this);
+        binding.btLanhan.setOnClickListener(this);
+        binding.btInclass.setOnClickListener(this);
+        binding.btEnum.setOnClickListener(this);
     }
 
     @Override

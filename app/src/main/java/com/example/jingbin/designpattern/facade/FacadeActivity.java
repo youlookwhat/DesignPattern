@@ -1,23 +1,21 @@
 package com.example.jingbin.designpattern.facade;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityFacadeBinding;
 import com.example.jingbin.designpattern.facade.device.Computer;
 import com.example.jingbin.designpattern.facade.device.Light;
 import com.example.jingbin.designpattern.facade.device.Player;
 import com.example.jingbin.designpattern.facade.device.PopcornPopper;
 import com.example.jingbin.designpattern.facade.device.Projector;
 import com.example.jingbin.designpattern.facade.theater.HomeTheaterFacade;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 外观模式:
@@ -39,28 +37,18 @@ import butterknife.ButterKnife;
  */
 public class FacadeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_facade)
-    Button btFacade;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.bt_open)
-    Button btOpen;
-    @BindView(R.id.bt_close)
-    Button btClose;
-
     private HomeTheaterFacade homeTheaterFacade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facade);
-        ButterKnife.bind(this);
+        ActivityFacadeBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_facade);
         setTitle("外观模式");
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.FACADE_DEFINE));
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.FACADE_DEFINE));
 
-        btFacade.setOnClickListener(this);
-        btOpen.setOnClickListener(this);
-        btClose.setOnClickListener(this);
+        binding.btFacade.setOnClickListener(this);
+        binding.btOpen.setOnClickListener(this);
+        binding.btClose.setOnClickListener(this);
     }
 
     @Override

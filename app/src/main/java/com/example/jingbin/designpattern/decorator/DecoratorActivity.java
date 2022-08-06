@@ -1,24 +1,21 @@
 package com.example.jingbin.designpattern.decorator;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
+import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityDecoratorBinding;
 import com.example.jingbin.designpattern.decorator.equip.RingEquip;
 import com.example.jingbin.designpattern.decorator.equip.ShoeEquip;
 import com.example.jingbin.designpattern.decorator.gem.BlueGemDecorator;
 import com.example.jingbin.designpattern.decorator.gem.RedGemDecorator;
 import com.example.jingbin.designpattern.decorator.gem.YellowGemDecorator;
-import com.example.jingbin.designpattern.app.EMTagHandler;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 装饰者模式:
@@ -33,31 +30,19 @@ import butterknife.ButterKnife;
  */
 public class DecoratorActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_decorator)
-    Button btDecorator;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.activity_decorator)
-    LinearLayout activityDecorator;
-    @BindView(R.id.bt_demo1)
-    Button btDemo1;
-    @BindView(R.id.bt_demo2)
-    Button btDemo2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_decorator);
-        ButterKnife.bind(this);
+        ActivityDecoratorBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_decorator);
         setTitle("装饰者模式");
 
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.DECORATOR_DEFINE));
-        btDemo1.setText("一个镶嵌2颗红宝石,1颗蓝宝石的靴子");
-        btDemo2.setText("一个镶嵌1颗红宝石,1颗蓝宝石,1颗黄宝石的戒指");
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.DECORATOR_DEFINE));
+        binding.btDemo1.setText("一个镶嵌2颗红宝石,1颗蓝宝石的靴子");
+        binding.btDemo2.setText("一个镶嵌1颗红宝石,1颗蓝宝石,1颗黄宝石的戒指");
 
-        btDecorator.setOnClickListener(this);
-        btDemo1.setOnClickListener(this);
-        btDemo2.setOnClickListener(this);
+        binding.btDecorator.setOnClickListener(this);
+        binding.btDemo1.setOnClickListener(this);
+        binding.btDemo2.setOnClickListener(this);
     }
 
     @Override

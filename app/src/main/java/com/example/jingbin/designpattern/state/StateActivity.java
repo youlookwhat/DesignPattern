@@ -1,21 +1,18 @@
 package com.example.jingbin.designpattern.state;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityStateBinding;
 import com.example.jingbin.designpattern.state.better.VendingMachineBetter;
 import com.example.jingbin.designpattern.state.old.VendingMachine;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 状态模式
@@ -24,30 +21,18 @@ import butterknife.ButterKnife;
  */
 public class StateActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_facade)
-    Button btFacade;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.activity_state)
-    LinearLayout activityState;
-    @BindView(R.id.bt_facade_old)
-    Button btFacadeOld;
-    @BindView(R.id.bt_facade_better)
-    Button btFacadeBetter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_state);
-        ButterKnife.bind(this);
+        ActivityStateBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_state);
         setTitle("状态模式");
 
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.STATE_DEFINE));
-        btFacadeOld.setText("最初实现待改进");
-        btFacadeBetter.setText("改进过的售货机");
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.STATE_DEFINE));
+        binding.btFacadeOld.setText("最初实现待改进");
+        binding.btFacadeBetter.setText("改进过的售货机");
 
-        btFacadeOld.setOnClickListener(this);
-        btFacadeBetter.setOnClickListener(this);
+        binding.btFacadeOld.setOnClickListener(this);
+        binding.btFacadeBetter.setOnClickListener(this);
     }
 
     @Override
@@ -73,7 +58,7 @@ public class StateActivity extends AppCompatActivity implements View.OnClickList
                 vendingMachine.backMoney();
                 vendingMachine.turnCrank();
                 break;
-            
+
             case R.id.bt_facade_better:// 改进过的售货机
                 VendingMachineBetter machineBetter = new VendingMachineBetter(4);
 //                machineBetter.dispense();无法直接操作 出商品(出商品是自动的);

@@ -1,25 +1,22 @@
 package com.example.jingbin.designpattern.factory;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityRoujiaMoStoreBinding;
 import com.example.jingbin.designpattern.factory.cxgc.XianRoujiaMoTeSeStore;
 import com.example.jingbin.designpattern.factory.cxgc.XianSimpleRoujiaMoTeSeFactory;
 import com.example.jingbin.designpattern.factory.gcff.XianRoujiaMoStore;
 import com.example.jingbin.designpattern.factory.gcff.XianSimpleRoujiaMoFactory;
 import com.example.jingbin.designpattern.factory.jdgc.RoujiaMoStore;
 import com.example.jingbin.designpattern.factory.jdgc.SimpleRoujiaMoFactory;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by jingbin on 2016/10/22.
@@ -36,41 +33,25 @@ import butterknife.ButterKnife;
  */
 public class FactoryActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_simple_factory)
-    Button btSimpleFactory;
-    @BindView(R.id.bt_factory_method)
-    Button btFactoryMethod;
-    @BindView(R.id.bt_static_factory)
-    Button btStaticFactory;
-    @BindView(R.id.bt_abstract_factory)
-    Button btAbstractFactory;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.activity_roujia_mo_store)
-    LinearLayout activityRoujiaMoStore;
-    @BindView(R.id.tv_define2)
-    TextView tvDefine2;
-    @BindView(R.id.tv_define3)
-    TextView tvDefine3;
+    private ActivityRoujiaMoStoreBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_roujia_mo_store);
-        ButterKnife.bind(this);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_roujia_mo_store);
         setTitle("工厂模式");
 
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.JDGC_FACTORY_DEFINE));
-        tvDefine2.setText(EMTagHandler.fromHtml(AppConstant.GCFF_FACTORY_DEFINE));
-        tvDefine3.setText(EMTagHandler.fromHtml(AppConstant.CXGC_FACTORY_DEFINE));
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.JDGC_FACTORY_DEFINE));
+        binding.tvDefine2.setText(EMTagHandler.fromHtml(AppConstant.GCFF_FACTORY_DEFINE));
+        binding.tvDefine3.setText(EMTagHandler.fromHtml(AppConstant.CXGC_FACTORY_DEFINE));
         initListener();
     }
 
     private void initListener() {
-        btStaticFactory.setOnClickListener(this);
-        btSimpleFactory.setOnClickListener(this);
-        btFactoryMethod.setOnClickListener(this);
-        btAbstractFactory.setOnClickListener(this);
+        binding.btStaticFactory.setOnClickListener(this);
+        binding.btSimpleFactory.setOnClickListener(this);
+        binding.btFactoryMethod.setOnClickListener(this);
+        binding.btAbstractFactory.setOnClickListener(this);
     }
 
     @Override

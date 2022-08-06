@@ -1,24 +1,21 @@
 package com.example.jingbin.designpattern.observer;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityObserverBinding;
 import com.example.jingbin.designpattern.observer.classs.ObjectFor3D;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser1;
 import com.example.jingbin.designpattern.observer.classs.ObserverUser2;
 import com.example.jingbin.designpattern.observer.javautil.Observer1;
 import com.example.jingbin.designpattern.observer.javautil.SubjectFor3d;
 import com.example.jingbin.designpattern.observer.javautil.SubjectForSSQ;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 可以看出，使用Java内置的类实现观察者模式，代码非常简洁，
@@ -34,17 +31,6 @@ import butterknife.ButterKnife;
  */
 public class ObserverActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.bt_observer)
-    Button btObserver;
-    @BindView(R.id.bt_myself)
-    Button btMyself;
-    @BindView(R.id.bt_system)
-    Button btSystem;
-    @BindView(R.id.activity_observer)
-    LinearLayout activityObserver;
-
     private ObjectFor3D objectFor3D;
     private ObserverUser1 observerUser1;
     private ObserverUser2 observerUser2;
@@ -52,13 +38,12 @@ public class ObserverActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_observer);
-        ButterKnife.bind(this);
+        ActivityObserverBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_observer);
         setTitle("观察者模式");
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.OBSERVER_DEFINE));
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.OBSERVER_DEFINE));
 
-        btMyself.setOnClickListener(this);
-        btSystem.setOnClickListener(this);
+        binding.btMyself.setOnClickListener(this);
+        binding.btSystem.setOnClickListener(this);
     }
 
 

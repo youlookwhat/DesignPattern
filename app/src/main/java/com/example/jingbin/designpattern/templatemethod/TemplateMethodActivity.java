@@ -1,23 +1,20 @@
 package com.example.jingbin.designpattern.templatemethod;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityTemplateMethodBinding;
 import com.example.jingbin.designpattern.templatemethod.worker.CTOWorker;
 import com.example.jingbin.designpattern.templatemethod.worker.HRWorker;
 import com.example.jingbin.designpattern.templatemethod.worker.ITWorker;
 import com.example.jingbin.designpattern.templatemethod.worker.OtherWorker;
 import com.example.jingbin.designpattern.templatemethod.worker.QAWorker;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 模版方法模式 展现程序员的一天
@@ -29,29 +26,17 @@ import butterknife.ButterKnife;
  */
 public class TemplateMethodActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_template_method)
-    Button btTemplateMethod;
-    @BindView(R.id.bt_template_method_text)
-    Button btTemplateMethodText;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.activity_template_method)
-    LinearLayout activityTemplateMethod;
-    @BindView(R.id.bt_template_method_text2)
-    Button btTemplateMethodText2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_template_method);
-        ButterKnife.bind(this);
+        ActivityTemplateMethodBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_template_method);
         setTitle("模板方法模式");
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.TEMPLATE_METHOD_DEFINE));
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.TEMPLATE_METHOD_DEFINE));
 
-        btTemplateMethodText.setText("查看所有人员的工作情况");
-        btTemplateMethodText2.setText("查看程序猿离开公司的时间");
-        btTemplateMethodText.setOnClickListener(this);
-        btTemplateMethodText2.setOnClickListener(this);
+        binding.btTemplateMethodText.setText("查看所有人员的工作情况");
+        binding.btTemplateMethodText2.setText("查看程序猿离开公司的时间");
+        binding.btTemplateMethodText.setOnClickListener(this);
+        binding.btTemplateMethodText2.setOnClickListener(this);
     }
 
     @Override

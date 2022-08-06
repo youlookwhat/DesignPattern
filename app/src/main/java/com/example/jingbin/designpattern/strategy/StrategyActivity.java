@@ -1,23 +1,20 @@
 package com.example.jingbin.designpattern.strategy;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jingbin.designpattern.R;
 import com.example.jingbin.designpattern.app.AppConstant;
 import com.example.jingbin.designpattern.app.EMTagHandler;
+import com.example.jingbin.designpattern.databinding.ActivityStategyBinding;
 import com.example.jingbin.designpattern.strategy.better.AttackXL;
 import com.example.jingbin.designpattern.strategy.better.DefendTMS;
 import com.example.jingbin.designpattern.strategy.better.DisplayYZ;
 import com.example.jingbin.designpattern.strategy.better.RoleA;
 import com.example.jingbin.designpattern.strategy.better.RunJCTQ;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 策略模式（Strategy Pattern）：定义了算法族，分别封装起来，
@@ -25,27 +22,17 @@ import butterknife.ButterKnife;
  */
 public class StrategyActivity extends AppCompatActivity {
 
-    @BindView(R.id.bt_strategy)
-    Button btStrategy;
-    @BindView(R.id.activity_stategy)
-    LinearLayout activityStategy;
-    @BindView(R.id.tv_define)
-    TextView tvDefine;
-    @BindView(R.id.bt_strategy_text)
-    Button btStrategyText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stategy);
-        ButterKnife.bind(this);
+        ActivityStategyBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_stategy);
         setTitle("策略模式");
 
-        tvDefine.setText(EMTagHandler.fromHtml(AppConstant.STRATEGY_DEFINE));
-        btStrategyText.setText("创建角色A,并设定样子,攻击,逃跑,防御");
+        binding.tvDefine.setText(EMTagHandler.fromHtml(AppConstant.STRATEGY_DEFINE));
+        binding.btStrategyText.setText("创建角色A,并设定样子,攻击,逃跑,防御");
 
 
-        btStrategyText.setOnClickListener(new View.OnClickListener() {
+        binding.btStrategyText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RoleA roleA = new RoleA("---A");

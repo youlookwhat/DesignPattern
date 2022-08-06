@@ -15,76 +15,31 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".observer.ObserverActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".factory.FactoryActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".singleton.SingletonActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".strategy.StrategyActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".adapter.AdapterActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".command.CommandActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".decorator.DecoratorActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".facade.FacadeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".templatemethod.TemplateMethodActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".state.StateActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".builder.BuilderActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".flyweight.FlyweightActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".prototype.PrototypeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".proxy.ProxyActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".bridge.BridgeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".composite.CompositeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".iterator.IteratorActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".mediator.MediatorActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".memento.MementoActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".interpreter.InterpreterActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".chainofresponsibility.ChainOfResponsibilityActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".visitor.VisitorActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name=".observer.ObserverActivity" />
+        <activity android:name=".factory.FactoryActivity" />
+        <activity android:name=".singleton.SingletonActivity" />
+        <activity android:name=".strategy.StrategyActivity" />
+        <activity android:name=".adapter.AdapterActivity" />
+        <activity android:name=".command.CommandActivity" />
+        <activity android:name=".decorator.DecoratorActivity" />
+        <activity android:name=".facade.FacadeActivity" />
+        <activity android:name=".templatemethod.TemplateMethodActivity" />
+        <activity android:name=".state.StateActivity" />
+        <activity android:name=".builder.BuilderActivity" />
+        <activity android:name=".flyweight.FlyweightActivity" />
+        <activity android:name=".prototype.PrototypeActivity" />
+        <activity android:name=".proxy.ProxyActivity" />
+        <activity android:name=".bridge.BridgeActivity" />
+        <activity android:name=".composite.CompositeActivity" />
+        <activity android:name=".iterator.IteratorActivity" />
+        <activity android:name=".mediator.MediatorActivity" />
+        <activity android:name=".memento.MementoActivity" />
+        <activity android:name=".interpreter.InterpreterActivity" />
+        <activity android:name=".chainofresponsibility.ChainOfResponsibilityActivity" />
+        <activity android:name=".visitor.VisitorActivity" />
     </application>
 
 </manifest>

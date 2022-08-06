@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_stategy"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jingbin.designpattern.strategy.StrategyActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <Button
-        android:id="@+id/bt_strategy"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_stategy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="策略模式" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.jingbin.designpattern.strategy.StrategyActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="设计游戏角色超类"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/bt_strategy_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/bt_strategy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="策略模式" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_marginTop="20dp"
-        android:background="@color/line" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="设计游戏角色超类"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/tv_define"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="#333333"
-        android:textSize="16sp" />
+        <Button
+            android:id="@+id/bt_strategy_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="20dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_define"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>

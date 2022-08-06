@@ -1,77 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_roujia_mo_store"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jingbin.designpattern.factory.FactoryActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="已卖肉夹馍为例"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="15sp" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bt_static_factory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1.静态工厂模式  (类+静态方法)" />
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_roujia_mo_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context="com.example.jingbin.designpattern.factory.FactoryActivity">
 
-    <Button
-        android:id="@+id/bt_simple_factory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2.简单工厂模式  (店里卖肉夹馍)" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="已卖肉夹馍为例"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/bt_factory_method"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="3.工厂方法模式  (西安开分店)" />
+            <Button
+                android:id="@+id/bt_static_factory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.静态工厂模式  (类+静态方法)" />
 
-    <Button
-        android:id="@+id/bt_abstract_factory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="4.抽象工厂模式  (使用官方提供的原料)" />
+            <Button
+                android:id="@+id/bt_simple_factory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.简单工厂模式  (店里卖肉夹馍)" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_marginTop="20dp"
-        android:background="@color/line" />
+            <Button
+                android:id="@+id/bt_factory_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3.工厂方法模式  (西安开分店)" />
 
-    <TextView
-        android:id="@+id/tv_define"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="#333333"
-        android:textSize="16sp" />
+            <Button
+                android:id="@+id/bt_abstract_factory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4.抽象工厂模式  (使用官方提供的原料)" />
 
-    <TextView
-        android:id="@+id/tv_define2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="#333333"
-        android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="20dp"
+                android:background="@color/line" />
 
-    <TextView
-        android:id="@+id/tv_define3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="#333333"
-        android:textSize="16sp" />
-</LinearLayout>
+            <TextView
+                android:id="@+id/tv_define"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_define2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_define3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</layout>
